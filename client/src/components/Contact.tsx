@@ -64,32 +64,10 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Interactive Map Section */}
+          {/* Social & Contact Links */}
+          <div className="max-w-2xl mx-auto">
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-              <h3 className="text-2xl font-bold mb-6 flex items-center text-gray-900">
-                <MapPin className="w-6 h-6 mr-3 text-blue-600" />
-                {t('contact.location.city')}
-              </h3>
-              
-              {/* Map Container */}
-              <div className="aspect-video rounded-xl overflow-hidden bg-gray-200 relative">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d179885.38408715503!2d-71.38454755000001!3d46.8138783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb8968a05db8893%3A0x8fc52d63f0e83a03!2sQuebec%20City%2C%20QC%2C%20Canada!5e0!3m2!1sen!2sus!4v1642683947834!5m2!1sen!2sus"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Quebec City Location"
-                ></iframe>
-              </div>
-            </div>
-
-            {/* Social & Contact Links */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-              <h3 className="text-2xl font-bold mb-8 text-gray-900">{t('contact.social.title')}</h3>
+              <h3 className="text-2xl font-bold mb-8 text-gray-900 text-center">{t('contact.social.title')}</h3>
               
               <div className="space-y-6">
                 <a
