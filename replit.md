@@ -1,6 +1,6 @@
 # Overview
 
-This is a professional personal portfolio website for Raed Fadhlaoui, a Software Engineer and Full-Stack Developer. The application is built as a modern, responsive single-page application showcasing personal projects, skills, experience, and providing a contact form. The portfolio features a sleek dark theme design with smooth animations and multi-language support (English, French, Arabic).
+This is a professional personal portfolio website for Raed Fadhlaoui, a Full Stack Developer (.NET/JS) and OSS Contributor. The application is built as a modern, responsive single-page application showcasing personal projects, skills, experience, education, certifications, and providing a contact form. The portfolio features a sleek dark theme design with smooth animations and multi-language support (English, French, Arabic) with RTL support for Arabic.
 
 # User Preferences
 

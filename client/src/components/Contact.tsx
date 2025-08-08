@@ -148,7 +148,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="font-medium">Email</p>
-                      <p className="text-gray-600 dark:text-gray-400">raed.fadhlaoui@cofomo.com</p>
+                      <p className="text-gray-600 dark:text-gray-400">raed.fadhlaoui@hotmail.com</p>
                     </div>
                   </div>
                   
@@ -170,7 +170,7 @@ export default function Contact() {
                 
                 <div className="flex gap-4">
                   <a
-                    href="https://linkedin.com/in/raedfadhlaoui"
+                    href="https://tn.linkedin.com/in/fadhlaouiraed"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center hover:bg-blue-200 dark:hover:bg-blue-800/50 transition-colors"
@@ -179,21 +179,12 @@ export default function Contact() {
                   </a>
                   
                   <a
-                    href="https://github.com/raedfadhlaoui"
+                    href="https://github.com/raedf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                   >
                     <Github className="w-6 h-6 text-gray-700 dark:text-gray-300" />
-                  </a>
-                  
-                  <a
-                    href="https://twitter.com/raedfadhlaoui"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center hover:bg-blue-200 dark:hover:bg-blue-800/50 transition-colors"
-                  >
-                    <Twitter className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                   </a>
                 </div>
               </div>

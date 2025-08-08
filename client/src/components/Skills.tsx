@@ -8,17 +8,8 @@ const skillCategories = [
     skills: [
       { name: 'JavaScript', icon: 'JS', bgColor: 'bg-yellow-100 dark:bg-yellow-900/30', textColor: 'text-yellow-600' },
       { name: 'TypeScript', icon: 'TS', bgColor: 'bg-blue-100 dark:bg-blue-900/30', textColor: 'text-blue-600' },
-      { name: 'C#', icon: 'C#', bgColor: 'bg-purple-100 dark:bg-purple-900/30', textColor: 'text-purple-600' }
-    ]
-  },
-  {
-    key: 'backend',
-    color: 'text-emerald-600 dark:text-emerald-400',
-    skills: [
-      { name: 'Node.js', icon: 'N', bgColor: 'bg-green-100 dark:bg-green-900/30', textColor: 'text-green-600' },
-      { name: 'Express.js', icon: 'Ex', bgColor: 'bg-gray-100 dark:bg-gray-800', textColor: 'text-gray-600 dark:text-gray-300' },
-      { name: 'MongoDB', icon: 'M', bgColor: 'bg-emerald-100 dark:bg-emerald-900/30', textColor: 'text-emerald-600' },
-      { name: '.NET', icon: '.N', bgColor: 'bg-purple-100 dark:bg-purple-900/30', textColor: 'text-purple-600' }
+      { name: 'C#', icon: 'C#', bgColor: 'bg-purple-100 dark:bg-purple-900/30', textColor: 'text-purple-600' },
+      { name: 'SQL', icon: 'SQL', bgColor: 'bg-gray-100 dark:bg-gray-800', textColor: 'text-gray-600 dark:text-gray-300' }
     ]
   },
   {
@@ -26,18 +17,29 @@ const skillCategories = [
     color: 'text-blue-600 dark:text-blue-400',
     skills: [
       { name: 'React', icon: 'R', bgColor: 'bg-blue-100 dark:bg-blue-900/30', textColor: 'text-blue-600' },
-      { name: 'Tailwind CSS', icon: 'TW', bgColor: 'bg-cyan-100 dark:bg-cyan-900/30', textColor: 'text-cyan-600' },
-      { name: 'Bootstrap', icon: 'BS', bgColor: 'bg-purple-100 dark:bg-purple-900/30', textColor: 'text-purple-600' }
+      { name: 'Angular', icon: 'A', bgColor: 'bg-red-100 dark:bg-red-900/30', textColor: 'text-red-600' },
+      { name: 'Next.js', icon: 'N', bgColor: 'bg-gray-100 dark:bg-gray-800', textColor: 'text-gray-600 dark:text-gray-300' },
+      { name: 'Tailwind', icon: 'TW', bgColor: 'bg-cyan-100 dark:bg-cyan-900/30', textColor: 'text-cyan-600' }
+    ]
+  },
+  {
+    key: 'backend',
+    color: 'text-emerald-600 dark:text-emerald-400',
+    skills: [
+      { name: 'Node.js', icon: 'N', bgColor: 'bg-green-100 dark:bg-green-900/30', textColor: 'text-green-600' },
+      { name: 'Express', icon: 'Ex', bgColor: 'bg-gray-100 dark:bg-gray-800', textColor: 'text-gray-600 dark:text-gray-300' },
+      { name: 'ASP.NET', icon: '.N', bgColor: 'bg-purple-100 dark:bg-purple-900/30', textColor: 'text-purple-600' },
+      { name: 'Nest.js', icon: 'Ne', bgColor: 'bg-red-100 dark:bg-red-900/30', textColor: 'text-red-600' }
     ]
   },
   {
     key: 'devops',
     color: 'text-orange-600 dark:text-orange-400',
     skills: [
+      { name: 'Azure', icon: 'Az', bgColor: 'bg-blue-100 dark:bg-blue-900/30', textColor: 'text-blue-600' },
       { name: 'Docker', icon: 'D', bgColor: 'bg-blue-100 dark:bg-blue-900/30', textColor: 'text-blue-600' },
       { name: 'Git', icon: 'Git', bgColor: 'bg-gray-100 dark:bg-gray-800', textColor: 'text-gray-600 dark:text-gray-300' },
-      { name: 'VSCode', icon: 'VS', bgColor: 'bg-blue-100 dark:bg-blue-900/30', textColor: 'text-blue-600' },
-      { name: 'Postman', icon: 'PM', bgColor: 'bg-orange-100 dark:bg-orange-900/30', textColor: 'text-orange-600' }
+      { name: 'CI/CD', icon: 'CI', bgColor: 'bg-green-100 dark:bg-green-900/30', textColor: 'text-green-600' }
     ]
   }
 ];

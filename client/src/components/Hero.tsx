@@ -35,6 +35,10 @@ export default function Hero() {
             <span className="gradient-text">Raed Fadhlaoui</span>
           </h1>
           
+          <h2 className="text-2xl sm:text-3xl text-gray-800 dark:text-gray-200 mb-6 leading-relaxed">
+            {t('hero.headline')}
+          </h2>
+          
           <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             {t('hero.tagline')}
           </p>

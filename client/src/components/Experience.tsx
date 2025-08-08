@@ -7,18 +7,25 @@ const experiences = [
     icon: 'C',
     iconBg: 'bg-primary-100 dark:bg-primary-900/30',
     iconColor: 'text-primary-600 dark:text-primary-400',
-    technologies: ['React', 'Node.js', '.NET', 'Azure']
+    technologies: ['.NET', 'Angular', 'React', 'Azure']
   },
   {
     id: 'orange',
     icon: 'O',
     iconBg: 'bg-orange-100 dark:bg-orange-900/30',
     iconColor: 'text-orange-600 dark:text-orange-400',
-    technologies: ['JavaScript', 'Node.js', 'PostgreSQL', 'Redis']
+    technologies: ['JavaScript', 'Node.js', 'Team Lead', 'Agile']
   },
   {
-    id: 'teaching',
-    icon: 'T',
+    id: 'emiketic',
+    icon: 'E',
+    iconBg: 'bg-purple-100 dark:bg-purple-900/30',
+    iconColor: 'text-purple-600 dark:text-purple-400',
+    technologies: ['Performance', 'Security', 'Innovation', 'Full Stack']
+  },
+  {
+    id: 'rbk',
+    icon: 'R',
     iconBg: 'bg-emerald-100 dark:bg-emerald-900/30',
     iconColor: 'text-emerald-600 dark:text-emerald-400',
     technologies: ['JavaScript', 'React', 'Node.js', 'Mentoring']
@@ -30,10 +37,15 @@ const technologyColors: Record<string, string> = {
   'Node.js': 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200',
   '.NET': 'bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200',
   Azure: 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200',
+  Angular: 'bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200',
   JavaScript: 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-200',
-  PostgreSQL: 'bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200',
-  Redis: 'bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200',
-  Mentoring: 'bg-pink-100 dark:bg-pink-900/30 text-pink-800 dark:text-pink-200'
+  'Team Lead': 'bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-200',
+  Agile: 'bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-200',
+  Performance: 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200',
+  Security: 'bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200',
+  Innovation: 'bg-pink-100 dark:bg-pink-900/30 text-pink-800 dark:text-pink-200',
+  'Full Stack': 'bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200',
+  Mentoring: 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200'
 };
 
 export default function Experience() {

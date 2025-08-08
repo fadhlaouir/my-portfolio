@@ -1,0 +1,144 @@
+Create a modern, professional portfolio website for **Raed Fadhlaoui** using React and Tailwind CSS. Include all sections, content, and styling. Make it mobile-friendly, animated, and optimized for SEO.
+
+---
+
+🧑‍💻 General Info:
+- Name: Raed Fadhlaoui
+- Title: Full Stack Developer (.NET/JS) | OSS Contributor
+- Location: Québec, QC, Canada
+- Email: raed.fadhlaoui@hotmail.com
+- LinkedIn: https://tn.linkedin.com/in/fadhlaouiraed
+- GitHub: https://github.com/raedf
+- Languages: English (Fluent), French (Fluent), Arabic (Native)
+- Profile image placeholder
+
+---
+
+🏠 Home (Hero Section)
+- Headline: "Turning ideas into high-performance code."
+- Tagline: "Full Stack Developer | DevOps | OSS Contributor"
+- CTA Buttons: [View My Work] [Contact Me]
+- Animated background (e.g., particles, gradient, or code lines)
+
+---
+
+🙋‍♂️ About Me
+"With over 5 years of experience as a full-stack developer, I possess deep expertise in crafting robust, scalable, and efficient web applications. I specialize in both front-end and back-end systems using modern technologies and development best practices. I’m also the founder and maintainer of the open-source npm package `create-express-node-starter`, downloaded over 9,000 times. Proven in leading teams, managing entire project lifecycles, and consistently delivering high-quality solutions that exceed expectations and meet tight deadlines."
+
+---
+
+💼 Experience
+
+**Cofomo Inc** (Québec, Canada)  
+*Full Stack Developer* — Sep 2024 – Present  
+- Developing enterprise-grade solutions for Revenu Québec using .NET, Angular, React, and Azure.
+- Implemented CI/CD pipelines with Azure DevOps and Git.
+- Applied clean architecture and Agile methodology.
+
+**Orange Tunisia** (Tunis, Tunisia)  
+*Team Lead / Full Stack Developer* — Feb 2022 – Jun 2024  
+- Coordinated resources to meet deadlines.
+- Designed software solutions from user requirements.
+- Led testing, deployment, and feedback cycles.
+
+**EMIKETIC Web Technologies** (Hammamet, Tunisia)  
+*Full Stack Developer* — Jun 2021 – Feb 2022  
+- Optimized app performance.
+- Implemented data security.
+- Participated in brainstorming sessions for innovation.
+
+**ReBootKamp (RBK) Tunisia** (Tunis, Tunisia)  
+*Full Stack Developer / Technical Mentor* — Sep 2020 – Feb 2021  
+- Guided students through coding projects.
+- Delivered technical lectures and support.
+- Collaborated on curriculum improvement.
+
+**GoMyCode** (Tunis, Tunisia)  
+*Full Stack Developer* — May 2019 – Jul 2020  
+- Built accessible UIs and reviewed code.
+- Contributed to internal tooling and docs.
+
+**GoMyCode Intern** — Jan 2019 – Apr 2019  
+- Worked on real-world apps under supervision.
+- Built and demoed prototypes.
+- Fostered peer collaboration.
+
+---
+
+🚀 Projects
+
+**create-express-node-starter**  
+→ [GitHub](https://github.com/fadhlaouir/create-express-node-starter)  
+An open-source boilerplate for building secure, scalable Node.js REST APIs.  
+Tech: Node.js, Express, MongoDB, JWT, Swagger
+
+**RemoteHorizon**  
+Job board inspired by WeWorkRemotely, powered by MERN stack.  
+Tech: React, Node.js, MongoDB, Tailwind, Express
+
+**AdSwift**  
+Classified ads platform like Kijiji/Tayara/Leboncoin  
+Tech: React, Node.js, MongoDB, Tailwind CSS
+
+**FlashSolve**  
+AI assistant to solve developer coding issues fast  
+Tech: React, Node.js, OpenAI API
+
+---
+
+🎓 Education
+
+**National Engineering Diploma – Big Data & BI**  
+International Private Polytechnic School of Tunis (2019–2022)  
+*Recognized as equivalent to Canadian BSc in CS*
+
+**Bachelor’s in CS Applied to Management**  
+Faculty of Economics and Management Sciences of Nabeul (2016–2019)
+
+---
+
+📚 Certifications
+- Google: Foundations of Project Management (2024)
+- Scrum Fundamentals Certified (SCRUMstudy – 2023)
+- Microsoft: MTA Database Fundamentals (2021)
+- Microsoft: MTA Networking Fundamentals (2019)
+- Microsoft: MTA Windows OS Fundamentals (2019)
+
+---
+
+🛠 Skills
+
+**Languages:** JavaScript, TypeScript, C#, SQL  
+**Frontend:** React.js, HTML, CSS, SCSS, Tailwind, Next.js, Angular, Storybook  
+**Backend:** Node.js, Express, Nest.js, Strapi, ASP.NET Core, Entity Framework  
+**DevOps:** Azure DevOps, Git, Docker, Kubernetes, CI/CD  
+**Databases:** MongoDB, SQL Server, PostgreSQL, MySQL, Firebase  
+**Platforms:** AWS, GCP, Azure, Heroku, DigitalOcean  
+**Tools:** VS Code, Visual Studio, Postman, Swagger, Jira  
+**Soft Skills:** Leadership, Communication, Time management, Teamwork, Adaptability
+
+---
+
+❤️ Volunteer Experience
+- GDSC Lead at Polytech Intl (2021–2022): Organized tech events for 1000+ students.
+- Microsoft Tech Club Member at FSEGN (2017–2018)
+- Marketing Club Member at FSEGN (2018–2019)
+
+---
+
+📬 Contact
+- Form with name, email, and message
+- Email: raed.fadhlaoui@hotmail.com
+- LinkedIn: [linkedin.com/in/fadhlaouiraed](https://tn.linkedin.com/in/fadhlaouiraed)
+- GitHub: [github.com/raedf](https://github.com/raedf)
+
+---
+
+🌐 Site Features
+- Sticky navbar with smooth scrolling
+- Dark theme with accent color (your choice)
+- Animated transitions, AOS scroll animations
+- SEO ready with meta tags, OG image, and favicon
+- Clean responsive layout with Tailwind CSS
+- Easy to add more projects, jobs, and certifications
+

@@ -6,28 +6,29 @@ const projects = [
   {
     id: 'project1',
     image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400',
-    technologies: ['JavaScript', 'Node.js', 'Express.js', 'MongoDB'],
-    stars: '2.1k',
-    status: 'Open Source'
+    technologies: ['Node.js', 'Express', 'MongoDB', 'JWT', 'Swagger'],
+    stars: '9k+',
+    status: 'Open Source',
+    github: 'https://github.com/fadhlaouir/create-express-node-starter'
   },
   {
     id: 'project2',
     image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400',
-    technologies: ['React', 'Node.js', 'Express.js', 'MongoDB'],
+    technologies: ['React', 'Node.js', 'MongoDB', 'Tailwind'],
     stars: '876',
     status: 'Live Demo'
   },
   {
     id: 'project3',
     image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400',
-    technologies: ['React', 'TypeScript', 'Node.js', 'MongoDB'],
+    technologies: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
     stars: '1.3k',
     status: 'Live Demo'
   },
   {
     id: 'project4',
     image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400',
-    technologies: ['TypeScript', 'React', 'AI/ML', 'Python'],
+    technologies: ['React', 'Node.js', 'OpenAI API'],
     stars: '3.2k',
     status: 'Beta Release'
   }
@@ -37,11 +38,14 @@ const technologyColors: Record<string, string> = {
   JavaScript: 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-200',
   TypeScript: 'bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200',
   'Node.js': 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200',
-  'Express.js': 'bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200',
+  Express: 'bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200',
   MongoDB: 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200',
   React: 'bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200',
-  'AI/ML': 'bg-pink-100 dark:bg-pink-900/30 text-pink-800 dark:text-pink-200',
-  Python: 'bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200'
+  JWT: 'bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200',
+  Swagger: 'bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200',
+  Tailwind: 'bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-200',
+  'Tailwind CSS': 'bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-200',
+  'OpenAI API': 'bg-pink-100 dark:bg-pink-900/30 text-pink-800 dark:text-pink-200'
 };
 
 export default function Projects() {
@@ -77,7 +81,9 @@ export default function Projects() {
                   </h3>
                   <div className="flex gap-2">
                     <a
-                      href="#"
+                      href={project.github || "#"}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-gray-500 hover:text-primary-600 transition-colors"
                     >
                       <Github className="w-5 h-5" />

@@ -12,28 +12,29 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Hero Section
     'hero.greeting': 'Hi, I\'m',
-    'hero.tagline': 'Software Engineer | Full-Stack Developer | Open Source Enthusiast',
-    'hero.description': 'Passionate about building scalable web applications and contributing to open source projects. Based in Quebec, Canada.',
+    'hero.headline': 'Turning ideas into high-performance code.',
+    'hero.tagline': 'Full Stack Developer | DevOps | OSS Contributor',
+    'hero.description': 'With over 5 years of experience crafting robust, scalable web applications using modern technologies. Creator of create-express-node-starter with 9,000+ downloads.',
     'hero.cta': 'View My Work',
-    'hero.contact': 'Get In Touch',
+    'hero.contact': 'Contact Me',
     
     // About Section
     'about.title': 'About Me',
-    'about.bio': 'I\'m a passionate software engineer based in Quebec, Canada, with experience in full-stack development, DevOps, and software architecture. I specialize in JavaScript, TypeScript, Node.js, MongoDB, React, and C#.',
-    'about.bio2': 'I\'m the creator of the open-source tool create-express-node-starter and currently working at Cofomo, where I build scalable solutions and contribute to innovative projects.',
+    'about.bio': 'With over 5 years of experience as a full-stack developer, I possess deep expertise in crafting robust, scalable, and efficient web applications. I specialize in both front-end and back-end systems using modern technologies and development best practices.',
+    'about.bio2': 'I\'m the founder and maintainer of the open-source npm package create-express-node-starter, downloaded over 9,000 times. Proven in leading teams, managing entire project lifecycles, and consistently delivering high-quality solutions.',
     'about.resume': 'Download Resume',
     
     // Projects Section
     'projects.title': 'Featured Projects',
     'projects.subtitle': 'Here are some of my recent projects that showcase my skills in full-stack development and open source contributions.',
     'projects.project1.title': 'create-express-node-starter',
-    'projects.project1.description': 'Express.js + MongoDB starter template for building REST APIs quickly. Includes authentication, validation, error handling, and best practices setup.',
+    'projects.project1.description': 'An open-source boilerplate for building secure, scalable Node.js REST APIs. Downloaded over 9,000 times with authentication, validation, and best practices.',
     'projects.project2.title': 'RemoteHorizon',
-    'projects.project2.description': 'Remote jobs board built with MERN stack. Features job posting, filtering, company profiles, and application tracking for remote opportunities.',
+    'projects.project2.description': 'Job board inspired by WeWorkRemotely, powered by MERN stack. Features job posting, filtering, company profiles, and application tracking.',
     'projects.project3.title': 'AdSwift',
-    'projects.project3.description': 'Classified ads web app inspired by Tayara and Leboncoin. Features user authentication, ad posting, search & filters, and secure messaging system.',
+    'projects.project3.description': 'Classified ads platform like Kijiji/Tayara/Leboncoin with user authentication, ad posting, search & filters, and secure messaging.',
     'projects.project4.title': 'FlashSolve',
-    'projects.project4.description': 'AI-powered coding assistant for solving problems faster. Integrates with popular IDEs and provides intelligent code suggestions, debugging help, and optimization tips.',
+    'projects.project4.description': 'AI assistant to solve developer coding issues fast. Integrates with popular IDEs for intelligent suggestions and debugging help.',
     'projects.viewAll': 'View All Projects',
     
     // Skills Section
@@ -47,18 +48,22 @@ export const translations: Record<Language, Record<string, string>> = {
     // Experience Section
     'experience.title': 'Professional Experience',
     'experience.subtitle': 'My journey through different roles and companies, building innovative solutions and growing as a developer.',
-    'experience.cofomo.title': 'Software Engineer – Full Stack',
-    'experience.cofomo.company': 'Cofomo',
-    'experience.cofomo.period': '2023 – Present',
-    'experience.cofomo.description': 'Leading full-stack development projects, building scalable web applications using modern technologies. Collaborating with cross-functional teams to deliver innovative solutions for enterprise clients.',
-    'experience.orange.title': 'Backend Developer',
+    'experience.cofomo.title': 'Full Stack Developer',
+    'experience.cofomo.company': 'Cofomo Inc',
+    'experience.cofomo.period': 'Sep 2024 – Present',
+    'experience.cofomo.description': 'Developing enterprise-grade solutions for Revenu Québec using .NET, Angular, React, and Azure. Implemented CI/CD pipelines with Azure DevOps and Git. Applied clean architecture and Agile methodology.',
+    'experience.orange.title': 'Team Lead / Full Stack Developer',
     'experience.orange.company': 'Orange Tunisia',
-    'experience.orange.period': '2021 – 2023',
-    'experience.orange.description': 'Developed and maintained RESTful APIs and microservices for telecom applications. Optimized database performance and implemented robust authentication systems for millions of users.',
-    'experience.teaching.title': 'Coding Instructor',
-    'experience.teaching.company': 'GoMyCode & RBK',
-    'experience.teaching.period': '2020 – 2021',
-    'experience.teaching.description': 'Taught full-stack development bootcamps, mentored junior developers, and created curriculum for JavaScript, React, and Node.js. Helped 200+ students transition into tech careers.',
+    'experience.orange.period': 'Feb 2022 – Jun 2024',
+    'experience.orange.description': 'Coordinated resources to meet deadlines. Designed software solutions from user requirements. Led testing, deployment, and feedback cycles.',
+    'experience.emiketic.title': 'Full Stack Developer',
+    'experience.emiketic.company': 'EMIKETIC Web Technologies',
+    'experience.emiketic.period': 'Jun 2021 – Feb 2022',
+    'experience.emiketic.description': 'Optimized app performance. Implemented data security. Participated in brainstorming sessions for innovation.',
+    'experience.rbk.title': 'Full Stack Developer / Technical Mentor',
+    'experience.rbk.company': 'ReBootKamp (RBK) Tunisia',
+    'experience.rbk.period': 'Sep 2020 – Feb 2021',
+    'experience.rbk.description': 'Guided students through coding projects. Delivered technical lectures and support. Collaborated on curriculum improvement.',
     
     // Contact Section
     'contact.title': 'Get In Touch',
@@ -92,8 +97,9 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Hero Section
     'hero.greeting': 'Salut, je suis',
-    'hero.tagline': 'Ingénieur Logiciel | Développeur Full-Stack | Passionné Open Source',
-    'hero.description': 'Passionné par la création d\'applications web évolutives et la contribution aux projets open source. Basé au Québec, Canada.',
+    'hero.headline': 'Transformer les idées en code haute performance.',
+    'hero.tagline': 'Développeur Full Stack | DevOps | Contributeur OSS',
+    'hero.description': 'Plus de 5 ans d\'expérience dans la création d\'applications web robustes et évolutives avec des technologies modernes. Créateur de create-express-node-starter avec plus de 9 000 téléchargements.',
     'hero.cta': 'Voir Mon Travail',
     'hero.contact': 'Me Contacter',
     
@@ -172,8 +178,9 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Hero Section
     'hero.greeting': 'مرحباً، أنا',
-    'hero.tagline': 'مهندس برمجيات | مطور Full-Stack | محب للمصادر المفتوحة',
-    'hero.description': 'شغوف ببناء تطبيقات الويب القابلة للتوسع والمساهمة في مشاريع المصدر المفتوح. مقيم في كيبيك، كندا.',
+    'hero.headline': 'تحويل الأفكار إلى كود عالي الأداء.',
+    'hero.tagline': 'مطور Full Stack | DevOps | مساهم في المصادر المفتوحة',
+    'hero.description': 'أكثر من 5 سنوات خبرة في بناء تطبيقات ويب قوية وقابلة للتوسع بتقنيات حديثة. مؤسس create-express-node-starter مع أكثر من 9000 تحميل.',
     'hero.cta': 'اطلع على أعمالي',
     'hero.contact': 'تواصل معي',
     

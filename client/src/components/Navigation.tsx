@@ -42,6 +42,9 @@ export default function Navigation() {
             <button onClick={() => scrollToSection('experience')} className="nav-link hover:text-primary-500 transition-colors">
               {t('nav.experience')}
             </button>
+            <button onClick={() => scrollToSection('education')} className="nav-link hover:text-primary-500 transition-colors">
+              Education
+            </button>
             <button onClick={() => scrollToSection('contact')} className="nav-link hover:text-primary-500 transition-colors">
               {t('nav.contact')}
             </button>
@@ -106,6 +109,9 @@ export default function Navigation() {
             </button>
             <button onClick={() => scrollToSection('experience')} className="block hover:text-primary-500 transition-colors">
               {t('nav.experience')}
+            </button>
+            <button onClick={() => scrollToSection('education')} className="block hover:text-primary-500 transition-colors">
+              Education
             </button>
             <button onClick={() => scrollToSection('contact')} className="block hover:text-primary-500 transition-colors">
               {t('nav.contact')}
