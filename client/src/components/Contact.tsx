@@ -179,7 +179,7 @@ export default function Contact() {
                   </a>
                   
                   <a
-                    href="https://github.com/raedf"
+                    href="https://github.com/fadhlaouir"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
