@@ -42,18 +42,23 @@ export default function Contact() {
     setIsSubmitting(true);
     
     try {
-      await apiRequest('POST', '/api/contact', formData);
+      const response = await apiRequest('POST', '/api/contact', formData);
+      const result = await response.json();
       
-      toast({
-        title: "Success",
-        description: t('contact.form.success')
-      });
-      
-      setFormData({ name: '', email: '', message: '' });
+      if (result.success) {
+        toast({
+          title: "✅ Message Sent Successfully!",
+          description: "Thank you for your message. I'll get back to you soon!",
+        });
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        throw new Error(result.message || 'Failed to send message');
+      }
     } catch (error) {
+      console.error('Contact form error:', error);
       toast({
-        title: "Error",
-        description: t('contact.form.error'),
+        title: "❌ Failed to Send Message",
+        description: "Please try again or contact me directly via email.",
         variant: "destructive"
       });
     } finally {
