@@ -23,7 +23,11 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center py-5">
           <div className="flex items-center">
-            <img src="/rf-logo.svg" alt="RF Logo" className="w-12 h-12" />
+            <img 
+              src={language === 'ar' ? "/rf-logo-arabic.svg" : "/rf-logo.svg"} 
+              alt={language === 'ar' ? "ر.ف Logo" : "RF Logo"} 
+              className="w-12 h-12" 
+            />
           </div>
           
           <div className={`hidden md:flex items-center ${language === 'ar' ? 'space-x-reverse space-x-8' : 'space-x-8'}`}>
