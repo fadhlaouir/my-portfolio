@@ -113,15 +113,7 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Contact Section
     'contact.title': 'Get In Touch',
-    'contact.subtitle': 'I\'m always interested in hearing about new opportunities, innovative projects, or just having a chat about technology.',
-    'contact.form.title': 'Send Message',
-    'contact.form.name': 'Name',
-    'contact.form.email': 'Email',
-    'contact.form.message': 'Message',
-    'contact.form.send': 'Send Message',
-    'contact.form.sending': 'Sending...',
-    'contact.form.success': 'Message sent successfully!',
-    'contact.form.error': 'Failed to send message. Please try again.',
+    'contact.subtitle': 'Based in beautiful Quebec City, Canada. Always interested in new opportunities and innovative projects.',
     'contact.email': 'Email',
     'contact.info.title': 'Contact Information',
     'contact.info.location': 'Location',
@@ -248,15 +240,7 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Contact Section
     'contact.title': 'Me Contacter',
-    'contact.subtitle': 'Je suis toujours intéressé d\'entendre parler de nouvelles opportunités, projets innovants, ou simplement discuter de technologie.',
-    'contact.form.title': 'Envoyer Message',
-    'contact.form.name': 'Nom',
-    'contact.form.email': 'Email',
-    'contact.form.message': 'Message',
-    'contact.form.send': 'Envoyer Message',
-    'contact.form.sending': 'Envoi en cours...',
-    'contact.form.success': 'Message envoyé avec succès !',
-    'contact.form.error': 'Échec de l\'envoi du message. Veuillez réessayer.',
+    'contact.subtitle': 'Basé dans la belle ville de Québec, Canada. Toujours intéressé par de nouvelles opportunités et projets innovants.',
     'contact.email': 'Email',
     'contact.info.title': 'Informations Contact',
     'contact.info.location': 'Localisation',

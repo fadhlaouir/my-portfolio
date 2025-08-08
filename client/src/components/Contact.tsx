@@ -107,13 +107,7 @@ export default function Contact() {
                 />
               </div>
               
-              <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-                <h4 className="font-semibold text-blue-900 mb-2">About Quebec City</h4>
-                <p className="text-blue-800 text-sm leading-relaxed">
-                  A UNESCO World Heritage site, Quebec City is one of North America's oldest fortified cities. 
-                  Known for its rich history, beautiful architecture, and vibrant tech scene.
-                </p>
-              </div>
+
             </div>
           </div>
         </div>
