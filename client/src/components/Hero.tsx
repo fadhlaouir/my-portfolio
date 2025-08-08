@@ -24,12 +24,59 @@ export default function Hero() {
       ref={ref}
       className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-sky-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-20"
     >
-      {/* Animated Background Elements */}
-      <div className="floating-shapes">
-        <div className="floating-shape w-64 h-64 -top-32 -left-32 animate-float opacity-20"></div>
-        <div className="floating-shape w-48 h-48 top-1/4 -right-24 animate-float opacity-15" style={{ animationDelay: '-2s' }}></div>
-        <div className="floating-shape w-32 h-32 bottom-1/4 left-1/4 animate-float opacity-25" style={{ animationDelay: '-4s' }}></div>
-        <div className="floating-shape w-40 h-40 bottom-10 right-1/3 animate-float opacity-10" style={{ animationDelay: '-6s' }}></div>
+      {/* Paint Splash Background Elements */}
+      <div className="paint-splashes">
+        {/* Large paint splash */}
+        <svg className="absolute -top-20 -left-20 w-96 h-96 opacity-20 dark:opacity-10 animate-float" viewBox="0 0 200 200" fill="none">
+          <path d="M100,20 C120,30 140,50 130,80 C135,100 120,120 100,125 C80,130 60,120 55,100 C50,80 70,60 85,40 C90,30 95,25 100,20 Z" 
+                fill="url(#paint1)" className="animate-pulse"/>
+          <defs>
+            <linearGradient id="paint1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#3B82F6" />
+              <stop offset="100%" stopColor="#8B5CF6" />
+            </linearGradient>
+          </defs>
+        </svg>
+        
+        {/* Medium paint splash */}
+        <svg className="absolute top-1/4 -right-16 w-72 h-72 opacity-15 dark:opacity-8 animate-float" 
+             style={{ animationDelay: '-2s' }} viewBox="0 0 200 200" fill="none">
+          <path d="M150,40 C160,55 165,75 155,90 C160,110 145,125 125,120 C105,115 95,95 100,75 C105,55 125,35 140,30 C145,28 148,32 150,40 Z" 
+                fill="url(#paint2)" className="animate-pulse"/>
+          <defs>
+            <linearGradient id="paint2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#06B6D4" />
+              <stop offset="100%" stopColor="#3B82F6" />
+            </linearGradient>
+          </defs>
+        </svg>
+        
+        {/* Small paint splashes */}
+        <svg className="absolute bottom-1/4 left-1/4 w-48 h-48 opacity-25 dark:opacity-12 animate-float" 
+             style={{ animationDelay: '-4s' }} viewBox="0 0 200 200" fill="none">
+          <circle cx="100" cy="100" r="60" fill="url(#paint3)" className="animate-pulse"/>
+          <path d="M140,80 C150,85 155,95 145,105 C135,115 125,110 130,95 C135,85 140,80 140,80 Z" fill="url(#paint3)"/>
+          <defs>
+            <linearGradient id="paint3" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#8B5CF6" />
+              <stop offset="100%" stopColor="#EC4899" />
+            </linearGradient>
+          </defs>
+        </svg>
+        
+        {/* Bottom right splash */}
+        <svg className="absolute bottom-10 right-1/3 w-56 h-56 opacity-18 dark:opacity-10 animate-float" 
+             style={{ animationDelay: '-6s' }} viewBox="0 0 200 200" fill="none">
+          <path d="M80,60 C100,65 120,75 125,95 C130,115 120,135 100,140 C80,145 60,135 55,115 C50,95 60,75 80,60 Z" 
+                fill="url(#paint4)"/>
+          <path d="M140,100 C145,105 148,115 140,120 C132,125 128,115 135,105 C140,100 140,100 140,100 Z" fill="url(#paint4)"/>
+          <defs>
+            <linearGradient id="paint4" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#10B981" />
+              <stop offset="100%" stopColor="#06B6D4" />
+            </linearGradient>
+          </defs>
+        </svg>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center relative z-10">
@@ -55,12 +102,12 @@ export default function Hero() {
           </h2>
           
           {/* Premium Tagline */}
-          <p className="text-xl sm:text-2xl md:text-3xl text-gray-700 mb-8 max-w-4xl mx-auto font-medium leading-relaxed">
+          <p className="text-xl sm:text-2xl md:text-3xl text-gray-700 dark:text-gray-300 mb-8 max-w-4xl mx-auto font-medium leading-relaxed">
             {t('hero.tagline')}
           </p>
           
           {/* Descriptive Text */}
-          <p className="text-lg sm:text-xl text-gray-600 mb-16 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-16 max-w-3xl mx-auto leading-relaxed">
             {t('hero.description')}
           </p>
           

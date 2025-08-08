@@ -80,8 +80,24 @@ export default function Experience() {
   const { ref, hasIntersected } = useIntersectionObserver();
 
   return (
-    <section id="experience" className="py-20 bg-white dark:bg-gray-800">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="experience" className="py-20 bg-white dark:bg-gray-800 relative overflow-hidden">
+      {/* Paint Splash Background */}
+      <div className="paint-splashes absolute inset-0">
+        <svg className="absolute bottom-20 right-16 w-88 h-88 opacity-8 dark:opacity-4 animate-float" 
+             style={{ animationDelay: '-4s' }} viewBox="0 0 200 200" fill="none">
+          <path d="M100,40 C120,35 140,45 145,65 C150,85 140,105 120,110 C100,115 80,105 75,85 C70,65 90,45 100,40 Z" 
+                fill="url(#expPaint1)"/>
+          <path d="M60,120 C70,115 80,125 75,135 C70,145 60,140 65,130 C60,120 60,120 60,120 Z" fill="url(#expPaint1)"/>
+          <defs>
+            <linearGradient id="expPaint1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#7C3AED" />
+              <stop offset="100%" stopColor="#EC4899" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div ref={ref} className={`fade-in ${hasIntersected ? 'visible' : ''}`}>
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900 dark:text-gray-100">
             {t('experience.title')}

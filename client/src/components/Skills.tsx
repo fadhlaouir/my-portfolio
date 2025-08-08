@@ -84,8 +84,24 @@ export default function Skills() {
   const { ref, hasIntersected } = useIntersectionObserver();
 
   return (
-    <section id="skills" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="skills" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden">
+      {/* Paint Splash Background */}
+      <div className="paint-splashes absolute inset-0">
+        <svg className="absolute top-40 left-20 w-72 h-72 opacity-12 dark:opacity-6 animate-float" 
+             style={{ animationDelay: '-5s' }} viewBox="0 0 200 200" fill="none">
+          <path d="M90,40 C110,35 130,45 135,65 C140,85 130,105 110,110 C90,115 70,105 65,85 C60,65 80,45 90,40 Z" 
+                fill="url(#skillsPaint1)"/>
+          <circle cx="150" cy="70" r="25" fill="url(#skillsPaint1)" opacity="0.7"/>
+          <defs>
+            <linearGradient id="skillsPaint1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#6366F1" />
+              <stop offset="100%" stopColor="#8B5CF6" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div ref={ref} className={`fade-in ${hasIntersected ? 'visible' : ''}`}>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">

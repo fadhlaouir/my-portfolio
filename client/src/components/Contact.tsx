@@ -13,8 +13,22 @@ export default function Contact() {
       className="py-24 bg-gradient-to-br from-gray-50 via-white to-sky-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden"
       style={{ minHeight: '100vh' }}
     >
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-dotted-pattern opacity-30"></div>
+      {/* Paint Splash Background */}
+      <div className="paint-splashes absolute inset-0">
+        <svg className="absolute top-32 right-20 w-96 h-96 opacity-10 dark:opacity-5 animate-float" 
+             style={{ animationDelay: '-2s' }} viewBox="0 0 200 200" fill="none">
+          <path d="M80,30 C100,25 120,35 125,55 C130,75 120,95 100,100 C80,105 60,95 55,75 C50,55 70,35 80,30 Z" 
+                fill="url(#contactPaint1)"/>
+          <path d="M140,120 C150,115 160,125 155,135 C150,145 140,140 145,130 C140,120 140,120 140,120 Z" fill="url(#contactPaint1)"/>
+          <circle cx="60" cy="150" r="30" fill="url(#contactPaint1)" opacity="0.6"/>
+          <defs>
+            <linearGradient id="contactPaint1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#059669" />
+              <stop offset="100%" stopColor="#0891B2" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
       
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className={`fade-in ${hasIntersected ? 'visible' : ''}`}>

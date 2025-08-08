@@ -74,24 +74,24 @@
 }
 
 .dark {
-  --background: hsl(210, 25%, 7.8431%);
+  --background: hsl(220, 25%, 8%);
   --foreground: hsl(210, 6.6667%, 97.0588%);
-  --card: hsl(180, 6.6667%, 15%);
+  --card: hsl(220, 25%, 12%);
   --card-foreground: hsl(210, 6.6667%, 97.0588%);
-  --popover: hsl(210, 25%, 7.8431%);
+  --popover: hsl(220, 25%, 8%);
   --popover-foreground: hsl(210, 6.6667%, 97.0588%);
   --primary: hsl(216, 87%, 65%);
   --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(210, 6.6667%, 20%);
+  --secondary: hsl(220, 25%, 18%);
   --secondary-foreground: hsl(0, 0%, 100%);
-  --muted: hsl(210, 6.6667%, 15%);
+  --muted: hsl(220, 25%, 15%);
   --muted-foreground: hsl(210, 6.6667%, 65%);
-  --accent: hsl(210, 6.6667%, 20%);
+  --accent: hsl(220, 25%, 18%);
   --accent-foreground: hsl(216, 87%, 65%);
   --destructive: hsl(356.3033, 90.5579%, 54.3137%);
   --destructive-foreground: hsl(0, 0%, 100%);
-  --border: hsl(210, 6.6667%, 20%);
-  --input: hsl(210, 6.6667%, 15%);
+  --border: hsl(220, 25%, 25%);
+  --input: hsl(220, 25%, 15%);
   --ring: hsl(216, 87%, 65%);
 }
 
@@ -168,6 +168,30 @@
   @keyframes float {
     0%, 100% { transform: translateY(0px) rotate(0deg); }
     50% { transform: translateY(-20px) rotate(5deg); }
+  }
+  
+  /* Paint Splash Animations */
+  .paint-splashes svg {
+    filter: blur(0.5px);
+  }
+  
+  @keyframes paintFloat {
+    0%, 100% { 
+      transform: translateY(0px) rotate(0deg) scale(1); 
+      opacity: var(--initial-opacity);
+    }
+    33% { 
+      transform: translateY(-15px) rotate(3deg) scale(1.05); 
+      opacity: calc(var(--initial-opacity) * 1.2);
+    }
+    66% { 
+      transform: translateY(-8px) rotate(-2deg) scale(0.98); 
+      opacity: calc(var(--initial-opacity) * 0.8);
+    }
+  }
+  
+  .paint-splashes svg {
+    animation: paintFloat 8s ease-in-out infinite;
   }
   
   /* Glowing Effect */

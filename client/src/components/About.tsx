@@ -19,8 +19,23 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-white via-slate-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="about" className="py-20 bg-gradient-to-br from-white via-slate-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden">
+      {/* Paint Splash Background */}
+      <div className="paint-splashes absolute inset-0">
+        <svg className="absolute top-20 right-10 w-64 h-64 opacity-10 dark:opacity-5 animate-float" 
+             style={{ animationDelay: '-1s' }} viewBox="0 0 200 200" fill="none">
+          <path d="M60,80 C80,75 100,85 110,105 C115,125 105,145 85,150 C65,155 45,145 40,125 C35,105 55,85 60,80 Z" 
+                fill="url(#aboutPaint1)"/>
+          <defs>
+            <linearGradient id="aboutPaint1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#F59E0B" />
+              <stop offset="100%" stopColor="#EF4444" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div ref={ref} className={`fade-in ${hasIntersected ? 'visible' : ''}`}>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
@@ -44,11 +59,11 @@ export default function About() {
                   return (
                     <div 
                       key={highlight.key}
-                      className={`flex items-center gap-3 px-6 py-3 ${highlight.bg} ${highlight.border} border rounded-2xl transition-all duration-300 hover:scale-105`}
+                      className={`flex items-center gap-3 px-6 py-3 ${highlight.bg} dark:bg-opacity-20 ${highlight.border} dark:border-opacity-30 border rounded-2xl transition-all duration-300 hover:scale-105`}
                       style={{ animationDelay: `${index * 0.2}s` }}
                     >
                       <IconComponent className={`w-5 h-5 ${highlight.color}`} />
-                      <span className={`font-semibold ${highlight.color}`}>
+                      <span className={`font-semibold ${highlight.color} dark:text-opacity-90`}>
                         {t(`about.badge.${highlight.key}`)}
                       </span>
                     </div>
