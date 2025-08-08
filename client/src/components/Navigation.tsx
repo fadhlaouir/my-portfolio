@@ -24,7 +24,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center py-5">
           <div className="text-2xl font-bold gradient-text">RF</div>
           
-          <div className="hidden md:flex items-center space-x-8">
+          <div className={`hidden md:flex items-center ${language === 'ar' ? 'space-x-reverse space-x-8' : 'space-x-8'}`}>
             <button onClick={() => scrollToSection('home')} className="nav-link">
               {t('nav.home')}
             </button>
@@ -51,7 +51,7 @@ export default function Navigation() {
             </button>
           </div>
           
-          <div className="flex items-center space-x-4">
+          <div className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
             {/* Language Switcher */}
             <div className="relative">
               <select
@@ -86,28 +86,28 @@ export default function Navigation() {
       {isMobileMenuOpen && (
         <div className="md:hidden nav-glass border-t border-sky-200/20">
           <div className="max-w-7xl mx-auto px-6 py-6 space-y-4">
-            <button onClick={() => scrollToSection('home')} className="block w-full text-left nav-link py-2">
+            <button onClick={() => scrollToSection('home')} className={`block w-full nav-link py-2 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
               {t('nav.home')}
             </button>
-            <button onClick={() => scrollToSection('about')} className="block w-full text-left nav-link py-2">
+            <button onClick={() => scrollToSection('about')} className={`block w-full nav-link py-2 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
               {t('nav.about')}
             </button>
-            <button onClick={() => scrollToSection('projects')} className="block w-full text-left nav-link py-2">
+            <button onClick={() => scrollToSection('projects')} className={`block w-full nav-link py-2 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
               {t('nav.projects')}
             </button>
-            <button onClick={() => scrollToSection('skills')} className="block w-full text-left nav-link py-2">
+            <button onClick={() => scrollToSection('skills')} className={`block w-full nav-link py-2 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
               {t('nav.skills')}
             </button>
-            <button onClick={() => scrollToSection('experience')} className="block w-full text-left nav-link py-2">
+            <button onClick={() => scrollToSection('experience')} className={`block w-full nav-link py-2 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
               {t('nav.experience')}
             </button>
-            <button onClick={() => scrollToSection('education')} className="block w-full text-left nav-link py-2">
+            <button onClick={() => scrollToSection('education')} className={`block w-full nav-link py-2 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
               {t('nav.education')}
             </button>
-            <button onClick={() => scrollToSection('volunteer')} className="block w-full text-left nav-link py-2">
+            <button onClick={() => scrollToSection('volunteer')} className={`block w-full nav-link py-2 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
               {t('nav.volunteer')}
             </button>
-            <button onClick={() => scrollToSection('contact')} className="block w-full text-left nav-link py-2">
+            <button onClick={() => scrollToSection('contact')} className={`block w-full nav-link py-2 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
               {t('nav.contact')}
             </button>
           </div>
