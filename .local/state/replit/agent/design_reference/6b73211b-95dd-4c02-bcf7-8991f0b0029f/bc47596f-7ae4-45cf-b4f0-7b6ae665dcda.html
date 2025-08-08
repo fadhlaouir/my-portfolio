@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raed Fadhlaoui - Software Engineer | Full-Stack Developer</title>
+    <meta name="description" content="Passionate software engineer based in Quebec, Canada. Full-stack developer specializing in JavaScript, TypeScript, Node.js, React, and C#.">
+    <meta name="keywords" content="Software Engineer, Full-Stack Developer, JavaScript, TypeScript, Node.js, React, MongoDB, Quebec, Canada">
+    <meta name="author" content="Raed Fadhlaoui">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Raed Fadhlaoui - Software Engineer">
+    <meta property="og:description" content="Passionate software engineer and full-stack developer">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://raedfadhlaoui.com">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Raed Fadhlaoui - Software Engineer">
+    <meta name="twitter:description" content="Passionate software engineer and full-stack developer">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Heroicons -->
+    <script src="https://unpkg.com/heroicons@2.0.16/24/outline/index.js" type="module"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        darkMode: 'class',
+        theme: {
+            extend: {
+                fontFamily: {
+                    'inter': ['Inter', 'sans-serif'],
+                },
+                colors: {
+                    primary: {
+                        50: '#eff6ff',
+                        100: '#dbeafe', 
+                        200: '#bfdbfe',
+                        300: '#93c5fd',
+                        400: '#60a5fa',
+                        500: '#3b82f6',
+                        600: '#2563eb',
+                        700: '#1d4ed8',
+                        800: '#1e40af',
+                        900: '#1e3a8a'
+                    },
+                    dark: {
+                        50: '#f8fafc',
+                        100: '#f1f5f9',
+                        200: '#e2e8f0',
+                        300: '#cbd5e1',
+                        400: '#94a3b8',
+                        500: '#64748b',
+                        600: '#475569',
+                        700: '#334155',
+                        800: '#1e293b',
+                        900: '#0f172a',
+                        950: '#0a0a0a'
+                    }
+                },
+                animation: {
+                    'fade-in': 'fadeIn 0.6s ease-out',
+                    'slide-up': 'slideUp 0.6s ease-out',
+                    'bounce-slow': 'bounce 3s infinite'
+                },
+                keyframes: {
+                    fadeIn: {
+                        '0%': { opacity: '0', transform: 'translateY(20px)' },
+                        '100%': { opacity: '1', transform: 'translateY(0)' }
+                    },
+                    slideUp: {
+                        '0%': { opacity: '0', transform: 'translateY(30px)' },
+                        '100%': { opacity: '1', transform: 'translateY(0)' }
+                    }
+                }
+            }
+        }
+    }
+    </script>
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+        }
+        
+        .tech-badge {
+            transition: all 0.2s ease;
+        }
+        
+        .tech-badge:hover {
+            transform: scale(1.05);
+        }
+        
+        /* RTL Support */
+        [dir="rtl"] .rtl-flip {
+            transform: scaleX(-1);
+        }
+        
+        /* Smooth animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Loading skeleton */
+        .skeleton {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
+</head>
+<body class="font-inter bg-white dark:bg-dark-950 text-gray-900 dark:text-white transition-colors duration-300">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-dark-950/80 backdrop-blur-md border-b border-gray-200 dark:border-dark-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-xl font-bold gradient-text">RF</div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link hover:text-primary-500 transition-colors" data-key="nav.home">Home</a>
+                    <a href="#about" class="nav-link hover:text-primary-500 transition-colors" data-key="nav.about">About</a>
+                    <a href="#projects" class="nav-link hover:text-primary-500 transition-colors" data-key="nav.projects">Projects</a>
+                    <a href="#skills" class="nav-link hover:text-primary-500 transition-colors" data-key="nav.skills">Skills</a>
+                    <a href="#experience" class="nav-link hover:text-primary-500 transition-colors" data-key="nav.experience">Experience</a>
+                    <a href="#contact" class="nav-link hover:text-primary-500 transition-colors" data-key="nav.contact">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <!-- Language Switcher -->
+                    <div class="relative">
+                        <select id="languageSwitch" class="bg-transparent border border-gray-300 dark:border-dark-700 rounded-lg px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500">
+                            <option value="en">EN</option>
+                            <option value="fr">FR</option>
+                            <option value="ar">العربية</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Theme Toggle -->
+                    <button id="themeToggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-800 transition-colors">
+                        <svg class="w-5 h-5 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                        <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                    </button>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobileMenuToggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-800 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-dark-950 border-b border-gray-200 dark:border-dark-800">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#home" class="block hover:text-primary-500 transition-colors" data-key="nav.home">Home</a>
+                <a href="#about" class="block hover:text-primary-500 transition-colors" data-key="nav.about">About</a>
+                <a href="#projects" class="block hover:text-primary-500 transition-colors" data-key="nav.projects">Projects</a>
+                <a href="#skills" class="block hover:text-primary-500 transition-colors" data-key="nav.skills">Skills</a>
+                <a href="#experience" class="block hover:text-primary-500 transition-colors" data-key="nav.experience">Experience</a>
+                <a href="#contact" class="block hover:text-primary-500 transition-colors" data-key="nav.contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-emerald-50 dark:from-dark-950 dark:to-dark-900 pt-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="fade-in">
+                <!-- Professional headshot placeholder -->
+                <div class="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-primary-400 to-emerald-400 flex items-center justify-center text-white text-4xl font-bold shadow-xl">
+                    RF
+                </div>
+                
+                <h1 class="text-4xl sm:text-6xl font-bold mb-6">
+                    <span data-key="hero.greeting">Hi, I'm</span> 
+                    <span class="gradient-text">Raed Fadhlaoui</span>
+                </h1>
+                
+                <p class="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                    <span data-key="hero.tagline">Software Engineer | Full-Stack Developer | Open Source Enthusiast</span>
+                </p>
+                
+                <p class="text-lg text-gray-500 dark:text-gray-400 mb-10 max-w-2xl mx-auto" data-key="hero.description">
+                    Passionate about building scalable web applications and contributing to open source projects. Based in Quebec, Canada.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#projects" class="inline-flex items-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200">
+                        <span data-key="hero.cta">View My Work</span>
+                        <svg class="w-5 h-5 ml-2 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                    
+                    <a href="#contact" class="inline-flex items-center px-8 py-4 border-2 border-primary-600 text-primary-600 dark:text-primary-400 dark:border-primary-400 font-semibold rounded-xl hover:bg-primary-600 hover:text-white transition-all duration-200">
+                        <span data-key="hero.contact">Get In Touch</span>
+                    </a>
+                </div>
+                
+                <!-- Scroll indicator -->
+                <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
+                    <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50 dark:bg-dark-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="fade-in">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16">
+                    <span data-key="about.title">About Me</span>
+                </h2>
+                
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                        <!-- Professional landscape photo showing developer at work -->
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                             alt="Professional headshot of Raed Fadhlaoui" 
+                             class="rounded-2xl shadow-2xl w-full h-auto object-cover"
+                             data-mock="true" />
+                    </div>
+                    
+                    <div class="order-1 lg:order-2">
+                        <p class="text-lg leading-relaxed mb-6 text-gray-600 dark:text-gray-300" data-key="about.bio">
+                            I'm a passionate software engineer based in Quebec, Canada, with experience in full-stack development, DevOps, and software architecture. I specialize in JavaScript, TypeScript, Node.js, MongoDB, React, and C#.
+                        </p>
+                        
+                        <p class="text-lg leading-relaxed mb-8 text-gray-600 dark:text-gray-300" data-key="about.bio2">
+                            I'm the creator of the open-source tool <code class="bg-gray-100 dark:bg-dark-800 px-2 py-1 rounded text-primary-600">create-express-node-starter</code> and currently working at Cofomo, where I build scalable solutions and contribute to innovative projects.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-3 mb-8">
+                            <span class="px-4 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-200 rounded-full text-sm font-medium">🎯 Problem Solver</span>
+                            <span class="px-4 py-2 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200 rounded-full text-sm font-medium">🌱 Open Source</span>
+                            <span class="px-4 py-2 bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 rounded-full text-sm font-medium">🚀 Innovation</span>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <a href="#" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium transition-colors">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.024-.105-.949-.199-2.403.041-3.439.219-.937 1.404-5.965 1.404-5.965s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.161-1.499-.696-2.436-2.888-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.357-.629-2.748-1.378 0 0-.599 2.282-.744 2.84-.282 1.084-1.064 2.456-1.549 3.235C9.584 23.815 10.77 24.001 12.017 24.001c6.624 0 11.99-5.367 11.99-11.987C24.007 5.367 18.641.001 12.017.001z"/>
+                                </svg>
+                                <span data-key="about.resume">Download Resume</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white dark:bg-dark-950">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="fade-in">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4">
+                    <span data-key="projects.title">Featured Projects</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 text-center mb-16 max-w-2xl mx-auto" data-key="projects.subtitle">
+                    Here are some of my recent projects that showcase my skills in full-stack development and open source contributions.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Project 1: create-express-node-starter -->
+                    <div class="card-hover bg-gray-50 dark:bg-dark-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl">
+                        <!-- Modern development workspace with code on screen -->
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                             alt="Express.js and Node.js development setup" 
+                             class="rounded-xl mb-6 w-full h-48 object-cover"
+                             data-mock="true" />
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">create-express-node-starter</h3>
+                            <div class="flex gap-2">
+                                <a href="#" class="text-gray-500 hover:text-primary-600 transition-colors">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-gray-500 hover:text-emerald-600 transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 mb-4" data-key="projects.project1.description">
+                            Express.js + MongoDB starter template for building REST APIs quickly. Includes authentication, validation, error handling, and best practices setup.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-200 rounded-full text-xs font-medium">JavaScript</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 rounded-full text-xs font-medium">Node.js</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 rounded-full text-xs font-medium">Express.js</span>
+                            <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200 rounded-full text-xs font-medium">MongoDB</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
+                            <div class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <span>2.1k stars</span>
+                            </div>
+                            <span>Open Source</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2: RemoteHorizon -->
+                    <div class="card-hover bg-gray-50 dark:bg-dark-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl">
+                        <!-- Professional remote work setup with laptop and modern workspace -->
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                             alt="Modern remote work setup and job board interface" 
+                             class="rounded-xl mb-6 w-full h-48 object-cover"
+                             data-mock="true" />
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">RemoteHorizon</h3>
+                            <div class="flex gap-2">
+                                <a href="#" class="text-gray-500 hover:text-primary-600 transition-colors">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-gray-500 hover:text-emerald-600 transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 mb-4" data-key="projects.project2.description">
+                            Remote jobs board built with MERN stack. Features job posting, filtering, company profiles, and application tracking for remote opportunities.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full text-xs font-medium">React</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 rounded-full text-xs font-medium">Node.js</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 rounded-full text-xs font-medium">Express.js</span>
+                            <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200 rounded-full text-xs font-medium">MongoDB</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
+                            <div class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <span>876 stars</span>
+                            </div>
+                            <span>Live Demo</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3: AdSwift -->
+                    <div class="card-hover bg-gray-50 dark:bg-dark-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl">
+                        <!-- E-commerce marketplace interface showing various product listings -->
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                             alt="Modern e-commerce marketplace interface with product listings" 
+                             class="rounded-xl mb-6 w-full h-48 object-cover"
+                             data-mock="true" />
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">AdSwift</h3>
+                            <div class="flex gap-2">
+                                <a href="#" class="text-gray-500 hover:text-primary-600 transition-colors">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-gray-500 hover:text-emerald-600 transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 mb-4" data-key="projects.project3.description">
+                            Classified ads web app inspired by Tayara and Leboncoin. Features user authentication, ad posting, search & filters, and secure messaging system.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full text-xs font-medium">React</span>
+                            <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-200 rounded-full text-xs font-medium">TypeScript</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 rounded-full text-xs font-medium">Node.js</span>
+                            <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200 rounded-full text-xs font-medium">MongoDB</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
+                            <div class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <span>1.3k stars</span>
+                            </div>
+                            <span>Live Demo</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 4: FlashSolve -->
+                    <div class="card-hover bg-gray-50 dark:bg-dark-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl">
+                        <!-- AI development tools and coding assistance interface -->
+                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                             alt="AI-powered coding assistant interface with modern development tools" 
+                             class="rounded-xl mb-6 w-full h-48 object-cover"
+                             data-mock="true" />
+                        
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">FlashSolve</h3>
+                            <div class="flex gap-2">
+                                <a href="#" class="text-gray-500 hover:text-primary-600 transition-colors">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-gray-500 hover:text-emerald-600 transition-colors">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-600 dark:text-gray-300 mb-4" data-key="projects.project4.description">
+                            AI-powered coding assistant for solving problems faster. Integrates with popular IDEs and provides intelligent code suggestions, debugging help, and optimization tips.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-200 rounded-full text-xs font-medium">TypeScript</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full text-xs font-medium">React</span>
+                            <span class="px-3 py-1 bg-pink-100 dark:bg-pink-900/30 text-pink-800 dark:text-pink-200 rounded-full text-xs font-medium">AI/ML</span>
+                            <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200 rounded-full text-xs font-medium">Python</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
+                            <div class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                <span>3.2k stars</span>
+                            </div>
+                            <span>Beta Release</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <a href="#" class="inline-flex items-center px-6 py-3 border-2 border-primary-600 text-primary-600 dark:text-primary-400 dark:border-primary-400 font-semibold rounded-xl hover:bg-primary-600 hover:text-white transition-all duration-200">
+                        <span data-key="projects.viewAll">View All Projects</span>
+                        <svg class="w-5 h-5 ml-2 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50 dark:bg-dark-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="fade-in">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4">
+                    <span data-key="skills.title">Skills & Technologies</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 text-center mb-16 max-w-2xl mx-auto" data-key="skills.subtitle">
+                    Technologies and tools I use to bring ideas to life, from frontend interfaces to robust backend systems.
+                </p>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Languages -->
+                    <div class="bg-white dark:bg-dark-950 rounded-2xl p-6 shadow-lg">
+                        <h3 class="text-lg font-semibold mb-4 text-primary-600 dark:text-primary-400" data-key="skills.languages">Languages</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 tech-badge p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-dark-800">
+                                <div class="w-8 h-8 bg-yellow-100 dark:bg-yellow-900/30 rounded flex items-center justify-center">
+                                    <span class="text-yellow-600 font-bold text-xs">JS</span>
+                                </div>
+                                <span class="font-medium">JavaScript</span>
+                            </div>
+                            <div class="flex items-center gap-3 tech-badge p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-dark-800">
+                                <div class="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded flex items-center justify-center">
+                                    <span class="text-blue-600 font-bold text-xs">TS</span>
+                                </div>
+                                <span class="font-medium">TypeScript</span>
+                            </div>
+                            <div class="flex items-center gap-3 tech-badge p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-dark-800">
+                                <div class="w-8 h-8 bg-purple-100 dark:bg-purple-900/30 rounded flex items-center justify-center">
+                                    <span class="text-purple-600 font-bold text-xs">C#</span>
+                                </div>
+                                <span class="font-medium">C#</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Backend -->
+                    <div class="bg-white dark:bg-dark-950 rounded-2xl p-6 shadow-lg">
+                        <h3 class="text-lg font-semibold mb-4 text-emerald-600 dark:text-emerald-400" data-key="skills.backend">Backend</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 tech-badge p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-dark-800">
+                                <div class="w-8 h-8 bg-green-100 dark:bg-green-900/30 rounded flex items-center justify-center">
+                                    <span class="text-green-600 font-bold text-xs">N</span>
+                                </div>
+                                <span class="font-medium">Node.js</span>
+                            </div>
+                            <div class="flex items-center gap-3 tech-badge p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-dark-800">
+                                <div class="w-8 h-8 bg-gray-100 dark:bg-gray-800 rounded flex items-center justify-center">
+                                    <span class="text-gray-600 dark:text-gray-300 font-bold text-xs">Ex</span>
+                                </div>
+                                <span class="font-medium">Express.js</span>
+                            </div>
+                            <div class="flex items-center gap-3 tech-badge p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-dark-800">
+                                <div class="w-8 h-8 bg-emerald-100 dark:bg-emerald-900/30 rounded flex items-center justify-center">
+                                    <span class="text-emerald-600 font-bold text-xs">M</span>
+                                </div>
+                                <span class="font-medium">MongoDB</span>
+                            </div>
+                            <div class="flex items-center gap-3 tech-badge p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-dark-800">
+                                <div class="w-8 h-8 bg-purple-100 dark:bg-purple-900/30 rounded flex items-center justify-center">
+                                    <span class="text-purple-600 font-bold text-xs">.N</span>
+                                </div>
+                                <span class="font-medium">.NET</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Frontend -->
+                    <div class="bg-white dark:bg-dark-950 rounded-2xl p-6 shadow-lg">
+                        <h3 class="text-lg font-semibold mb-4 text-blue-600 dark:text-blue-400" data-key="skills.frontend">Frontend</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 tech-badge p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-dark-800">
+                                <div class="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded flex items-center justify-center">
+                                    <span class="text-blue-600 font-bold text-xs">R</span>
+                                </div>
+                                <span class="font-medium">React</span>
+                            </div>
+                            <div class="flex items-center gap-3 tech-badge p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-dark-800">
+                                <div class="w-8 h-8 bg-cyan-100 dark:bg-cyan-900/30 rounded flex items-center justify-center">
+                                    <span class="text-cyan-600 font-bold text-xs">TW</span>
+                                </div>
+                                <span class="font-medium">Tailwind CSS</span>
+                            </div>
+                            <div class="flex items-center gap-3 tech-badge p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-dark-800">
+                                <div class="w-8 h-8 bg-purple-100 dark:bg-purple-900/30 rounded flex items-center justify-center">
+                                    <span class="text-purple-600 font-bold text-xs">BS</span>
+                                </div>
+                                <span class="font-medium">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- DevOps & Tools -->
+                    <div class="bg-white dark:bg-dark-950 rounded-2xl p-6 shadow-lg">
+                        <h3 class="text-lg font-semibold mb-4 text-orange-600 dark:text-orange-400" data-key="skills.devops">DevOps & Tools</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3 tech-badge p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-dark-800">
+                                <div class="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded flex items-center justify-center">
+                                    <span class="text-blue-600 font-bold text-xs">D</span>
+                                </div>
+                                <span class="font-medium">Docker</span>
+                            </div>
+                            <div class="flex items-center gap-3 tech-badge p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-dark-800">
+                                <div class="w-8 h-8 bg-gray-100 dark:bg-gray-800 rounded flex items-center justify-center">
+                                    <span class="text-gray-600 dark:text-gray-300 font-bold text-xs">Git</span>
+                                </div>
+                                <span class="font-medium">Git</span>
+                            </div>
+                            <div class="flex items-center gap-3 tech-badge p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-dark-800">
+                                <div class="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded flex items-center justify-center">
+                                    <span class="text-blue-600 font-bold text-xs">VS</span>
+                                </div>
+                                <span class="font-medium">VSCode</span>
+                            </div>
+                            <div class="flex items-center gap-3 tech-badge p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-dark-800">
+                                <div class="w-8 h-8 bg-orange-100 dark:bg-orange-900/30 rounded flex items-center justify-center">
+                                    <span class="text-orange-600 font-bold text-xs">PM</span>
+                                </div>
+                                <span class="font-medium">Postman</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white dark:bg-dark-950">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="fade-in">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4">
+                    <span data-key="experience.title">Professional Experience</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 text-center mb-16 max-w-2xl mx-auto" data-key="experience.subtitle">
+                    My journey through different roles and companies, building innovative solutions and growing as a developer.
+                </p>
+                
+                <div class="space-y-8">
+                    <!-- Cofomo -->
+                    <div class="bg-gray-50 dark:bg-dark-900 rounded-2xl p-8 shadow-lg">
+                        <div class="flex flex-col md:flex-row md:items-center gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center">
+                                    <span class="text-primary-600 dark:text-primary-400 font-bold text-xl">C</span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex-grow">
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">Software Engineer – Full Stack</h3>
+                                    <span class="text-sm text-primary-600 dark:text-primary-400 font-medium">2023 – Present</span>
+                                </div>
+                                <p class="text-lg text-gray-700 dark:text-gray-300 mb-3">Cofomo</p>
+                                <p class="text-gray-600 dark:text-gray-400 mb-4" data-key="experience.cofomo.description">
+                                    Leading full-stack development projects, building scalable web applications using modern technologies. Collaborating with cross-functional teams to deliver innovative solutions for enterprise clients.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full text-xs font-medium">React</span>
+                                    <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 rounded-full text-xs font-medium">Node.js</span>
+                                    <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 rounded-full text-xs font-medium">.NET</span>
+                                    <span class="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200 rounded-full text-xs font-medium">Azure</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Orange Tunisia -->
+                    <div class="bg-gray-50 dark:bg-dark-900 rounded-2xl p-8 shadow-lg">
+                        <div class="flex flex-col md:flex-row md:items-center gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-16 h-16 bg-orange-100 dark:bg-orange-900/30 rounded-xl flex items-center justify-center">
+                                    <span class="text-orange-600 dark:text-orange-400 font-bold text-xl">O</span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex-grow">
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">Backend Developer</h3>
+                                    <span class="text-sm text-orange-600 dark:text-orange-400 font-medium">2021 – 2023</span>
+                                </div>
+                                <p class="text-lg text-gray-700 dark:text-gray-300 mb-3">Orange Tunisia</p>
+                                <p class="text-gray-600 dark:text-gray-400 mb-4" data-key="experience.orange.description">
+                                    Developed and maintained RESTful APIs and microservices for telecom applications. Optimized database performance and implemented robust authentication systems for millions of users.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-200 rounded-full text-xs font-medium">JavaScript</span>
+                                    <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 rounded-full text-xs font-medium">Node.js</span>
+                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full text-xs font-medium">PostgreSQL</span>
+                                    <span class="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200 rounded-full text-xs font-medium">Redis</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- GoMyCode & RBK -->
+                    <div class="bg-gray-50 dark:bg-dark-900 rounded-2xl p-8 shadow-lg">
+                        <div class="flex flex-col md:flex-row md:items-center gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-16 h-16 bg-emerald-100 dark:bg-emerald-900/30 rounded-xl flex items-center justify-center">
+                                    <span class="text-emerald-600 dark:text-emerald-400 font-bold text-xl">T</span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex-grow">
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">Coding Instructor</h3>
+                                    <span class="text-sm text-emerald-600 dark:text-emerald-400 font-medium">2020 – 2021</span>
+                                </div>
+                                <p class="text-lg text-gray-700 dark:text-gray-300 mb-3">GoMyCode & RBK</p>
+                                <p class="text-gray-600 dark:text-gray-400 mb-4" data-key="experience.teaching.description">
+                                    Taught full-stack development bootcamps, mentored junior developers, and created curriculum for JavaScript, React, and Node.js. Helped 200+ students transition into tech careers.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-200 rounded-full text-xs font-medium">JavaScript</span>
+                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full text-xs font-medium">React</span>
+                                    <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 rounded-full text-xs font-medium">Node.js</span>
+                                    <span class="px-3 py-1 bg-pink-100 dark:bg-pink-900/30 text-pink-800 dark:text-pink-200 rounded-full text-xs font-medium">Mentoring</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-dark-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="fade-in">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4">
+                    <span data-key="contact.title">Get In Touch</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-300 text-center mb-16 max-w-2xl mx-auto" data-key="contact.subtitle">
+                    I'm always interested in hearing about new opportunities, innovative projects, or just having a chat about technology.
+                </p>
+                
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div class="bg-white dark:bg-dark-950 rounded-2xl p-8 shadow-lg">
+                        <h3 class="text-xl font-semibold mb-6" data-key="contact.form.title">Send Message</h3>
+                        
+                        <form class="space-y-6" data-mock="true">
+                            <!-- TODO: Implement form submission logic -->
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-key="contact.form.name">Name</label>
+                                <input type="text" id="name" name="name" required 
+                                       class="w-full px-4 py-3 border border-gray-300 dark:border-dark-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-800 text-gray-900 dark:text-white"
+                                       placeholder="Your Name">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-key="contact.form.email">Email</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full px-4 py-3 border border-gray-300 dark:border-dark-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-800 text-gray-900 dark:text-white"
+                                       placeholder="your@email.com">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" data-key="contact.form.message">Message</label>
+                                <textarea id="message" name="message" rows="5" required 
+                                          class="w-full px-4 py-3 border border-gray-300 dark:border-dark-700 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-800 text-gray-900 dark:text-white resize-none"
+                                          placeholder="Tell me about your project or just say hello!"></textarea>
+                            </div>
+                            
+                            <button type="submit" 
+                                    class="w-full px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200">
+                                <span data-key="contact.form.send">Send Message</span>
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="space-y-8">
+                        <div class="bg-white dark:bg-dark-950 rounded-2xl p-8 shadow-lg">
+                            <h3 class="text-xl font-semibold mb-6" data-key="contact.info.title">Contact Information</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-lg flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Email</p>
+                                        <p class="text-gray-600 dark:text-gray-400" data-mock="true">raed.fadhlaoui@example.com</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium" data-key="contact.info.location">Location</p>
+                                        <p class="text-gray-600 dark:text-gray-400">Quebec, Canada</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Links -->
+                        <div class="bg-white dark:bg-dark-950 rounded-2xl p-8 shadow-lg">
+                            <h3 class="text-xl font-semibold mb-6" data-key="contact.social.title">Connect With Me</h3>
+                            
+                            <div class="flex gap-4">
+                                <a href="#" class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center hover:bg-blue-200 dark:hover:bg-blue-800/50 transition-colors">
+                                    <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                    </svg>
+                                </a>
+                                
+                                <a href="#" class="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                                    <svg class="w-6 h-6 text-gray-700 dark:text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                
+                                <a href="#" class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center hover:bg-blue-200 dark:hover:bg-blue-800/50 transition-colors">
+                                    <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="py-12 bg-white dark:bg-dark-950 border-t border-gray-200 dark:border-dark-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="text-2xl font-bold gradient-text mb-2">Raed Fadhlaoui</div>
+                    <p class="text-gray-600 dark:text-gray-400" data-key="footer.tagline">
+                        Building the future, one line of code at a time.
+                    </p>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="text-gray-600 dark:text-gray-400" data-key="footer.copyright">
+                        © 2024 Raed Fadhlaoui. All rights reserved.
+                    </p>
+                    <p class="text-sm text-gray-500 dark:text-gray-500 mt-1">
+                        <span data-key="footer.built">Built with</span> ❤️ <span data-key="footer.tech">using React & Tailwind CSS</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+    (() => {
+        // Language translations
+        const translations = {
+            en: {
+                // Navigation
+                'nav.home': 'Home',
+                'nav.about': 'About',
+                'nav.projects': 'Projects',
+                'nav.skills': 'Skills',
+                'nav.experience': 'Experience',
+                'nav.contact': 'Contact',
+                
+                // Hero Section
+                'hero.greeting': 'Hi, I\'m',
+                'hero.tagline': 'Software Engineer | Full-Stack Developer | Open Source Enthusiast',
+                'hero.description': 'Passionate about building scalable web applications and contributing to open source projects. Based in Quebec, Canada.',
+                'hero.cta': 'View My Work',
+                'hero.contact': 'Get In Touch',
+                
+                // About Section
+                'about.title': 'About Me',
+                'about.bio': 'I\'m a passionate software engineer based in Quebec, Canada, with experience in full-stack development, DevOps, and software architecture. I specialize in JavaScript, TypeScript, Node.js, MongoDB, React, and C#.',
+                'about.bio2': 'I\'m the creator of the open-source tool create-express-node-starter and currently working at Cofomo, where I build scalable solutions and contribute to innovative projects.',
+                'about.resume': 'Download Resume',
+                
+                // Projects Section
+                'projects.title': 'Featured Projects',
+                'projects.subtitle': 'Here are some of my recent projects that showcase my skills in full-stack development and open source contributions.',
+                'projects.project1.description': 'Express.js + MongoDB starter template for building REST APIs quickly. Includes authentication, validation, error handling, and best practices setup.',
+                'projects.project2.description': 'Remote jobs board built with MERN stack. Features job posting, filtering, company profiles, and application tracking for remote opportunities.',
+                'projects.project3.description': 'Classified ads web app inspired by Tayara and Leboncoin. Features user authentication, ad posting, search & filters, and secure messaging system.',
+                'projects.project4.description': 'AI-powered coding assistant for solving problems faster. Integrates with popular IDEs and provides intelligent code suggestions, debugging help, and optimization tips.',
+                'projects.viewAll': 'View All Projects',
+                
+                // Skills Section
+                'skills.title': 'Skills & Technologies',
+                'skills.subtitle': 'Technologies and tools I use to bring ideas to life, from frontend interfaces to robust backend systems.',
+                'skills.languages': 'Languages',
+                'skills.backend': 'Backend',
+                'skills.frontend': 'Frontend',
+                'skills.devops': 'DevOps & Tools',
+                
+                // Experience Section
+                'experience.title': 'Professional Experience',
+                'experience.subtitle': 'My journey through different roles and companies, building innovative solutions and growing as a developer.',
+                'experience.cofomo.description': 'Leading full-stack development projects, building scalable web applications using modern technologies. Collaborating with cross-functional teams to deliver innovative solutions for enterprise clients.',
+                'experience.orange.description': 'Developed and maintained RESTful APIs and microservices for telecom applications. Optimized database performance and implemented robust authentication systems for millions of users.',
+                'experience.teaching.description': 'Taught full-stack development bootcamps, mentored junior developers, and created curriculum for JavaScript, React, and Node.js. Helped 200+ students transition into tech careers.',
+                
+                // Contact Section
+                'contact.title': 'Get In Touch',
+                'contact.subtitle': 'I\'m always interested in hearing about new opportunities, innovative projects, or just having a chat about technology.',
+                'contact.form.title': 'Send Message',
+                'contact.form.name': 'Name',
+                'contact.form.email': 'Email',
+                'contact.form.message': 'Message',
+                'contact.form.send': 'Send Message',
+                'contact.info.title': 'Contact Information',
+                'contact.info.location': 'Location',
+                'contact.social.title': 'Connect With Me',
+                
+                // Footer
+                'footer.tagline': 'Building the future, one line of code at a time.',
+                'footer.copyright': '© 2024 Raed Fadhlaoui. All rights reserved.',
+                'footer.built': 'Built with',
+                'footer.tech': 'using React & Tailwind CSS'
+            },
+            
+            fr: {
+                // Navigation
+                'nav.home': 'Accueil',
+                'nav.about': 'À propos',
+                'nav.projects': 'Projets',
+                'nav.skills': 'Compétences',
+                'nav.experience': 'Expérience',
+                'nav.contact': 'Contact',
+                
+                // Hero Section
+                'hero.greeting': 'Salut, je suis',
+                'hero.tagline': 'Ingénieur Logiciel | Développeur Full-Stack | Passionné Open Source',
+                'hero.description': 'Passionné par la création d\'applications web évolutives et la contribution aux projets open source. Basé au Québec, Canada.',
+                'hero.cta': 'Voir Mon Travail',
+                'hero.contact': 'Me Contacter',
+                
+                // About Section
+                'about.title': 'À Propos de Moi',
+                'about.bio': 'Je suis un ingénieur logiciel passionné basé au Québec, Canada, avec de l\'expérience en développement full-stack, DevOps et architecture logicielle. Je me spécialise en JavaScript, TypeScript, Node.js, MongoDB, React et C#.',
+                'about.bio2': 'Je suis le créateur de l\'outil open source create-express-node-starter et je travaille actuellement chez Cofomo, où je construis des solutions évolutives et contribue à des projets innovants.',
+                'about.resume': 'Télécharger CV',
+                
+                // Projects Section
+                'projects.title': 'Projets Phares',
+                'projects.subtitle': 'Voici quelques-uns de mes projets récents qui démontrent mes compétences en développement full-stack et contributions open source.',
+                'projects.project1.description': 'Template de démarrage Express.js + MongoDB pour créer rapidement des APIs REST. Inclut authentification, validation, gestion d\'erreurs et configuration des bonnes pratiques.',
+                'projects.project2.description': 'Plateforme d\'emplois à distance construite avec la stack MERN. Fonctionnalités de publication d\'offres, filtrage, profils d\'entreprise et suivi des candidatures.',
+                'projects.project3.description': 'Application web de petites annonces inspirée de Tayara et Leboncoin. Authentification utilisateur, publication d\'annonces, recherche et filtres, système de messagerie sécurisé.',
+                'projects.project4.description': 'Assistant de codage alimenté par IA pour résoudre les problèmes plus rapidement. S\'intègre avec les IDEs populaires et fournit des suggestions de code intelligentes.',
+                'projects.viewAll': 'Voir Tous les Projets',
+                
+                // Skills Section
+                'skills.title': 'Compétences & Technologies',
+                'skills.subtitle': 'Technologies et outils que j\'utilise pour donner vie aux idées, des interfaces frontend aux systèmes backend robustes.',
+                'skills.languages': 'Langages',
+                'skills.backend': 'Backend',
+                'skills.frontend': 'Frontend',
+                'skills.devops': 'DevOps & Outils',
+                
+                // Experience Section
+                'experience.title': 'Expérience Professionnelle',
+                'experience.subtitle': 'Mon parcours à travers différents rôles et entreprises, construisant des solutions innovantes et évoluant en tant que développeur.',
+                'experience.cofomo.description': 'Direction de projets de développement full-stack, création d\'applications web évolutives utilisant des technologies modernes. Collaboration avec des équipes pluridisciplinaires.',
+                'experience.orange.description': 'Développement et maintenance d\'APIs RESTful et microservices pour applications télécoms. Optimisation des performances de base de données pour des millions d\'utilisateurs.',
+                'experience.teaching.description': 'Enseignement de bootcamps de développement full-stack, mentorat de développeurs juniors. Aide de 200+ étudiants dans leur transition vers des carrières tech.',
+                
+                // Contact Section
+                'contact.title': 'Me Contacter',
+                'contact.subtitle': 'Je suis toujours intéressé d\'entendre parler de nouvelles opportunités, projets innovants, ou simplement discuter de technologie.',
+                'contact.form.title': 'Envoyer Message',
+                'contact.form.name': 'Nom',
+                'contact.form.email': 'Email',
+                'contact.form.message': 'Message',
+                'contact.form.send': 'Envoyer Message',
+                'contact.info.title': 'Informations Contact',
+                'contact.info.location': 'Localisation',
+                'contact.social.title': 'Me Suivre',
+                
+                // Footer
+                'footer.tagline': 'Construire l\'avenir, une ligne de code à la fois.',
+                'footer.copyright': '© 2024 Raed Fadhlaoui. Tous droits réservés.',
+                'footer.built': 'Créé avec',
+                'footer.tech': 'utilisant React & Tailwind CSS'
+            },
+            
+            ar: {
+                // Navigation
+                'nav.home': 'الرئيسية',
+                'nav.about': 'من أنا',
+                'nav.projects': 'المشاريع',
+                'nav.skills': 'المهارات',
+                'nav.experience': 'الخبرة',
+                'nav.contact': 'التواصل',
+                
+                // Hero Section
+                'hero.greeting': 'مرحباً، أنا',
+                'hero.tagline': 'مهندس برمجيات | مطور Full-Stack | محب للمصادر المفتوحة',
+                'hero.description': 'شغوف ببناء تطبيقات الويب القابلة للتوسع والمساهمة في مشاريع المصدر المفتوح. مقيم في كيبيك، كندا.',
+                'hero.cta': 'اطلع على أعمالي',
+                'hero.contact': 'تواصل معي',
+                
+                // About Section
+                'about.title': 'من أنا',
+                'about.bio': 'أنا مهندس برمجيات شغوف مقيم في كيبيك، كندا، لدي خبرة في تطوير Full-Stack وDevOps وهندسة البرمجيات. أتخصص في JavaScript وTypeScript وNode.js وMongoDB وReact وC#.',
+                'about.bio2': 'أنا مؤسس أداة المصدر المفتوح create-express-node-starter وأعمل حالياً في Cofomo، حيث أبني حلول قابلة للتوسع وأساهم في مشاريع مبتكرة.',
+                'about.resume': 'تحميل السيرة الذاتية',
+                
+                // Projects Section
+                'projects.title': 'المشاريع المميزة',
+                'projects.subtitle': 'إليك بعض مشاريعي الحديثة التي تعرض مهاراتي في تطوير Full-Stack ومساهماتي في المصدر المفتوح.',
+                'projects.project1.description': 'قالب بدء Express.js + MongoDB لبناء APIs REST بسرعة. يتضمن المصادقة والتحقق ومعالجة الأخطاء وأفضل الممارسات.',
+                'projects.project2.description': 'لوحة وظائف العمل عن بُعد مبنية بـ MERN stack. تتضمن نشر الوظائف والتصفية وملفات الشركات وتتبع التقديمات.',
+                'projects.project3.description': 'تطبيق ويب للإعلانات المبوبة مستوحى من تيارة ولوبونكوان. يتضمن مصادقة المستخدمين ونشر الإعلانات والبحث والمراسلة الآمنة.',
+                'projects.project4.description': 'مساعد برمجة مدعوم بالذكاء الاصطناعي لحل المشاكل بشكل أسرع. يتكامل مع IDEs الشائعة ويقدم اقتراحات كود ذكية.',
+                'projects.viewAll': 'عرض جميع المشاريع',
+                
+                // Skills Section
+                'skills.title': 'المهارات والتقنيات',
+                'skills.subtitle': 'التقنيات والأدوات التي أستخدمها لتحويل الأفكار إلى واقع، من واجهات المستخدم إلى أنظمة الخادم القوية.',
+                'skills.languages': 'لغات البرمجة',
+                'skills.backend': 'الخادم',
+                'skills.frontend': 'واجهة المستخدم',
+                'skills.devops': 'DevOps والأدوات',
+                
+                // Experience Section
+                'experience.title': 'الخبرة المهنية',
+                'experience.subtitle': 'رحلتي عبر أدوار وشركات مختلفة، بناء حلول مبتكرة والنمو كمطور.',
+                'experience.cofomo.description': 'قيادة مشاريع تطوير full-stack، بناء تطبيقات ويب قابلة للتوسع باستخدام تقنيات حديثة. التعاون مع فرق متعددة التخصصات لتقديم حلول مبتكرة.',
+                'experience.orange.description': 'تطوير وصيانة APIs RESTful وmicroservices لتطبيقات الاتصالات. تحسين أداء قواعد البيانات وتطبيق أنظمة مصادقة قوية لملايين المستخدمين.',
+                'experience.teaching.description': 'تدريس bootcamps تطوير full-stack، إرشاد المطورين المبتدئين، وإنشاء مناهج JavaScript وReact وNode.js. ساعدت أكثر من 200 طالب في الانتقال إلى مهن التكنولوجيا.',
+                
+                // Contact Section
+                'contact.title': 'تواصل معي',
+                'contact.subtitle': 'أنا دائماً مهتم بسماع الفرص الجديدة والمشاريع المبتكرة أو مجرد الدردشة حول التكنولوجيا.',
+                'contact.form.title': 'إرسال رسالة',
+                'contact.form.name': 'الاسم',
+                'contact.form.email': 'البريد الإلكتروني',
+                'contact.form.message': 'الرسالة',
+                'contact.form.send': 'إرسال الرسالة',
+                'contact.info.title': 'معلومات التواصل',
+                'contact.info.location': 'الموقع',
+                'contact.social.title': 'تواصل معي',
+                
+                // Footer
+                'footer.tagline': 'بناء المستقبل، سطر كود في المرة.',
+                'footer.copyright': '© 2024 رائد فضل الله. جميع الحقوق محفوظة.',
+                'footer.built': 'تم البناء بـ',
+                'footer.tech': 'باستخدام React و Tailwind CSS'
+            }
+        };
+
+        // Theme management
+        let currentTheme = localStorage.getItem('theme') || 'dark';
+        let currentLanguage = localStorage.getItem('language') || 'en';
+
+        function updateTheme() {
+            if (currentTheme === 'dark') {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        }
+
+        function updateLanguage() {
+            const isRTL = currentLanguage === 'ar';
+            document.documentElement.setAttribute('lang', currentLanguage);
+            document.documentElement.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
+
+            // Update all translatable elements
+            document.querySelectorAll('[data-key]').forEach(element => {
+                const key = element.getAttribute('data-key');
+                if (translations[currentLanguage] && translations[currentLanguage][key]) {
+                    element.textContent = translations[currentLanguage][key];
+                }
+            });
+
+            // Update placeholders
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const messageTextarea = document.getElementById('message');
+            
+            if (currentLanguage === 'ar') {
+                if (nameInput) nameInput.placeholder = 'اسمك';
+                if (emailInput) emailInput.placeholder = 'بريدك@الإلكتروني.com';
+                if (messageTextarea) messageTextarea.placeholder = 'أخبرني عن مشروعك أو فقط قل مرحباً!';
+            } else if (currentLanguage === 'fr') {
+                if (nameInput) nameInput.placeholder = 'Votre Nom';
+                if (emailInput) emailInput.placeholder = 'votre@email.com';
+                if (messageTextarea) messageTextarea.placeholder = 'Parlez-moi de votre projet ou dites juste bonjour!';
+            } else {
+                if (nameInput) nameInput.placeholder = 'Your Name';
+                if (emailInput) emailInput.placeholder = 'your@email.com';
+                if (messageTextarea) messageTextarea.placeholder = 'Tell me about your project or just say hello!';
+            }
+        }
+
+        // Initialize
+        updateTheme();
+        updateLanguage();
+
+        // Theme toggle
+        document.getElementById('themeToggle')?.addEventListener('click', () => {
+            currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', currentTheme);
+            updateTheme();
+        });
+
+        // Language switch
+        const languageSwitch = document.getElementById('languageSwitch');
+        if (languageSwitch) {
+            languageSwitch.value = currentLanguage;
+            languageSwitch.addEventListener('change', (e) => {
+                currentLanguage = e.target.value;
+                localStorage.setItem('language', currentLanguage);
+                updateLanguage();
+            });
+        }
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuToggle?.addEventListener('click', () => {
+            mobileMenu?.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu?.classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80; // Account for fixed navbar
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form submission (mock)
+        const contactForm = document.querySelector('form[data-mock="true"]');
+        contactForm?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // TODO: Implement actual form submission logic
+            alert(translations[currentLanguage]['contact.form.send'] + ' - ' + 'This is a demo!');
+        });
+
+        // Add loading states for images
+        document.querySelectorAll('img[data-mock="true"]').forEach(img => {
+            img.addEventListener('load', function() {
+                this.classList.remove('skeleton');
+            });
+            
+            if (!img.complete) {
+                img.classList.add('skeleton');
+            }
+        });
+
+        // Dynamic year in footer
+        const currentYear = new Date().getFullYear();
+        document.querySelectorAll('[data-key="footer.copyright"]').forEach(el => {
+            el.textContent = el.textContent.replace('2024', currentYear.toString());
+        });
+    })();
+    </script>
+</body>
+</html>
