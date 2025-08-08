@@ -1,10 +1,8 @@
 import { useState } from 'react';
-import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
-import { Moon, Sun, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export default function Navigation() {
-  const { theme, toggleTheme } = useTheme();
   const { language, setLanguage, t } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -56,30 +54,20 @@ export default function Navigation() {
               <select
                 value={language}
                 onChange={(e) => setLanguage(e.target.value as any)}
-                className="bg-white/50 dark:bg-black/50 border border-sky-200 dark:border-sky-800 rounded-xl px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 backdrop-blur-sm transition-all duration-300 text-gray-900 dark:text-white"
+                className="bg-white/50 border border-sky-200 rounded-xl px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 backdrop-blur-sm transition-all duration-300 text-gray-900"
               >
-                <option value="en" className="bg-white dark:bg-gray-800">EN</option>
-                <option value="fr" className="bg-white dark:bg-gray-800">FR</option>
-                <option value="ar" className="bg-white dark:bg-gray-800">العربية</option>
+                <option value="en" className="bg-white">EN</option>
+                <option value="fr" className="bg-white">FR</option>
+                <option value="ar" className="bg-white">العربية</option>
               </select>
             </div>
             
-            {/* Theme Toggle */}
-            <button
-              onClick={toggleTheme}
-              className="p-3 rounded-xl bg-white/50 dark:bg-black/50 hover:bg-sky-50 dark:hover:bg-sky-900/30 transition-all duration-300 backdrop-blur-sm border border-sky-200 dark:border-sky-800"
-            >
-              {theme === 'dark' ? (
-                <Sun className="w-5 h-5" />
-              ) : (
-                <Moon className="w-5 h-5" />
-              )}
-            </button>
+
             
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-3 rounded-xl bg-white/50 dark:bg-black/50 hover:bg-sky-50 dark:hover:bg-sky-900/30 transition-all duration-300 backdrop-blur-sm border border-sky-200 dark:border-sky-800"
+              className="md:hidden p-3 rounded-xl bg-white/50 hover:bg-sky-50 transition-all duration-300 backdrop-blur-sm border border-sky-200"
             >
               {isMobileMenuOpen ? (
                 <X className="w-5 h-5" />
@@ -93,7 +81,7 @@ export default function Navigation() {
       
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden nav-glass border-t border-sky-200/20 dark:border-sky-800/20">
+        <div className="md:hidden nav-glass border-t border-sky-200/20">
           <div className="max-w-7xl mx-auto px-6 py-6 space-y-4">
             <button onClick={() => scrollToSection('home')} className="block w-full text-left nav-link py-2">
               {t('nav.home')}

@@ -22,7 +22,7 @@ export default function Hero() {
     <section
       id="home"
       ref={ref}
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-sky-50 dark:from-gray-900 dark:via-gray-950 dark:to-sky-950 pt-20"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-sky-50 pt-20"
     >
       {/* Animated Background Elements */}
       <div className="floating-shapes">
@@ -45,22 +45,22 @@ export default function Hero() {
           
           {/* Large Typography */}
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
-            <span className="block text-gray-900 dark:text-white mb-4">{t('hero.greeting')}</span>
+            <span className="block text-gray-900 mb-4">{t('hero.greeting')}</span>
             <span className="gradient-text">Raed Fadhlaoui</span>
           </h1>
           
           {/* Professional Headline */}
-          <h2 className="text-2xl sm:text-3xl md:text-4xl text-gray-800 dark:text-gray-200 mb-8 leading-relaxed font-medium">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl text-gray-800 mb-8 leading-relaxed font-medium">
             {t('hero.headline')}
           </h2>
           
           {/* Premium Tagline */}
-          <p className="text-xl sm:text-2xl md:text-3xl text-gray-700 dark:text-gray-300 mb-8 max-w-4xl mx-auto font-medium leading-relaxed">
+          <p className="text-xl sm:text-2xl md:text-3xl text-gray-700 mb-8 max-w-4xl mx-auto font-medium leading-relaxed">
             {t('hero.tagline')}
           </p>
           
           {/* Descriptive Text */}
-          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-16 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-600 mb-16 max-w-3xl mx-auto leading-relaxed">
             {t('hero.description')}
           </p>
           

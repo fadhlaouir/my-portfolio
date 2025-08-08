@@ -6,39 +6,31 @@ export default function About() {
   const { ref, hasIntersected } = useIntersectionObserver();
 
   return (
-    <section id="about" className="py-20 bg-gray-50 dark:bg-dark-900">
+    <section id="about" className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={ref} className={`fade-in ${hasIntersected ? 'visible' : ''}`}>
           <h2 className="text-3xl sm:text-4xl font-bold text-center mb-16">
             {t('about.title')}
           </h2>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
-              <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
-                alt="Professional headshot of Raed Fadhlaoui"
-                className="rounded-2xl shadow-2xl w-full h-auto object-cover"
-              />
-            </div>
-            
-            <div className="order-1 lg:order-2">
-              <p className="text-lg leading-relaxed mb-6 text-gray-600 dark:text-gray-300">
+          <div className="max-w-4xl mx-auto">
+            <div>
+              <p className="text-lg leading-relaxed mb-6 text-gray-600">
                 {t('about.bio')}
               </p>
               
-              <p className="text-lg leading-relaxed mb-8 text-gray-600 dark:text-gray-300">
+              <p className="text-lg leading-relaxed mb-8 text-gray-600">
                 {t('about.bio2')}
               </p>
               
               <div className="flex flex-wrap gap-3 mb-8">
-                <span className="px-4 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-200 rounded-full text-sm font-medium">
+                <span className="px-4 py-2 bg-sky-100 text-sky-800 rounded-full text-sm font-medium">
                   🎯 Problem Solver
                 </span>
-                <span className="px-4 py-2 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200 rounded-full text-sm font-medium">
+                <span className="px-4 py-2 bg-emerald-100 text-emerald-800 rounded-full text-sm font-medium">
                   🌱 Open Source
                 </span>
-                <span className="px-4 py-2 bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 rounded-full text-sm font-medium">
+                <span className="px-4 py-2 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">
                   🚀 Innovation
                 </span>
               </div>

@@ -53,9 +53,9 @@ export default function Projects() {
   const { ref, hasIntersected } = useIntersectionObserver();
 
   return (
-    <section id="projects" className="py-24 bg-gray-50 dark:bg-gray-900 relative overflow-hidden">
+    <section id="projects" className="py-24 bg-gray-50 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-br from-sky-50 to-white dark:from-gray-900 dark:to-gray-950"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-sky-50 to-white"></div>
       
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div ref={ref} className={`fade-in ${hasIntersected ? 'visible' : ''}`}>
@@ -74,30 +74,31 @@ export default function Projects() {
                 key={project.id}
                 className="glass project-card rounded-3xl overflow-hidden group"
               >
-                <div className="h-64 bg-gradient-to-br from-sky-100 to-sky-200 dark:from-sky-900 dark:to-sky-800 relative overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-24 h-24 bg-white dark:bg-gray-800 rounded-2xl flex items-center justify-center shadow-xl">
-                      <span className="text-3xl font-bold text-sky-600 dark:text-sky-400">
-                        {project.id === 'express-starter' ? '🚀' : 
-                         project.id === 'ai-chatbot' ? '🤖' : 
-                         project.id === 'ecommerce' ? '🛒' : '📱'}
-                      </span>
-                    </div>
-                  </div>
+                <div className="h-64 bg-gradient-to-br from-sky-100 to-sky-200 relative overflow-hidden">
+                  <img 
+                    src={`https://images.unsplash.com/photo-${
+                      project.id === 'express-starter' ? '1555066931-4365d14bdc57' : 
+                      project.id === 'ai-chatbot' ? '1677442136019-1595019bdbaa' : 
+                      project.id === 'ecommerce' ? '1556742049-0cfed4f6a45d' : '1551650975-87deedd944c3'
+                    }?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400`}
+                    alt={t(`projects.${project.id}.title`)}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 </div>
                 
                 <div className="p-8 lg:p-10">
                   <div className="flex items-center justify-between mb-6">
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
+                    <h3 className="text-2xl font-bold text-gray-900 group-hover:text-sky-600 transition-colors">
                       {t(`projects.${project.id}.title`)}
                     </h3>
-                    <div className="flex items-center gap-2 text-sky-600 dark:text-sky-400">
+                    <div className="flex items-center gap-2 text-sky-600">
                       <Star className="w-5 h-5 fill-current" />
                       <span className="font-semibold">{project.stars}</span>
                     </div>
                   </div>
                   
-                  <p className="text-gray-700 dark:text-gray-300 mb-8 text-lg leading-relaxed">
+                  <p className="text-gray-700 mb-8 text-lg leading-relaxed">
                     {t(`projects.${project.id}.description`)}
                   </p>
                   
@@ -105,7 +106,7 @@ export default function Projects() {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="tech-badge px-4 py-2 bg-sky-100 dark:bg-sky-900/30 text-sky-800 dark:text-sky-200 rounded-xl text-sm font-semibold"
+                        className="tech-badge px-4 py-2 bg-sky-100 text-sky-800 rounded-xl text-sm font-semibold"
                       >
                         {tech}
                       </span>
@@ -117,7 +118,7 @@ export default function Projects() {
                       href={project.github || "#"}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-3 px-6 py-3 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-200 rounded-xl transition-all duration-300 font-semibold"
+                      className="flex items-center gap-3 px-6 py-3 bg-gray-900 text-white hover:bg-gray-800 rounded-xl transition-all duration-300 font-semibold"
                     >
                       <Github className="w-5 h-5" />
                       <span>Code</span>
