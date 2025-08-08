@@ -13,6 +13,9 @@ export default function Footer() {
         <div className="text-center">
           {/* Logo and tagline */}
           <div className="mb-12">
+            <div className="flex justify-center mb-6">
+              <img src="/rf-logo.svg" alt="RF Logo" className="w-20 h-20" />
+            </div>
             <div className="text-4xl font-bold gradient-text mb-4">{t('name')}</div>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
               {t('footer.tagline')}

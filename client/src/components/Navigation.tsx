@@ -22,7 +22,9 @@ export default function Navigation() {
     <nav className="fixed top-0 w-full z-50 nav-glass transition-all duration-300">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center py-5">
-          <div className="text-2xl font-bold gradient-text">RF</div>
+          <div className="flex items-center">
+            <img src="/rf-logo.svg" alt="RF Logo" className="w-12 h-12" />
+          </div>
           
           <div className={`hidden md:flex items-center ${language === 'ar' ? 'space-x-reverse space-x-8' : 'space-x-8'}`}>
             <button onClick={() => scrollToSection('home')} className="nav-link">
