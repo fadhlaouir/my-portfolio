@@ -116,7 +116,9 @@ export default function ProjectsRedesigned() {
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src={project.image} 
-                  alt={t(`projects.project${project.id}.title`)}
+                  alt={project.id === 1 ? t('projects.express-starter.title') : 
+                       project.id === 2 ? t('projects.mobile-app.title') : 
+                       t('projects.ecommerce.title')}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 
@@ -143,17 +145,21 @@ export default function ProjectsRedesigned() {
 
                 {/* Title */}
                 <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
-                  {t(`projects.project${project.id}.title`)}
+                  {project.id === 1 ? t('projects.express-starter.title') : 
+                   project.id === 2 ? t('projects.mobile-app.title') : 
+                   t('projects.ecommerce.title')}
                 </h3>
 
                 {/* Description */}
                 <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-                  {t(`projects.project${project.id}.description`)}
+                  {project.id === 1 ? t('projects.express-starter.description') : 
+                   project.id === 2 ? t('projects.mobile-app.description') : 
+                   t('projects.ecommerce.description')}
                 </p>
 
                 {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {t(`projects.project${project.id}.tech`).split(', ').map((tech, idx) => (
+                  {['React', 'Node.js', 'MongoDB', 'TypeScript'].map((tech, idx) => (
                     <span 
                       key={idx}
                       className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-lg font-medium"

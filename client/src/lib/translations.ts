@@ -14,6 +14,7 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Hero Section
     'hero.greeting': 'Hi, I\'m',
+    'hero.availability': 'Available for new projects',
     'hero.headline': 'Turning ideas into high-performance code.',
     'hero.tagline': 'Full Stack Developer | DevOps | OSS Contributor',
     'hero.description': 'With over 5 years of experience crafting robust, scalable web applications using modern technologies. Creator of create-express-node-starter with 9,000+ downloads.',
@@ -148,6 +149,7 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Hero Section
     'hero.greeting': 'Salut, je suis',
+    'hero.availability': 'Disponible pour nouveaux projets',
     'hero.headline': 'Transformer les idées en code haute performance.',
     'hero.tagline': 'Développeur Full Stack | DevOps | Contributeur OSS',
     'hero.description': 'Plus de 5 ans d\'expérience dans la création d\'applications web robustes et évolutives avec des technologies modernes. Créateur de create-express-node-starter avec plus de 9 000 téléchargements.',
@@ -282,6 +284,7 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Hero Section
     'hero.greeting': 'مرحباً، أنا',
+    'hero.availability': 'متاح لمشاريع جديدة',
     'hero.headline': 'تحويل الأفكار إلى كود عالي الأداء.',
     'hero.tagline': 'مطور Full Stack | DevOps | مساهم في المصادر المفتوحة',
     'hero.description': 'أكثر من 5 سنوات خبرة في بناء تطبيقات ويب قوية وقابلة للتوسع بتقنيات حديثة. مؤسس create-express-node-starter مع أكثر من 9000 تحميل.',

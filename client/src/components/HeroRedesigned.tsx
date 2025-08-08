@@ -59,7 +59,7 @@ export default function HeroRedesigned() {
           {/* Floating Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 mb-8 hover:bg-white/20 transition-all duration-300">
             <Sparkles className="w-4 h-4 text-cyan-400" />
-            <span className="text-sm font-medium text-white">Available for new projects</span>
+            <span className="text-sm font-medium text-white">{t('hero.availability')}</span>
             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
           </div>
 
