@@ -390,7 +390,7 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Footer
     'footer.tagline': 'بناء المستقبل، سطر كود في المرة.',
-    'footer.copyright': '© 2025 رائد فضل الله. جميع الحقوق محفوظة.',
+    'footer.copyright': '© 2025 رائد فضلاوي. جميع الحقوق محفوظة.',
     'footer.built': 'تم البناء بـ ❤️ باستخدام React وTypeScript وTailwind CSS'
   }
 };
