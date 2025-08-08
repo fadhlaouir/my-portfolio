@@ -29,6 +29,20 @@ const experiences = [
     iconBg: 'bg-emerald-100',
     iconColor: 'text-emerald-600',
     technologies: ['Mentoring', 'Curriculum Design', 'JavaScript', 'React', 'Node.js', 'Teaching']
+  },
+  {
+    id: 'gomycode',
+    icon: 'G',
+    iconBg: 'bg-blue-100',
+    iconColor: 'text-blue-600',
+    technologies: ['Full Stack Development', 'UI/UX', 'Code Review', 'Accessibility', 'Documentation']
+  },
+  {
+    id: 'gomycode-intern',
+    icon: 'GI',
+    iconBg: 'bg-indigo-100',
+    iconColor: 'text-indigo-600',
+    technologies: ['JavaScript', 'React', 'Node.js', 'Prototyping', 'Team Collaboration']
   }
 ];
 
@@ -51,7 +65,14 @@ const technologyColors: Record<string, string> = {
   MongoDB: 'bg-green-100 text-green-800',
   Mentoring: 'bg-emerald-100 text-emerald-800',
   'Curriculum Design': 'bg-purple-100 text-purple-800',
-  Teaching: 'bg-blue-100 text-blue-800'
+  Teaching: 'bg-blue-100 text-blue-800',
+  'Full Stack Development': 'bg-blue-100 text-blue-800',
+  'UI/UX': 'bg-pink-100 text-pink-800',
+  'Code Review': 'bg-gray-100 text-gray-800',
+  'Accessibility': 'bg-green-100 text-green-800',
+  'Documentation': 'bg-indigo-100 text-indigo-800',
+  'Prototyping': 'bg-orange-100 text-orange-800',
+  'Team Collaboration': 'bg-cyan-100 text-cyan-800'
 };
 
 export default function Experience() {

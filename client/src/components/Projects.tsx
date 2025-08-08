@@ -5,7 +5,7 @@ import { Github, ExternalLink, Star, ArrowRight } from 'lucide-react';
 const projects = [
   {
     id: 'express-starter',
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bdc57?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
+    image: 'https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
     technologies: ['Node.js', 'Express', 'MongoDB', 'JWT', 'Swagger'],
     stars: '9k+',
     status: 'Open Source',
@@ -13,7 +13,7 @@ const projects = [
   },
   {
     id: 'ai-chatbot',
-    image: 'https://images.unsplash.com/photo-1677442136019-1595019bdbaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
+    image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
     technologies: ['React', 'TypeScript', 'OpenAI API', 'Node.js'],
     stars: '3.2k',
     status: 'Beta Release',
@@ -29,7 +29,7 @@ const projects = [
   },
   {
     id: 'mobile-app',
-    image: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
+    image: 'https://images.unsplash.com/photo-1677756119517-756a188d2d94?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
     technologies: ['React', 'Node.js', 'MongoDB', 'Tailwind'],
     stars: '876',
     status: 'Live Demo',
