@@ -64,7 +64,7 @@ export default function Projects() {
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative pb-16"
               >
                 <div className="aspect-video rounded-lg overflow-hidden mb-6">
                   <img 
@@ -106,7 +106,7 @@ export default function Projects() {
                     )}
                   </div>
                   
-                  <div className={`flex gap-2 mt-4 ${project.id === 'express-starter' || project.id === 'ai-chatbot' ? 'flex-nowrap overflow-x-auto' : 'flex-wrap'}`}>
+                  <div className={`absolute bottom-6 left-6 right-6 flex gap-2 ${project.id === 'express-starter' || project.id === 'ai-chatbot' ? 'flex-nowrap overflow-x-auto' : 'flex-wrap'}`}>
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
