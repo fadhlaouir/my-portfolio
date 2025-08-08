@@ -50,88 +50,110 @@ export default function Projects() {
   const { ref, hasIntersected } = useIntersectionObserver();
 
   return (
-    <section id="projects" className="py-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div ref={ref} className={`fade-in ${hasIntersected ? 'visible' : ''}`}>
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
-            {t('projects.title')}
-          </h2>
-          <p className="text-gray-600 text-center mb-16 max-w-2xl mx-auto">
-            {t('projects.subtitle')}
-          </p>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              {t('projects.title')}
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              {t('projects.subtitle')}
+            </p>
+          </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {projects.map((project) => (
+          <div className="grid md:grid-cols-2 gap-10 stagger-animation">
+            {projects.map((project, index) => (
               <div
                 key={project.id}
-                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative pb-16"
+                className="premium-card p-8 group hover:scale-105 transition-all duration-500 relative overflow-hidden"
+                style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="aspect-video rounded-lg overflow-hidden mb-6">
+                {/* Project Image with Overlay Effect */}
+                <div className="aspect-video rounded-xl overflow-hidden mb-6 relative group">
                   <img 
                     src={project.image} 
                     alt={t(`projects.${project.id}.title`)}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 
-                <div className="space-y-4">
+                <div className="space-y-6">
+                  {/* Stats Badge */}
                   {project.downloads && (
-                    <div className="flex items-center gap-2">
-                      <Download className="w-4 h-4 text-emerald-600" />
-                      <span className="text-sm font-medium text-emerald-600">
+                    <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 px-4 py-2 rounded-full border border-emerald-200">
+                      <Download className="w-4 h-4" />
+                      <span className="text-sm font-semibold">
                         {project.downloads} {t('projects.downloads')}
                       </span>
                     </div>
                   )}
                   
-                  <h3 className="text-xl font-bold text-gray-900">
+                  {/* Title */}
+                  <h3 className="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
                     {t(`projects.${project.id}.title`)}
                   </h3>
                   
-                  <p className="text-gray-600 leading-relaxed">
+                  {/* Description */}
+                  <p className="text-gray-600 leading-relaxed text-lg">
                     {t(`projects.${project.id}.description`)}
                   </p>
                   
-                  <div className="flex gap-3 pt-2">
+                  {/* Technology Stack */}
+                  <div className="space-y-3">
+                    <h4 className="text-sm font-semibold text-gray-800 uppercase tracking-wide">Technology Stack</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className={`px-3 py-1 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105 ${
+                            technologyColors[tech] || 'bg-gray-100 text-gray-800'
+                          }`}
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Action Buttons */}
+                  <div className="flex gap-3 pt-4">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-secondary px-6 py-3 inline-flex items-center gap-2"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      View Code
+                    </a>
                     {project.npm && (
                       <a
                         href={project.npm}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors text-sm font-medium"
+                        className="btn-primary px-6 py-3 inline-flex items-center gap-2"
                       >
-                        <ExternalLink className="w-4 h-4" />
-                        {t('projects.npm')}
+                        <Download className="w-4 h-4" />
+                        Install Package
                       </a>
                     )}
-                  </div>
-                  
-                  <div className={`absolute bottom-6 left-6 right-6 flex gap-2 ${project.id === 'express-starter' || project.id === 'ai-chatbot' ? 'flex-nowrap overflow-x-auto' : 'flex-wrap'}`}>
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className={`px-3 py-1 rounded-full text-sm font-medium flex-shrink-0 ${
-                          technologyColors[tech] || 'bg-gray-100 text-gray-800'
-                        }`}
-                      >
-                        {tech}
-                      </span>
-                    ))}
                   </div>
                 </div>
               </div>
             ))}
           </div>
           
-          <div className="text-center mt-12">
+          <div className="text-center mt-16">
             <a
               href="https://github.com/fadhlaouir"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors font-medium"
+              className="btn-primary px-8 py-4 text-lg inline-flex items-center gap-3"
             >
               {t('projects.viewAll')}
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-5 h-5" />
             </a>
           </div>
         </div>

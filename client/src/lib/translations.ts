@@ -30,6 +30,9 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.badge.opensource': '🌱 Open Source',
     'about.badge.innovation': '🚀 Innovation',
     'about.resume': 'Download Resume',
+    'about.stats.years.experience': 'Years of Experience',
+    'about.stats.projects.completed': 'Projects Completed',
+    'about.stats.npm.downloads': 'NPM Downloads',
     
     // Projects Section
     'projects.title': 'Featured Projects',

@@ -9,10 +9,12 @@ import Volunteer from '../components/Volunteer';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import BackgroundAnimation from '../components/BackgroundAnimation';
+import ScrollIndicator from '../components/ScrollIndicator';
 
 export default function Portfolio() {
   return (
     <div className="min-h-screen relative">
+      <ScrollIndicator />
       <BackgroundAnimation />
       <div className="relative z-10">
         <Navigation />
