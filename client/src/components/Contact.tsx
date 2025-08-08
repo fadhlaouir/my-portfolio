@@ -30,57 +30,56 @@ export default function Contact() {
               <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                 <MapPin className="w-6 h-6 mr-3 text-blue-600" />
                 {t('contact.info.title')}
-                </h3>
+              </h3>
                 
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">{t('contact.info.location')}</h4>
-                      <p className="text-gray-600">{t('contact.location.city')}</p>
-                      <p className="text-sm text-gray-500 mt-1">{t('contact.location.description')}</p>
-                    </div>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-blue-600" />
                   </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">{t('contact.email')}</h4>
-                      <a 
-                        href="mailto:raed.fadhlaoui@gmail.com" 
-                        className="text-blue-600 hover:text-blue-700 transition-colors"
-                      >
-                        raed.fadhlaoui@gmail.com
-                      </a>
-                    </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">{t('contact.info.location')}</h4>
+                    <p className="text-gray-600">{t('contact.location.city')}</p>
+                    <p className="text-sm text-gray-500 mt-1">{t('contact.location.description')}</p>
                   </div>
                 </div>
 
-                {/* Social Links */}
-                <div className="mt-8 pt-8 border-t border-gray-200">
-                  <h4 className="font-semibold text-gray-900 mb-4">{t('contact.social.title')}</h4>
-                  <div className="flex space-x-4">
-                    <a
-                      href="https://www.linkedin.com/in/raed-fadhlaoui/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center hover:bg-blue-200 transition-colors"
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-1">{t('contact.email')}</h4>
+                    <a 
+                      href="mailto:raed.fadhlaoui@gmail.com" 
+                      className="text-blue-600 hover:text-blue-700 transition-colors"
                     >
-                      <Linkedin className="w-6 h-6 text-blue-600" />
-                    </a>
-                    <a
-                      href="https://github.com/raedfadhlaoui"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-gray-200 transition-colors"
-                    >
-                      <Github className="w-6 h-6 text-gray-700" />
+                      raed.fadhlaoui@gmail.com
                     </a>
                   </div>
+                </div>
+              </div>
+
+              {/* Social Links */}
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <h4 className="font-semibold text-gray-900 mb-4">{t('contact.social.title')}</h4>
+                <div className="flex space-x-4">
+                  <a
+                    href="https://www.linkedin.com/in/raed-fadhlaoui/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center hover:bg-blue-200 transition-colors"
+                  >
+                    <Linkedin className="w-6 h-6 text-blue-600" />
+                  </a>
+                  <a
+                    href="https://github.com/raedfadhlaoui"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-gray-200 transition-colors"
+                  >
+                    <Github className="w-6 h-6 text-gray-700" />
+                  </a>
                 </div>
               </div>
             </div>
