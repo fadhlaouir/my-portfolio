@@ -10,7 +10,7 @@ export default function Contact() {
     <section
       id="contact"
       ref={ref}
-      className="py-20 bg-gradient-to-br from-gray-50 via-white to-sky-50"
+      className="min-h-screen py-20 bg-gradient-to-br from-gray-50 via-white to-sky-50 flex items-center"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className={`fade-in ${hasIntersected ? 'visible' : ''}`}>
