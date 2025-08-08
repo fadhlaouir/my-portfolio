@@ -4,81 +4,69 @@ import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 const education = [
   {
-    id: 'license',
-    degree: 'Bachelor\'s Degree in Computer Science',
-    school: 'Higher Institute of Technological Studies of Djerba',
-    period: '2017 - 2020',
-    icon: 'BSc',
+    id: 'engineering',
+    degree: 'National Engineering Diploma, Big Data and Business Intelligence',
+    school: 'International Private Polytechnic School of Tunis',
+    period: 'Sep 2019 - Jul 2022',
+    icon: 'ENG',
     iconBg: 'bg-sky-100',
     iconColor: 'text-sky-600',
-    note: 'Specialized in Software Engineering and Database Systems'
+    note: 'Recognized by MIFI as equivalent to a Bachelor\'s degree in Computer Science'
   },
   {
-    id: 'baccalaureate',
-    degree: 'Scientific Baccalaureate',
-    school: 'High School of Sciences',
-    period: '2016',
-    icon: 'HS',
+    id: 'bachelor',
+    degree: 'Bachelor\'s Degree, Computer Science Applied to Management',
+    school: 'Faculty of Economics and Management Sciences of Nabeul',
+    period: 'Sep 2016 - Jun 2019',
+    icon: 'BSc',
     iconBg: 'bg-emerald-100',
     iconColor: 'text-emerald-600',
-    note: 'Mathematics and Computer Science Track - Honors'
+    note: 'Recognized by MIFI as equivalent to a Bachelor\'s degree in Computer Science'
   }
 ];
 
 const certifications = [
   {
+    title: 'Foundations of Project Management',
+    year: '2024',
+    issuer: 'Google',
+    type: 'Project Management',
+    platform: 'Coursera'
+  },
+  {
+    title: 'Scrum Fundamentals Certified (SFC)',
+    year: '2023',
+    issuer: 'SCRUMstudy',
+    type: 'Agile Methodology',
+    platform: 'SCRUMstudy Link'
+  },
+  {
+    title: 'MTA: Database Fundamentals',
+    year: '2021',
+    issuer: 'Microsoft',
+    type: 'Database',
+    platform: 'Credly Link'
+  },
+  {
+    title: 'MTA: Networking Fundamentals',
+    year: '2019',
+    issuer: 'Microsoft',
+    type: 'Networking',
+    platform: 'Credly Link'
+  },
+  {
+    title: 'MTA: Windows Operating System Fundamentals',
+    year: '2019',
+    issuer: 'Microsoft',
+    type: 'Operating Systems',
+    platform: 'Credly Link'
+  },
+  {
     title: 'Full Stack JavaScript Development',
     year: '2021',
     issuer: 'ReBootKamp Tunisia',
-    type: 'Bootcamp'
-  },
-  {
-    title: 'Azure Fundamentals (AZ-900)',
-    year: '2023',
-    issuer: 'Microsoft',
-    type: 'Cloud Computing'
-  },
-  {
-    title: 'React Development Professional',
-    year: '2022',
-    issuer: 'Meta',
-    type: 'Frontend Development'
-  },
-  {
-    title: 'Node.js Application Development',
-    year: '2021',
-    issuer: 'Node.js Foundation',
-    type: 'Backend Development'
-  },
-  {
-    title: 'MongoDB Developer Certification',
-    year: '2022',
-    issuer: 'MongoDB University',
-    type: 'Database'
-  },
-  {
-    title: 'Git Version Control System',
-    year: '2020',
-    issuer: 'Atlassian',
-    type: 'Development Tools'
-  },
-  {
-    title: 'Agile Project Management',
-    year: '2023',
-    issuer: 'Scrum Alliance',
-    type: 'Project Management'
-  },
-  {
-    title: 'MTA Networking Fundamentals',
-    year: '2019',
-    issuer: 'Microsoft',
-    type: 'Networking'
-  },
-  {
-    title: 'MTA Windows OS Fundamentals',
-    year: '2019',
-    issuer: 'Microsoft',
-    type: 'Operating Systems'
+    type: 'Bootcamp',
+    platform: 'Certificate'
   }
 ];
 
@@ -167,9 +155,16 @@ export default function Education() {
                     </div>
                     
                     <div className="flex justify-between items-center">
-                      <p className="text-gray-700 font-medium">
-                        {cert.issuer}
-                      </p>
+                      <div>
+                        <p className="text-gray-700 font-medium">
+                          {cert.issuer}
+                        </p>
+                        {cert.platform && (
+                          <p className="text-xs text-gray-500 mt-1">
+                            via {cert.platform}
+                          </p>
+                        )}
+                      </div>
                       <span className="text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full">
                         {cert.type}
                       </span>

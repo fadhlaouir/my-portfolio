@@ -1,6 +1,15 @@
 # Overview
 
-This is a professional personal portfolio website for Raed Fadhlaoui, a Full Stack Developer (.NET/JS) and OSS Contributor. The application is built as a modern, responsive single-page application showcasing personal projects, skills, experience, education, certifications, and providing a contact form. The portfolio features a sleek dark theme design with smooth animations and multi-language support (English, French, Arabic) with RTL support for Arabic.
+This is a professional personal portfolio website for Raed Fadhlaoui, a Full Stack Developer (.NET/JS) and OSS Contributor. The application is built as a modern, responsive single-page application showcasing personal projects, skills, experience, education, certifications, volunteer experience, testimonials, and providing a contact form. The portfolio features a clean light theme design with smooth animations and multi-language support (English, French, Arabic) with RTL support for Arabic.
+
+## Recent Changes (January 2025)
+- Added comprehensive volunteer experience section with Google Developer Student Clubs leadership
+- Updated education to reflect actual academic background (Engineering Diploma from Polytech Intl + Computer Science from FSEGN)
+- Enhanced certifications with accurate Google, Microsoft MTA, and SCRUMstudy credentials
+- Added professional testimonials section with colleague and student feedback
+- Expanded experience section to include complete GoMyCode career progression (intern → developer → mentor)
+- Updated project imagery for better visual presentation
+- Maintained light-theme only design as requested
 
 # User Preferences
 
