@@ -24,18 +24,18 @@ export default function About() {
               </p>
 
               <p className="text-lg leading-relaxed mb-8 text-gray-600">
-                Beyond coding, I'm passionate about mentoring aspiring developers and contributing to open-source projects. I believe in the power of collaboration and continuous learning to drive innovation in the tech industry.
+                {t('about.bio3')}
               </p>
               
               <div className="flex flex-wrap gap-3 mb-8">
                 <span className="px-4 py-2 bg-sky-100 text-sky-800 rounded-full text-sm font-medium">
-                  🎯 Problem Solver
+                  {t('about.badge.problem')}
                 </span>
                 <span className="px-4 py-2 bg-emerald-100 text-emerald-800 rounded-full text-sm font-medium">
-                  🌱 Open Source
+                  {t('about.badge.opensource')}
                 </span>
                 <span className="px-4 py-2 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">
-                  🚀 Innovation
+                  {t('about.badge.innovation')}
                 </span>
               </div>
               

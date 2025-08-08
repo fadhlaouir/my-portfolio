@@ -92,7 +92,7 @@ export default function Education() {
                 <div className="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center">
                   <GraduationCap className="w-6 h-6 text-sky-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">Academic Background</h3>
+                <h3 className="text-2xl font-bold text-gray-900">{t('education.academic')}</h3>
               </div>
               
               <div className="space-y-8">
@@ -139,7 +139,7 @@ export default function Education() {
                 <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
                   <Award className="w-6 h-6 text-purple-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">Professional Certifications</h3>
+                <h3 className="text-2xl font-bold text-gray-900">{t('education.certifications')}</h3>
               </div>
               
               <div className="space-y-6">
@@ -161,7 +161,7 @@ export default function Education() {
                         </p>
                         {cert.platform && (
                           <p className="text-xs text-gray-500 mt-1">
-                            via {cert.platform}
+                            {t('education.via')} {cert.platform}
                           </p>
                         )}
                       </div>

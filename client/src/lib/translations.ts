@@ -24,11 +24,17 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.title': 'About Me',
     'about.bio': 'With over 5 years of experience as a full-stack developer, I possess deep expertise in crafting robust, scalable, and efficient web applications. I specialize in both front-end and back-end systems using modern technologies and development best practices.',
     'about.bio2': 'I\'m the founder and maintainer of the open-source npm package create-express-node-starter, downloaded over 9,000 times. Proven in leading teams, managing entire project lifecycles, and consistently delivering high-quality solutions.',
+    'about.bio3': 'Beyond coding, I\'m passionate about mentoring aspiring developers and contributing to open-source projects. I believe in the power of collaboration and continuous learning to drive innovation in the tech industry.',
+    'about.badge.problem': '🎯 Problem Solver',
+    'about.badge.opensource': '🌱 Open Source',
+    'about.badge.innovation': '🚀 Innovation',
     'about.resume': 'Download Resume',
     
     // Projects Section
     'projects.title': 'Featured Projects',
     'projects.subtitle': 'Here are some of my recent projects that showcase my skills in full-stack development and open source contributions.',
+    'projects.downloads': 'Downloads',
+    'projects.npm': 'NPM Package',
     'projects.express-starter.title': 'create-express-node-starter',
     'projects.express-starter.description': 'CLI tool for bootstrapping Express.js projects with a predefined template. A versatile tool designed to streamline the process of setting up new Express.js projects with comprehensive boilerplate including authentication, MongoDB integration, Swagger API documentation, and more.',
     'projects.mobile-app.title': 'RemoteHorizon',
@@ -80,6 +86,9 @@ export const translations: Record<Language, Record<string, string>> = {
     // Education Section
     'education.title': 'Education & Certifications',
     'education.subtitle': 'Academic background and professional certifications that shaped my expertise in software development and technology.',
+    'education.academic': 'Academic Background',
+    'education.certifications': 'Professional Certifications',
+    'education.via': 'via',
     
     // Volunteer Section
     'volunteer.title': 'Volunteer Experience',
@@ -93,8 +102,10 @@ export const translations: Record<Language, Record<string, string>> = {
     'contact.form.email': 'Email',
     'contact.form.message': 'Message',
     'contact.form.send': 'Send Message',
+    'contact.form.sending': 'Sending...',
     'contact.form.success': 'Message sent successfully!',
     'contact.form.error': 'Failed to send message. Please try again.',
+    'contact.email': 'Email',
     'contact.info.title': 'Contact Information',
     'contact.info.location': 'Location',
     'contact.social.title': 'Connect With Me',
@@ -129,11 +140,17 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.title': 'À Propos de Moi',
     'about.bio': 'Je suis un ingénieur logiciel passionné basé au Québec, Canada, avec de l\'expérience en développement full-stack, DevOps et architecture logicielle. Je me spécialise en JavaScript, TypeScript, Node.js, MongoDB, React et C#.',
     'about.bio2': 'Je suis le créateur de l\'outil open source create-express-node-starter et je travaille actuellement chez Cofomo, où je construis des solutions évolutives et contribue à des projets innovants.',
+    'about.bio3': 'Au-delà du codage, je suis passionné par le mentorat des développeurs en herbe et la contribution aux projets open source. Je crois en la puissance de la collaboration et de l\'apprentissage continu pour stimuler l\'innovation dans l\'industrie technologique.',
+    'about.badge.problem': '🎯 Résolveur de Problèmes',
+    'about.badge.opensource': '🌱 Open Source',
+    'about.badge.innovation': '🚀 Innovation',
     'about.resume': 'Télécharger CV',
     
     // Projects Section
     'projects.title': 'Projets Phares',
     'projects.subtitle': 'Voici quelques-uns de mes projets récents qui démontrent mes compétences en développement full-stack et contributions open source.',
+    'projects.downloads': 'Téléchargements',
+    'projects.npm': 'Package NPM',
     'projects.express-starter.title': 'create-express-node-starter',
     'projects.express-starter.description': 'Template de démarrage Express.js + MongoDB pour créer rapidement des APIs REST. Inclut authentification, validation, gestion d\'erreurs et configuration des bonnes pratiques.',
     'projects.mobile-app.title': 'RemoteHorizon',
@@ -185,6 +202,9 @@ export const translations: Record<Language, Record<string, string>> = {
     // Education Section
     'education.title': 'Éducation et Certifications',
     'education.subtitle': 'Parcours académique et certifications professionnelles qui ont façonné mon expertise en développement logiciel et technologie.',
+    'education.academic': 'Parcours Académique',
+    'education.certifications': 'Certifications Professionnelles',
+    'education.via': 'via',
     
     // Volunteer Section
     'volunteer.title': 'Expérience Bénévole',
@@ -198,8 +218,10 @@ export const translations: Record<Language, Record<string, string>> = {
     'contact.form.email': 'Email',
     'contact.form.message': 'Message',
     'contact.form.send': 'Envoyer Message',
+    'contact.form.sending': 'Envoi en cours...',
     'contact.form.success': 'Message envoyé avec succès !',
     'contact.form.error': 'Échec de l\'envoi du message. Veuillez réessayer.',
+    'contact.email': 'Email',
     'contact.info.title': 'Informations Contact',
     'contact.info.location': 'Localisation',
     'contact.social.title': 'Me Suivre',
@@ -234,11 +256,17 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.title': 'من أنا',
     'about.bio': 'أنا مهندس برمجيات شغوف مقيم في كيبيك، كندا، لدي خبرة في تطوير Full-Stack وDevOps وهندسة البرمجيات. أتخصص في JavaScript وTypeScript وNode.js وMongoDB وReact وC#.',
     'about.bio2': 'أنا مؤسس أداة المصدر المفتوح create-express-node-starter وأعمل حالياً في Cofomo، حيث أبني حلول قابلة للتوسع وأساهم في مشاريع مبتكرة.',
+    'about.bio3': 'بعيداً عن البرمجة، أنا متحمس لتوجيه المطورين الناشئين والمساهمة في مشاريع المصدر المفتوح. أؤمن بقوة التعاون والتعلم المستمر لقيادة الابتكار في صناعة التكنولوجيا.',
+    'about.badge.problem': '🎯 حلال المشاكل',
+    'about.badge.opensource': '🌱 المصدر المفتوح',
+    'about.badge.innovation': '🚀 الابتكار',
     'about.resume': 'تحميل السيرة الذاتية',
     
     // Projects Section
     'projects.title': 'المشاريع المميزة',
     'projects.subtitle': 'إليك بعض مشاريعي الحديثة التي تعرض مهاراتي في تطوير Full-Stack ومساهماتي في المصدر المفتوح.',
+    'projects.downloads': 'التحميلات',
+    'projects.npm': 'حزمة NPM',
     'projects.express-starter.title': 'create-express-node-starter',
     'projects.express-starter.description': 'قالب بدء Express.js + MongoDB لبناء APIs REST بسرعة. يتضمن المصادقة والتحقق ومعالجة الأخطاء وأفضل الممارسات.',
     'projects.mobile-app.title': 'RemoteHorizon',
@@ -290,6 +318,9 @@ export const translations: Record<Language, Record<string, string>> = {
     // Education Section
     'education.title': 'التعليم والشهادات',
     'education.subtitle': 'الخلفية الأكاديمية والشهادات المهنية التي شكلت خبرتي في تطوير البرمجيات والتكنولوجيا.',
+    'education.academic': 'الخلفية الأكاديمية',
+    'education.certifications': 'الشهادات المهنية',
+    'education.via': 'عبر',
     
     // Volunteer Section
     'volunteer.title': 'الخبرة التطوعية',
@@ -303,8 +334,10 @@ export const translations: Record<Language, Record<string, string>> = {
     'contact.form.email': 'البريد الإلكتروني',
     'contact.form.message': 'الرسالة',
     'contact.form.send': 'إرسال الرسالة',
+    'contact.form.sending': 'جاري الإرسال...',
     'contact.form.success': 'تم إرسال الرسالة بنجاح!',
     'contact.form.error': 'فشل في إرسال الرسالة. يرجى المحاولة مرة أخرى.',
+    'contact.email': 'البريد الإلكتروني',
     'contact.info.title': 'معلومات التواصل',
     'contact.info.location': 'الموقع',
     'contact.social.title': 'تواصل معي',

@@ -136,7 +136,7 @@ export default function Contact() {
                   disabled={isSubmitting}
                   className="w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200"
                 >
-                  {isSubmitting ? 'Sending...' : t('contact.form.send')}
+                  {isSubmitting ? t('contact.form.sending') : t('contact.form.send')}
                 </Button>
               </form>
             </div>
@@ -152,7 +152,7 @@ export default function Contact() {
                       <Mail className="w-6 h-6 text-primary-600 dark:text-primary-400" />
                     </div>
                     <div>
-                      <p className="font-medium">Email</p>
+                      <p className="font-medium">{t('contact.email')}</p>
                       <p className="text-gray-600 dark:text-gray-400">raed.fadhlaoui@hotmail.com</p>
                     </div>
                   </div>

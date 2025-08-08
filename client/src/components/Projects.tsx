@@ -79,7 +79,7 @@ export default function Projects() {
                     <div className="flex items-center gap-2">
                       <Download className="w-4 h-4 text-emerald-600" />
                       <span className="text-sm font-medium text-emerald-600">
-                        {project.downloads} Downloads
+                        {project.downloads} {t('projects.downloads')}
                       </span>
                     </div>
                   )}
@@ -101,7 +101,7 @@ export default function Projects() {
                         className="flex items-center gap-2 px-4 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors text-sm font-medium"
                       >
                         <ExternalLink className="w-4 h-4" />
-                        NPM Package
+                        {t('projects.npm')}
                       </a>
                     )}
                   </div>
