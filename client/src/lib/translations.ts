@@ -162,6 +162,9 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.badge.opensource': '🌱 Open Source',
     'about.badge.innovation': '🚀 Innovation',
     'about.resume': 'Télécharger CV',
+    'about.stats.years.experience': 'Années d\'Expérience',
+    'about.stats.projects.completed': 'Projets Terminés',
+    'about.stats.npm.downloads': 'Téléchargements NPM',
     
     // Projects Section
     'projects.title': 'Projets Phares',
@@ -291,6 +294,9 @@ export const translations: Record<Language, Record<string, string>> = {
     'about.badge.opensource': '🌱 المصدر المفتوح',
     'about.badge.innovation': '🚀 الابتكار',
     'about.resume': 'تحميل السيرة الذاتية',
+    'about.stats.years.experience': 'سنوات الخبرة',
+    'about.stats.projects.completed': 'المشاريع المكتملة',
+    'about.stats.npm.downloads': 'تحميلات NPM',
     
     // Projects Section
     'projects.title': 'المشاريع المميزة',
