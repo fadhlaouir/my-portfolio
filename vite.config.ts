@@ -34,5 +34,5 @@ export default defineConfig({
       deny: ["**/.*"],
     },
   },
-  base: process.env.NODE_ENV === "production" ? "/my-portfolio" : "/",
+  base: "my-portfolio",
 });
