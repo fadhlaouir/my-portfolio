@@ -1,54 +1,48 @@
 import { useLanguage } from '../contexts/LanguageContext';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
-import { Github, ExternalLink, Star, ArrowRight } from 'lucide-react';
+import { Github, ExternalLink, Download, ArrowRight } from 'lucide-react';
 
 const projects = [
   {
     id: 'express-starter',
     image: 'https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
     technologies: ['Node.js', 'Express', 'MongoDB', 'JWT', 'Swagger'],
-    stars: '9k+',
-    status: 'Open Source',
-    github: 'https://github.com/fadhlaouir/create-express-node-starter'
+    downloads: '9k+',
+    github: 'https://github.com/fadhlaouir/create-express-node-starter',
+    npm: 'https://www.npmjs.com/package/create-express-node-starter'
   },
   {
     id: 'ai-chatbot',
     image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
     technologies: ['React', 'TypeScript', 'OpenAI API', 'Node.js'],
-    stars: '3.2k',
-    status: 'Beta Release',
     github: 'https://github.com/fadhlaouir/flashsolve'
   },
   {
     id: 'ecommerce',
     image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
     technologies: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
-    stars: '1.3k',
-    status: 'Live Demo',
     github: 'https://github.com/fadhlaouir/adswift'
   },
   {
     id: 'mobile-app',
     image: 'https://images.unsplash.com/photo-1677756119517-756a188d2d94?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
     technologies: ['React', 'Node.js', 'MongoDB', 'Tailwind'],
-    stars: '876',
-    status: 'Live Demo',
     github: 'https://github.com/fadhlaouir/remotehorizon'
   }
 ];
 
 const technologyColors: Record<string, string> = {
-  JavaScript: 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-200',
-  TypeScript: 'bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200',
-  'Node.js': 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200',
-  Express: 'bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200',
-  MongoDB: 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-800 dark:text-emerald-200',
-  React: 'bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200',
-  JWT: 'bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200',
-  Swagger: 'bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200',
-  Tailwind: 'bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-200',
-  'Tailwind CSS': 'bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-200',
-  'OpenAI API': 'bg-pink-100 dark:bg-pink-900/30 text-pink-800 dark:text-pink-200'
+  JavaScript: 'bg-yellow-100 text-yellow-800',
+  TypeScript: 'bg-blue-100 text-blue-800',
+  'Node.js': 'bg-green-100 text-green-800',
+  Express: 'bg-gray-100 text-gray-800',
+  MongoDB: 'bg-emerald-100 text-emerald-800',
+  React: 'bg-blue-100 text-blue-800',
+  JWT: 'bg-purple-100 text-purple-800',
+  Swagger: 'bg-orange-100 text-orange-800',
+  Tailwind: 'bg-cyan-100 text-cyan-800',
+  'Tailwind CSS': 'bg-cyan-100 text-cyan-800',
+  'OpenAI API': 'bg-pink-100 text-pink-800'
 };
 
 export default function Projects() {
@@ -56,94 +50,97 @@ export default function Projects() {
   const { ref, hasIntersected } = useIntersectionObserver();
 
   return (
-    <section id="projects" className="py-24 bg-gray-50 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-br from-sky-50 to-white"></div>
-      
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+    <section id="projects" className="py-20 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={ref} className={`fade-in ${hasIntersected ? 'visible' : ''}`}>
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
-              <span className="gradient-text">{t('projects.title')}</span>
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              {t('projects.subtitle')}
-            </p>
-          </div>
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
+            {t('projects.title')}
+          </h2>
+          <p className="text-gray-600 text-center mb-16 max-w-2xl mx-auto">
+            {t('projects.subtitle')}
+          </p>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            {projects.map((project, index) => (
+          <div className="grid md:grid-cols-2 gap-8">
+            {projects.map((project) => (
               <div
                 key={project.id}
-                className="glass project-card rounded-3xl overflow-hidden group"
+                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="h-64 bg-gradient-to-br from-sky-100 to-sky-200 relative overflow-hidden">
+                <div className="aspect-video rounded-lg overflow-hidden mb-6">
                   <img 
-                    src={project.image}
+                    src={project.image} 
                     alt={t(`projects.${project.id}.title`)}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 </div>
                 
-                <div className="p-8 lg:p-10">
-                  <div className="flex items-center justify-between mb-6">
-                    <h3 className="text-2xl font-bold text-gray-900 group-hover:text-sky-600 transition-colors">
-                      {t(`projects.${project.id}.title`)}
-                    </h3>
-                    <div className="flex items-center gap-2 text-sky-600">
-                      <Star className="w-5 h-5 fill-current" />
-                      <span className="font-semibold">{project.stars}</span>
+                <div className="space-y-4">
+                  {project.downloads && (
+                    <div className="flex items-center gap-2">
+                      <Download className="w-4 h-4 text-emerald-600" />
+                      <span className="text-sm font-medium text-emerald-600">
+                        {project.downloads} Downloads
+                      </span>
                     </div>
-                  </div>
+                  )}
                   
-                  <p className="text-gray-700 mb-8 text-lg leading-relaxed">
+                  <h3 className="text-xl font-bold text-gray-900">
+                    {t(`projects.${project.id}.title`)}
+                  </h3>
+                  
+                  <p className="text-gray-600 leading-relaxed">
                     {t(`projects.${project.id}.description`)}
                   </p>
                   
-                  <div className="flex flex-wrap gap-3 mb-8">
+                  <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="tech-badge px-4 py-2 bg-sky-100 text-sky-800 rounded-xl text-sm font-semibold"
+                        className={`px-3 py-1 rounded-full text-sm font-medium ${
+                          technologyColors[tech] || 'bg-gray-100 text-gray-800'
+                        }`}
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
                   
-                  <div className="flex gap-4">
+                  <div className="flex gap-3 pt-2">
                     <a
-                      href={project.github || "#"}
+                      href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-3 px-6 py-3 bg-gray-900 text-white hover:bg-gray-800 rounded-xl transition-all duration-300 font-semibold"
+                      className="flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium"
                     >
-                      <Github className="w-5 h-5" />
-                      <span>Code</span>
+                      <Github className="w-4 h-4" />
+                      Code
                     </a>
-                    <a
-                      href="#"
-                      className="flex items-center gap-3 btn-primary"
-                    >
-                      <ExternalLink className="w-5 h-5" />
-                      <span>Live Demo</span>
-                    </a>
+                    {project.npm && (
+                      <a
+                        href={project.npm}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-4 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors text-sm font-medium"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        NPM
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
             ))}
           </div>
           
-          <div className="text-center mt-16">
+          <div className="text-center mt-12">
             <a
               href="https://github.com/fadhlaouir"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary text-lg px-8 py-4 inline-flex items-center gap-3"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors font-medium"
             >
-              <span>{t('projects.viewAll')}</span>
-              <ArrowRight className="w-5 h-5 rtl-flip" />
+              {t('projects.viewAll')}
+              <ArrowRight className="w-4 h-4" />
             </a>
           </div>
         </div>

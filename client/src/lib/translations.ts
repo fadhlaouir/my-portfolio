@@ -28,7 +28,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'projects.title': 'Featured Projects',
     'projects.subtitle': 'Here are some of my recent projects that showcase my skills in full-stack development and open source contributions.',
     'projects.express-starter.title': 'create-express-node-starter',
-    'projects.express-starter.description': 'An open-source boilerplate for building secure, scalable Node.js REST APIs. Downloaded over 9,000 times with authentication, validation, and best practices.',
+    'projects.express-starter.description': 'CLI tool for bootstrapping Express.js projects with a predefined template. A versatile tool designed to streamline the process of setting up new Express.js projects with comprehensive boilerplate including authentication, MongoDB integration, Swagger API documentation, and more.',
     'projects.mobile-app.title': 'RemoteHorizon',
     'projects.mobile-app.description': 'Job board inspired by WeWorkRemotely, powered by MERN stack. Features job posting, filtering, company profiles, and application tracking.',
     'projects.ecommerce.title': 'AdSwift',

@@ -6,7 +6,6 @@ import Skills from '../components/Skills';
 import Experience from '../components/Experience';
 import Education from '../components/Education';
 import Volunteer from '../components/Volunteer';
-import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import BackgroundAnimation from '../components/BackgroundAnimation';
@@ -24,7 +23,6 @@ export default function Portfolio() {
         <Experience />
         <Education />
         <Volunteer />
-        <Testimonials />
         <Contact />
         <Footer />
       </div>
