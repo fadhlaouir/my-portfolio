@@ -54,52 +54,17 @@ export default function Navigation() {
           </div>
           
           <div className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
-            {/* Interactive Language Switcher with Flags */}
-            <div className="flex items-center space-x-1 bg-white/50 backdrop-blur-sm border border-sky-200 rounded-xl p-1">
-              <button
-                onClick={() => setLanguage('en')}
-                className={`relative flex items-center justify-center w-10 h-10 rounded-lg transition-all duration-300 transform hover:scale-110 ${
-                  language === 'en' 
-                    ? 'bg-blue-500 shadow-lg scale-105' 
-                    : 'bg-transparent hover:bg-sky-50'
-                }`}
-                title="English"
+            {/* Language Switcher */}
+            <div className="relative">
+              <select
+                value={language}
+                onChange={(e) => setLanguage(e.target.value as any)}
+                className="bg-white/50 border border-sky-200 rounded-xl px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 backdrop-blur-sm transition-all duration-300 text-gray-900"
               >
-                <span className="text-xl">🇺🇸</span>
-                {language === 'en' && (
-                  <div className="absolute inset-0 bg-blue-500/20 rounded-lg animate-pulse"></div>
-                )}
-              </button>
-              
-              <button
-                onClick={() => setLanguage('fr')}
-                className={`relative flex items-center justify-center w-10 h-10 rounded-lg transition-all duration-300 transform hover:scale-110 ${
-                  language === 'fr' 
-                    ? 'bg-blue-500 shadow-lg scale-105' 
-                    : 'bg-transparent hover:bg-sky-50'
-                }`}
-                title="Français"
-              >
-                <span className="text-xl">🇫🇷</span>
-                {language === 'fr' && (
-                  <div className="absolute inset-0 bg-blue-500/20 rounded-lg animate-pulse"></div>
-                )}
-              </button>
-              
-              <button
-                onClick={() => setLanguage('ar')}
-                className={`relative flex items-center justify-center w-10 h-10 rounded-lg transition-all duration-300 transform hover:scale-110 ${
-                  language === 'ar' 
-                    ? 'bg-blue-500 shadow-lg scale-105' 
-                    : 'bg-transparent hover:bg-sky-50'
-                }`}
-                title="العربية"
-              >
-                <span className="text-xl">🇸🇦</span>
-                {language === 'ar' && (
-                  <div className="absolute inset-0 bg-blue-500/20 rounded-lg animate-pulse"></div>
-                )}
-              </button>
+                <option value="en" className="bg-white">EN</option>
+                <option value="fr" className="bg-white">FR</option>
+                <option value="ar" className="bg-white">العربية</option>
+              </select>
             </div>
             
 
@@ -124,44 +89,16 @@ export default function Navigation() {
         <div className="md:hidden nav-glass border-t border-sky-200/20">
           <div className="max-w-7xl mx-auto px-6 py-6 space-y-4">
             {/* Mobile Language Switcher */}
-            <div className="mb-6">
-              <div className="flex justify-center space-x-2 bg-white/90 border border-sky-200 rounded-xl p-2">
-                <button
-                  onClick={() => {setLanguage('en'); setIsMobileMenuOpen(false);}}
-                  className={`flex items-center justify-center flex-1 py-2 px-3 rounded-lg transition-all duration-300 transform hover:scale-105 ${
-                    language === 'en' 
-                      ? 'bg-blue-500 text-white shadow-lg' 
-                      : 'bg-transparent text-gray-700 hover:bg-sky-50'
-                  }`}
-                >
-                  <span className="text-lg mr-2">🇺🇸</span>
-                  <span className="text-sm font-medium">EN</span>
-                </button>
-                
-                <button
-                  onClick={() => {setLanguage('fr'); setIsMobileMenuOpen(false);}}
-                  className={`flex items-center justify-center flex-1 py-2 px-3 rounded-lg transition-all duration-300 transform hover:scale-105 ${
-                    language === 'fr' 
-                      ? 'bg-blue-500 text-white shadow-lg' 
-                      : 'bg-transparent text-gray-700 hover:bg-sky-50'
-                  }`}
-                >
-                  <span className="text-lg mr-2">🇫🇷</span>
-                  <span className="text-sm font-medium">FR</span>
-                </button>
-                
-                <button
-                  onClick={() => {setLanguage('ar'); setIsMobileMenuOpen(false);}}
-                  className={`flex items-center justify-center flex-1 py-2 px-3 rounded-lg transition-all duration-300 transform hover:scale-105 ${
-                    language === 'ar' 
-                      ? 'bg-blue-500 text-white shadow-lg' 
-                      : 'bg-transparent text-gray-700 hover:bg-sky-50'
-                  }`}
-                >
-                  <span className="text-lg mr-2">🇸🇦</span>
-                  <span className="text-sm font-medium">ع</span>
-                </button>
-              </div>
+            <div className="mb-6 px-6">
+              <select
+                value={language}
+                onChange={(e) => setLanguage(e.target.value as any)}
+                className="w-full bg-white/90 border border-sky-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 text-gray-900"
+              >
+                <option value="en">🇺🇸 English</option>
+                <option value="fr">🇫🇷 Français</option>
+                <option value="ar">🇸🇦 العربية</option>
+              </select>
             </div>
 
             <button onClick={() => scrollToSection('home')} className={`block w-full nav-link py-2 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
