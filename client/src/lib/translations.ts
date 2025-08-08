@@ -39,11 +39,15 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Skills Section
     'skills.title': 'Skills & Technologies',
-    'skills.subtitle': 'Technologies and tools I use to bring ideas to life, from frontend interfaces to robust backend systems.',
+    'skills.subtitle': 'A comprehensive toolkit of technologies and frameworks I use to build scalable, performant applications from concept to deployment.',
     'skills.languages': 'Languages',
     'skills.backend': 'Backend',
     'skills.frontend': 'Frontend',
+    'skills.databases': 'Databases',
     'skills.devops': 'DevOps & Tools',
+    'skills.tools': 'Development Tools',
+    'skills.databases': 'Databases',
+    'skills.tools': 'Development Tools',
     
     // Experience Section
     'experience.title': 'Professional Experience',
@@ -128,7 +132,9 @@ export const translations: Record<Language, Record<string, string>> = {
     'skills.languages': 'Langages',
     'skills.backend': 'Backend',
     'skills.frontend': 'Frontend',
+    'skills.databases': 'Bases de Données',
     'skills.devops': 'DevOps & Outils',
+    'skills.tools': 'Outils de Développement',
     
     // Experience Section
     'experience.title': 'Expérience Professionnelle',
@@ -215,7 +221,9 @@ export const translations: Record<Language, Record<string, string>> = {
     'skills.languages': 'لغات البرمجة',
     'skills.backend': 'الخادم',
     'skills.frontend': 'واجهة المستخدم',
+    'skills.databases': 'قواعد البيانات',
     'skills.devops': 'DevOps والأدوات',
+    'skills.tools': 'أدوات التطوير',
     
     // Experience Section
     'experience.title': 'الخبرة المهنية',

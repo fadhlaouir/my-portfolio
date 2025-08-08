@@ -19,8 +19,12 @@ export default function About() {
                 {t('about.bio')}
               </p>
               
-              <p className="text-lg leading-relaxed mb-8 text-gray-600">
+              <p className="text-lg leading-relaxed mb-6 text-gray-600">
                 {t('about.bio2')}
+              </p>
+
+              <p className="text-lg leading-relaxed mb-8 text-gray-600">
+                Beyond coding, I'm passionate about mentoring aspiring developers and contributing to open-source projects. I believe in the power of collaboration and continuous learning to drive innovation in the tech industry.
               </p>
               
               <div className="flex flex-wrap gap-3 mb-8">

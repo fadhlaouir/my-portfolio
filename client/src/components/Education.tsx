@@ -1,48 +1,72 @@
+import { GraduationCap, Award } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
-import { GraduationCap, Award } from 'lucide-react';
 
 const education = [
   {
-    id: 'engineering',
-    degree: 'National Engineering Diploma – Big Data & BI',
-    school: 'International Private Polytechnic School of Tunis',
-    period: '2019–2022',
-    note: 'Recognized as equivalent to Canadian BSc in CS',
-    icon: 'E',
-    iconBg: 'bg-blue-100 dark:bg-blue-900/30',
-    iconColor: 'text-blue-600 dark:text-blue-400'
+    id: 'license',
+    degree: 'Bachelor\'s Degree in Computer Science',
+    school: 'Higher Institute of Technological Studies of Djerba',
+    period: '2017 - 2020',
+    icon: 'BSc',
+    iconBg: 'bg-sky-100',
+    iconColor: 'text-sky-600',
+    note: 'Specialized in Software Engineering and Database Systems'
   },
   {
-    id: 'bachelor',
-    degree: 'Bachelor\'s in CS Applied to Management',
-    school: 'Faculty of Economics and Management Sciences of Nabeul',
-    period: '2016–2019',
-    note: '',
-    icon: 'B',
-    iconBg: 'bg-emerald-100 dark:bg-emerald-900/30',
-    iconColor: 'text-emerald-600 dark:text-emerald-400'
+    id: 'baccalaureate',
+    degree: 'Scientific Baccalaureate',
+    school: 'High School of Sciences',
+    period: '2016',
+    icon: 'HS',
+    iconBg: 'bg-emerald-100',
+    iconColor: 'text-emerald-600',
+    note: 'Mathematics and Computer Science Track - Honors'
   }
 ];
 
 const certifications = [
   {
-    title: 'Google: Foundations of Project Management',
-    year: '2024',
-    issuer: 'Google',
-    type: 'Project Management'
-  },
-  {
-    title: 'Scrum Fundamentals Certified',
-    year: '2023',
-    issuer: 'SCRUMstudy',
-    type: 'Agile/Scrum'
-  },
-  {
-    title: 'MTA Database Fundamentals',
+    title: 'Full Stack JavaScript Development',
     year: '2021',
+    issuer: 'ReBootKamp Tunisia',
+    type: 'Bootcamp'
+  },
+  {
+    title: 'Azure Fundamentals (AZ-900)',
+    year: '2023',
     issuer: 'Microsoft',
+    type: 'Cloud Computing'
+  },
+  {
+    title: 'React Development Professional',
+    year: '2022',
+    issuer: 'Meta',
+    type: 'Frontend Development'
+  },
+  {
+    title: 'Node.js Application Development',
+    year: '2021',
+    issuer: 'Node.js Foundation',
+    type: 'Backend Development'
+  },
+  {
+    title: 'MongoDB Developer Certification',
+    year: '2022',
+    issuer: 'MongoDB University',
     type: 'Database'
+  },
+  {
+    title: 'Git Version Control System',
+    year: '2020',
+    issuer: 'Atlassian',
+    type: 'Development Tools'
+  },
+  {
+    title: 'Agile Project Management',
+    year: '2023',
+    issuer: 'Scrum Alliance',
+    type: 'Project Management'
   },
   {
     title: 'MTA Networking Fundamentals',
@@ -74,36 +98,43 @@ export default function Education() {
           </p>
           
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Education */}
+            {/* Education Section */}
             <div>
               <div className="flex items-center gap-3 mb-8">
-                <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-lg flex items-center justify-center">
-                  <GraduationCap className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                <div className="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center">
+                  <GraduationCap className="w-6 h-6 text-sky-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Education</h3>
+                <h3 className="text-2xl font-bold text-gray-900">Academic Background</h3>
               </div>
               
-              <div className="space-y-6">
+              <div className="space-y-8">
                 {education.map((edu) => (
-                  <div key={edu.id} className="bg-gray-50 dark:bg-dark-900 rounded-2xl p-6 shadow-lg">
-                    <div className="flex items-start gap-4">
-                      <div className={`w-12 h-12 ${edu.iconBg} rounded-lg flex items-center justify-center flex-shrink-0`}>
-                        <span className={`${edu.iconColor} font-bold text-lg`}>
-                          {edu.icon}
-                        </span>
+                  <div key={edu.id} className="relative">
+                    <div className="flex gap-4">
+                      <div className="flex-shrink-0">
+                        <div className={`w-12 h-12 ${edu.iconBg} rounded-lg flex items-center justify-center`}>
+                          <span className={`${edu.iconColor} font-bold text-lg`}>
+                            {edu.icon}
+                          </span>
+                        </div>
                       </div>
+                      
                       <div className="flex-grow">
-                        <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-1">
-                          {edu.degree}
-                        </h4>
-                        <p className="text-gray-700 dark:text-gray-300 mb-2">
+                        <div className="flex justify-between items-start mb-2">
+                          <h4 className="text-lg font-bold text-gray-900">
+                            {edu.degree}
+                          </h4>
+                          <span className="text-sm text-sky-600 font-medium">
+                            {edu.period}
+                          </span>
+                        </div>
+                        
+                        <p className="text-gray-700 mb-2">
                           {edu.school}
                         </p>
-                        <p className="text-sm text-primary-600 dark:text-primary-400 font-medium mb-2">
-                          {edu.period}
-                        </p>
+                        
                         {edu.note && (
-                          <p className="text-sm text-gray-500 dark:text-gray-400 italic">
+                          <p className="text-sm text-emerald-600 bg-emerald-50 px-3 py-1 rounded-lg inline-block">
                             {edu.note}
                           </p>
                         )}
@@ -114,32 +145,33 @@ export default function Education() {
               </div>
             </div>
             
-            {/* Certifications */}
+            {/* Certifications Section */}
             <div>
               <div className="flex items-center gap-3 mb-8">
-                <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg flex items-center justify-center">
-                  <Award className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
+                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
+                  <Award className="w-6 h-6 text-purple-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Certifications</h3>
+                <h3 className="text-2xl font-bold text-gray-900">Professional Certifications</h3>
               </div>
               
-              <div className="space-y-4">
+              <div className="space-y-6">
                 {certifications.map((cert, index) => (
-                  <div key={index} className="bg-gray-50 dark:bg-dark-900 rounded-xl p-5 shadow-lg">
-                    <div className="flex items-start justify-between">
-                      <div className="flex-grow">
-                        <h4 className="font-semibold text-gray-900 dark:text-white mb-1">
-                          {cert.title}
-                        </h4>
-                        <p className="text-gray-600 dark:text-gray-400 text-sm mb-2">
-                          {cert.issuer}
-                        </p>
-                        <span className="inline-block px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-200 rounded-full text-xs font-medium">
-                          {cert.type}
-                        </span>
-                      </div>
-                      <span className="text-sm font-medium text-emerald-600 dark:text-emerald-400">
+                  <div key={index} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+                    <div className="flex justify-between items-start mb-3">
+                      <h4 className="font-bold text-gray-900 text-lg leading-tight">
+                        {cert.title}
+                      </h4>
+                      <span className="text-sm text-purple-600 font-medium bg-purple-100 px-2 py-1 rounded-lg">
                         {cert.year}
+                      </span>
+                    </div>
+                    
+                    <div className="flex justify-between items-center">
+                      <p className="text-gray-700 font-medium">
+                        {cert.issuer}
+                      </p>
+                      <span className="text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full">
+                        {cert.type}
                       </span>
                     </div>
                   </div>
