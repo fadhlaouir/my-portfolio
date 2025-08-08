@@ -40,8 +40,8 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">{t('contact.info.location')}</h4>
-                      <p className="text-gray-600">Quebec City, Quebec, Canada</p>
-                      <p className="text-sm text-gray-500 mt-1">Beautiful historic city in Eastern Canada</p>
+                      <p className="text-gray-600">{t('contact.location.city')}</p>
+                      <p className="text-sm text-gray-500 mt-1">{t('contact.location.description')}</p>
                     </div>
                   </div>
 
@@ -90,7 +90,7 @@ export default function Contact() {
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
               <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                 <MapPin className="w-6 h-6 mr-3 text-blue-600" />
-                Quebec City, Canada
+                {t('contact.map.title')}
               </h3>
               
               <div className="relative h-96 rounded-xl overflow-hidden border border-gray-200">

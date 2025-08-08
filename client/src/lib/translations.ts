@@ -117,6 +117,9 @@ export const translations: Record<Language, Record<string, string>> = {
     'contact.email': 'Email',
     'contact.info.title': 'Contact Information',
     'contact.info.location': 'Location',
+    'contact.location.city': 'Quebec City, Quebec, Canada',
+    'contact.location.description': 'Beautiful historic city in Eastern Canada',
+    'contact.map.title': 'Quebec City, Canada',
     'contact.social.title': 'Connect With Me',
     
     // Footer
@@ -244,6 +247,9 @@ export const translations: Record<Language, Record<string, string>> = {
     'contact.email': 'Email',
     'contact.info.title': 'Informations Contact',
     'contact.info.location': 'Localisation',
+    'contact.location.city': 'Ville de Québec, Québec, Canada',
+    'contact.location.description': 'Belle ville historique de l\'Est du Canada',
+    'contact.map.title': 'Ville de Québec, Canada',
     'contact.social.title': 'Me Suivre',
     
     // Footer
@@ -367,18 +373,13 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Contact Section
     'contact.title': 'تواصل معي',
-    'contact.subtitle': 'أنا دائماً مهتم بسماع الفرص الجديدة والمشاريع المبتكرة أو مجرد الدردشة حول التكنولوجيا.',
-    'contact.form.title': 'إرسال رسالة',
-    'contact.form.name': 'الاسم',
-    'contact.form.email': 'البريد الإلكتروني',
-    'contact.form.message': 'الرسالة',
-    'contact.form.send': 'إرسال الرسالة',
-    'contact.form.sending': 'جاري الإرسال...',
-    'contact.form.success': 'تم إرسال الرسالة بنجاح!',
-    'contact.form.error': 'فشل في إرسال الرسالة. يرجى المحاولة مرة أخرى.',
+    'contact.subtitle': 'مقيم في مدينة كيبيك الجميلة، كندا. مهتم دائماً بالفرص الجديدة والمشاريع المبتكرة.',
     'contact.email': 'البريد الإلكتروني',
     'contact.info.title': 'معلومات التواصل',
     'contact.info.location': 'الموقع',
+    'contact.location.city': 'مدينة كيبيك، كيبيك، كندا',
+    'contact.location.description': 'مدينة تاريخية جميلة في شرق كندا',
+    'contact.map.title': 'مدينة كيبيك، كندا',
     'contact.social.title': 'تواصل معي',
     
     // Footer
