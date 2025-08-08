@@ -51,9 +51,9 @@ export default function Navigation() {
                 onChange={(e) => setLanguage(e.target.value as any)}
                 className="bg-white/50 border border-sky-200 rounded-xl px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 backdrop-blur-sm transition-all duration-300 text-gray-900"
               >
-                <option value="en" className="bg-white">🏴󠁧󠁢󠁥󠁮󠁧󠁿 English</option>
-                <option value="fr" className="bg-white">🇫🇷 Français</option>
-                <option value="ar" className="bg-white">🇹🇳 العربية</option>
+                <option value="en" className="bg-white">EN</option>
+                <option value="fr" className="bg-white">FR</option>
+                <option value="ar" className="bg-white">AR</option>
               </select>
             </div>
             
@@ -83,9 +83,9 @@ export default function Navigation() {
                 onChange={(e) => setLanguage(e.target.value as any)}
                 className="w-full bg-white/90 border border-sky-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 text-gray-900"
               >
-                <option value="en">🏴󠁧󠁢󠁥󠁮󠁧󠁿 English</option>
-                <option value="fr">🇫🇷 Français</option>
-                <option value="ar">🇹🇳 العربية</option>
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+                <option value="ar">AR</option>
               </select>
             </div>
 
