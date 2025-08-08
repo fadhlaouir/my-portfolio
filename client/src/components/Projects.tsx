@@ -1,6 +1,6 @@
 import { useLanguage } from '../contexts/LanguageContext';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
-import { Github, ExternalLink, Download, ArrowRight } from 'lucide-react';
+import { ExternalLink, Download, ArrowRight } from 'lucide-react';
 
 const projects = [
   {
@@ -106,15 +106,6 @@ export default function Projects() {
                   </div>
                   
                   <div className="flex gap-3 pt-2">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium"
-                    >
-                      <Github className="w-4 h-4" />
-                      Code
-                    </a>
                     {project.npm && (
                       <a
                         href={project.npm}
@@ -123,7 +114,7 @@ export default function Projects() {
                         className="flex items-center gap-2 px-4 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors text-sm font-medium"
                       >
                         <ExternalLink className="w-4 h-4" />
-                        NPM
+                        NPM Package
                       </a>
                     )}
                   </div>
