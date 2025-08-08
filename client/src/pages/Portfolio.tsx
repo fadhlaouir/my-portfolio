@@ -1,8 +1,8 @@
 import Navigation from '../components/Navigation';
-import HeroRedesigned from '../components/HeroRedesigned';
+import Hero from '../components/Hero';
 import About from '../components/About';
-import ProjectsRedesigned from '../components/ProjectsRedesigned';
-import SkillsRedesigned from '../components/SkillsRedesigned';
+import Projects from '../components/Projects';
+import Skills from '../components/Skills';
 import Experience from '../components/Experience';
 import Education from '../components/Education';
 import Volunteer from '../components/Volunteer';
@@ -16,10 +16,10 @@ export default function Portfolio() {
       <BackgroundAnimation />
       <div className="relative z-10">
         <Navigation />
-        <HeroRedesigned />
+        <Hero />
         <About />
-        <ProjectsRedesigned />
-        <SkillsRedesigned />
+        <Projects />
+        <Skills />
         <Experience />
         <Education />
         <Volunteer />
