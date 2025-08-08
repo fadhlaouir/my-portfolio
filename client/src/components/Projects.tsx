@@ -92,19 +92,6 @@ export default function Projects() {
                     {t(`projects.${project.id}.description`)}
                   </p>
                   
-                  <div className={`flex gap-2 ${project.id === 'express-starter' || project.id === 'ai-chatbot' ? 'flex-nowrap overflow-x-auto' : 'flex-wrap'}`}>
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className={`px-3 py-1 rounded-full text-sm font-medium flex-shrink-0 ${
-                          technologyColors[tech] || 'bg-gray-100 text-gray-800'
-                        }`}
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  
                   <div className="flex gap-3 pt-2">
                     {project.npm && (
                       <a
@@ -117,6 +104,19 @@ export default function Projects() {
                         NPM Package
                       </a>
                     )}
+                  </div>
+                  
+                  <div className={`flex gap-2 ${project.id === 'express-starter' || project.id === 'ai-chatbot' ? 'flex-nowrap overflow-x-auto' : 'flex-wrap'}`}>
+                    {project.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className={`px-3 py-1 rounded-full text-sm font-medium flex-shrink-0 ${
+                          technologyColors[tech] || 'bg-gray-100 text-gray-800'
+                        }`}
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
