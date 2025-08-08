@@ -1,6 +1,7 @@
 import { useLanguage } from '../contexts/LanguageContext';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import { ArrowRight, ChevronDown } from 'lucide-react';
+import profileImage from '@assets/1680177373328_1754661590948.jpg';
 
 export default function Hero() {
   const { t } = useLanguage();
@@ -33,9 +34,13 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center relative z-10">
         <div className={`fade-in ${hasIntersected ? 'visible' : ''}`}>
-          {/* Premium Avatar */}
-          <div className="w-40 h-40 mx-auto mb-12 rounded-full bg-gradient-to-br from-sky-400 to-sky-600 flex items-center justify-center text-white text-5xl font-bold shadow-2xl animate-glow">
-            RF
+          {/* Professional Photo */}
+          <div className="w-40 h-40 mx-auto mb-12 rounded-full overflow-hidden shadow-2xl animate-glow ring-4 ring-sky-400/20">
+            <img 
+              src={profileImage} 
+              alt="Raed Fadhlaoui"
+              className="w-full h-full object-cover"
+            />
           </div>
           
           {/* Large Typography */}
@@ -77,12 +82,7 @@ export default function Hero() {
             </button>
           </div>
           
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
-            <div className="w-6 h-10 border-2 border-sky-400 rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-sky-400 rounded-full mt-2 animate-pulse"></div>
-            </div>
-          </div>
+
         </div>
       </div>
     </section>

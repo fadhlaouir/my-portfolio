@@ -118,6 +118,48 @@
 }
 
 @layer components {
+  /* RTL Support */
+  [dir="rtl"] {
+    direction: rtl;
+  }
+  
+  [dir="rtl"] .rtl-flip {
+    transform: scaleX(-1);
+  }
+  
+  [dir="rtl"] .text-left { 
+    text-align: right; 
+  }
+  
+  [dir="rtl"] .text-right { 
+    text-align: left; 
+  }
+  
+  [dir="rtl"] .ml-2 { 
+    margin-right: 0.5rem; 
+    margin-left: 0; 
+  }
+  
+  [dir="rtl"] .mr-2 { 
+    margin-left: 0.5rem; 
+    margin-right: 0; 
+  }
+  
+  [dir="rtl"] .flex-row {
+    flex-direction: row-reverse;
+  }
+  
+  /* Ensure proper spacing for Arabic text */
+  [dir="rtl"] .space-x-4 > * + * {
+    margin-right: 1rem;
+    margin-left: 0;
+  }
+  
+  [dir="rtl"] .space-x-8 > * + * {
+    margin-right: 2rem;
+    margin-left: 0;
+  }
+
   /* Premium gradient text */
   .gradient-text {
     background: linear-gradient(135deg, hsl(199, 89%, 48%), hsl(198, 93%, 60%), hsl(201, 94%, 86%));
@@ -265,7 +307,7 @@
     width: 100%;
   }
   
-  /* Premium buttons */
+  /* Premium buttons with dark mode support */
   .btn-primary {
     background: linear-gradient(135deg, hsl(199, 89%, 48%), hsl(198, 93%, 60%));
     border: none;
@@ -276,6 +318,11 @@
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
+  }
+  
+  .dark .btn-primary {
+    background: linear-gradient(135deg, hsl(199, 89%, 48%), hsl(198, 93%, 60%));
+    box-shadow: 0 4px 14px 0 rgba(56, 189, 248, 0.15);
   }
   
   .btn-primary::before {
@@ -307,6 +354,11 @@
     padding: 10px 30px;
     border-radius: 12px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .dark .btn-secondary {
+    border-color: hsl(198, 93%, 60%);
+    color: hsl(198, 93%, 60%);
   }
   
   .btn-secondary:hover {

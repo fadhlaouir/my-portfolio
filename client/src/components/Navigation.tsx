@@ -56,11 +56,11 @@ export default function Navigation() {
               <select
                 value={language}
                 onChange={(e) => setLanguage(e.target.value as any)}
-                className="bg-white/50 dark:bg-black/50 border border-sky-200 dark:border-sky-800 rounded-xl px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 backdrop-blur-sm transition-all duration-300"
+                className="bg-white/50 dark:bg-black/50 border border-sky-200 dark:border-sky-800 rounded-xl px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 backdrop-blur-sm transition-all duration-300 text-gray-900 dark:text-white"
               >
-                <option value="en">EN</option>
-                <option value="fr">FR</option>
-                <option value="ar">العربية</option>
+                <option value="en" className="bg-white dark:bg-gray-800">EN</option>
+                <option value="fr" className="bg-white dark:bg-gray-800">FR</option>
+                <option value="ar" className="bg-white dark:bg-gray-800">العربية</option>
               </select>
             </div>
             
@@ -79,12 +79,12 @@ export default function Navigation() {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-800 transition-colors"
+              className="md:hidden p-3 rounded-xl bg-white/50 dark:bg-black/50 hover:bg-sky-50 dark:hover:bg-sky-900/30 transition-all duration-300 backdrop-blur-sm border border-sky-200 dark:border-sky-800"
             >
               {isMobileMenuOpen ? (
-                <X className="w-6 h-6" />
+                <X className="w-5 h-5" />
               ) : (
-                <Menu className="w-6 h-6" />
+                <Menu className="w-5 h-5" />
               )}
             </button>
           </div>
@@ -93,27 +93,27 @@ export default function Navigation() {
       
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-dark-950 border-b border-gray-200 dark:border-dark-800">
-          <div className="px-4 py-4 space-y-3">
-            <button onClick={() => scrollToSection('home')} className="block hover:text-primary-500 transition-colors">
+        <div className="md:hidden nav-glass border-t border-sky-200/20 dark:border-sky-800/20">
+          <div className="max-w-7xl mx-auto px-6 py-6 space-y-4">
+            <button onClick={() => scrollToSection('home')} className="block w-full text-left nav-link py-2">
               {t('nav.home')}
             </button>
-            <button onClick={() => scrollToSection('about')} className="block hover:text-primary-500 transition-colors">
+            <button onClick={() => scrollToSection('about')} className="block w-full text-left nav-link py-2">
               {t('nav.about')}
             </button>
-            <button onClick={() => scrollToSection('projects')} className="block hover:text-primary-500 transition-colors">
+            <button onClick={() => scrollToSection('projects')} className="block w-full text-left nav-link py-2">
               {t('nav.projects')}
             </button>
-            <button onClick={() => scrollToSection('skills')} className="block hover:text-primary-500 transition-colors">
+            <button onClick={() => scrollToSection('skills')} className="block w-full text-left nav-link py-2">
               {t('nav.skills')}
             </button>
-            <button onClick={() => scrollToSection('experience')} className="block hover:text-primary-500 transition-colors">
+            <button onClick={() => scrollToSection('experience')} className="block w-full text-left nav-link py-2">
               {t('nav.experience')}
             </button>
-            <button onClick={() => scrollToSection('education')} className="block hover:text-primary-500 transition-colors">
+            <button onClick={() => scrollToSection('education')} className="block w-full text-left nav-link py-2">
               Education
             </button>
-            <button onClick={() => scrollToSection('contact')} className="block hover:text-primary-500 transition-colors">
+            <button onClick={() => scrollToSection('contact')} className="block w-full text-left nav-link py-2">
               {t('nav.contact')}
             </button>
           </div>
