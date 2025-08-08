@@ -87,23 +87,18 @@ export default function Contact() {
             </div>
 
             {/* Quebec City Map */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-              
-              <div className="relative h-96 rounded-xl overflow-hidden border border-gray-200">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d179956.23978652125!2d-71.38230989999999!3d46.8139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb8968a05db8893%3A0x8fc52d63f0e83a03!2sQuebec%20City%2C%20QC%2C%20Canada!5e0!3m2!1sen!2s!4v1699999999999!5m2!1sen!2s"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Quebec City Map"
-                  className="rounded-xl"
-                />
-              </div>
-              
-
+            <div className="relative h-96 rounded-2xl overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d179956.23978652125!2d-71.38230989999999!3d46.8139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb8968a05db8893%3A0x8fc52d63f0e83a03!2sQuebec%20City%2C%20QC%2C%20Canada!5e0!3m2!1sen!2s!4v1699999999999!5m2!1sen!2s"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Quebec City Map"
+                className="rounded-2xl"
+              />
             </div>
           </div>
         </div>
