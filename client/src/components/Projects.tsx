@@ -4,33 +4,36 @@ import { Github, ExternalLink, Star, ArrowRight } from 'lucide-react';
 
 const projects = [
   {
-    id: 'project1',
-    image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400',
+    id: 'express-starter',
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bdc57?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
     technologies: ['Node.js', 'Express', 'MongoDB', 'JWT', 'Swagger'],
     stars: '9k+',
     status: 'Open Source',
     github: 'https://github.com/fadhlaouir/create-express-node-starter'
   },
   {
-    id: 'project2',
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Tailwind'],
-    stars: '876',
-    status: 'Live Demo'
+    id: 'ai-chatbot',
+    image: 'https://images.unsplash.com/photo-1677442136019-1595019bdbaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
+    technologies: ['React', 'TypeScript', 'OpenAI API', 'Node.js'],
+    stars: '3.2k',
+    status: 'Beta Release',
+    github: 'https://github.com/fadhlaouir/flashsolve'
   },
   {
-    id: 'project3',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400',
+    id: 'ecommerce',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
     technologies: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
     stars: '1.3k',
-    status: 'Live Demo'
+    status: 'Live Demo',
+    github: 'https://github.com/fadhlaouir/adswift'
   },
   {
-    id: 'project4',
-    image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400',
-    technologies: ['React', 'Node.js', 'OpenAI API'],
-    stars: '3.2k',
-    status: 'Beta Release'
+    id: 'mobile-app',
+    image: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
+    technologies: ['React', 'Node.js', 'MongoDB', 'Tailwind'],
+    stars: '876',
+    status: 'Live Demo',
+    github: 'https://github.com/fadhlaouir/remotehorizon'
   }
 ];
 
@@ -76,11 +79,7 @@ export default function Projects() {
               >
                 <div className="h-64 bg-gradient-to-br from-sky-100 to-sky-200 relative overflow-hidden">
                   <img 
-                    src={`https://images.unsplash.com/photo-${
-                      project.id === 'express-starter' ? '1555066931-4365d14bdc57' : 
-                      project.id === 'ai-chatbot' ? '1677442136019-1595019bdbaa' : 
-                      project.id === 'ecommerce' ? '1556742049-0cfed4f6a45d' : '1551650975-87deedd944c3'
-                    }?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400`}
+                    src={project.image}
                     alt={t(`projects.${project.id}.title`)}
                     className="w-full h-full object-cover"
                   />
