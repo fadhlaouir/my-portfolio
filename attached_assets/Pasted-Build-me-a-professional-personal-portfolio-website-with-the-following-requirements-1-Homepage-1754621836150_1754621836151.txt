@@ -1,0 +1,46 @@
+Build me a professional personal portfolio website with the following requirements:
+
+1. **Homepage**
+   - Hero section with my name: *Raed Fadhlaoui*
+   - Short tagline: *Software Engineer | Full-Stack Developer | Open Source Enthusiast*
+   - Call-to-action button: "View My Work"
+
+2. **About Me**
+   - Section with a picture placeholder and a short bio:
+     "I’m a passionate software engineer based in Quebec, Canada, with experience in full-stack development, DevOps, and software architecture. I specialize in JavaScript, TypeScript, Node.js, MongoDB, React, and C#. I'm the creator of the open-source tool `create-express-node-starter` and currently working at Cofomo."
+
+3. **Projects**
+   - Showcase at least 4 projects (cards/grid layout) with image placeholders, project title, short description, tech stack used, and links to GitHub or live demo.
+     - Project 1: `create-express-node-starter` – Express.js + MongoDB starter for REST APIs
+     - Project 2: `RemoteHorizon` – Remote jobs board built with MERN stack
+     - Project 3: `AdSwift` – Classified ads web app inspired by Tayara and Leboncoin
+     - Project 4: `FlashSolve` – AI-powered coding assistant for solving problems faster
+
+4. **Skills**
+   - Display a list of tools, technologies, and frameworks using icons or badges:
+     - Languages: JavaScript, TypeScript, C#
+     - Backend: Node.js, Express.js, MongoDB, .NET, RESTful APIs
+     - Frontend: React, Tailwind CSS, Bootstrap
+     - DevOps: Docker, GitHub Actions, CI/CD
+     - Tools: Git, VSCode, Postman, Replit
+
+5. **Experience**
+   - Job Cards for recent experience:
+     - Cofomo (Software Engineer – Full Stack) – 2023–Present
+     - Orange Tunisia (Backend Developer) – 2021–2023
+     - GoMyCode & RBK (Coding Instructor)
+
+6. **Contact**
+   - A contact form with fields for name, email, and message
+   - Social links (LinkedIn, GitHub)
+
+7. **Design**
+   - Use a modern, responsive, mobile-friendly design
+   - Dark theme with accent colors (choose the most elegant and clean palette)
+   - Smooth scrolling, animations on scroll, and clean typography
+
+8. **Extra**
+   - Add SEO meta tags, favicon, and responsive images
+   - Deploy-ready (you can export it easily to Vercel/Netlify)
+
+Make sure the UI is sleek, professional, and looks like a top-tier developer’s personal portfolio. Use React + Tailwind CSS for the frontend (if needed).
