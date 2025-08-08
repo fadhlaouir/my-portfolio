@@ -46,7 +46,7 @@ export default function Hero() {
           {/* Large Typography */}
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
             <span className="block text-gray-900 mb-4">{t('hero.greeting')}</span>
-            <span className="gradient-text">Raed Fadhlaoui</span>
+            <span className="gradient-text">{t('name')}</span>
           </h1>
           
           {/* Professional Headline */}
