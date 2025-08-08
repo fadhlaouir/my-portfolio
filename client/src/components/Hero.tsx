@@ -21,36 +21,49 @@ export default function Hero() {
     <section
       id="home"
       ref={ref}
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-emerald-100 dark:from-dark-950 dark:to-dark-900 pt-20"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-sky-50 dark:from-gray-900 dark:via-gray-950 dark:to-sky-950 pt-20"
     >
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Animated Background Elements */}
+      <div className="floating-shapes">
+        <div className="floating-shape w-64 h-64 -top-32 -left-32 animate-float opacity-20"></div>
+        <div className="floating-shape w-48 h-48 top-1/4 -right-24 animate-float opacity-15" style={{ animationDelay: '-2s' }}></div>
+        <div className="floating-shape w-32 h-32 bottom-1/4 left-1/4 animate-float opacity-25" style={{ animationDelay: '-4s' }}></div>
+        <div className="floating-shape w-40 h-40 bottom-10 right-1/3 animate-float opacity-10" style={{ animationDelay: '-6s' }}></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center relative z-10">
         <div className={`fade-in ${hasIntersected ? 'visible' : ''}`}>
-          {/* Professional headshot placeholder */}
-          <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-primary-400 to-emerald-400 flex items-center justify-center text-white text-4xl font-bold shadow-xl">
+          {/* Premium Avatar */}
+          <div className="w-40 h-40 mx-auto mb-12 rounded-full bg-gradient-to-br from-sky-400 to-sky-600 flex items-center justify-center text-white text-5xl font-bold shadow-2xl animate-glow">
             RF
           </div>
           
-          <h1 className="text-4xl sm:text-6xl font-bold mb-6">
-            <span>{t('hero.greeting')}</span>{' '}
+          {/* Large Typography */}
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
+            <span className="block text-gray-900 dark:text-white mb-4">{t('hero.greeting')}</span>
             <span className="gradient-text">Raed Fadhlaoui</span>
           </h1>
           
-          <h2 className="text-2xl sm:text-3xl text-gray-800 dark:text-gray-200 mb-6 leading-relaxed">
+          {/* Professional Headline */}
+          <h2 className="text-2xl sm:text-3xl md:text-4xl text-gray-800 dark:text-gray-200 mb-8 leading-relaxed font-medium">
             {t('hero.headline')}
           </h2>
           
-          <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          {/* Premium Tagline */}
+          <p className="text-xl sm:text-2xl md:text-3xl text-gray-700 dark:text-gray-300 mb-8 max-w-4xl mx-auto font-medium leading-relaxed">
             {t('hero.tagline')}
           </p>
           
-          <p className="text-lg text-gray-500 dark:text-gray-400 mb-10 max-w-2xl mx-auto">
+          {/* Descriptive Text */}
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-16 max-w-3xl mx-auto leading-relaxed">
             {t('hero.description')}
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* Premium CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <button
               onClick={() => scrollToSection('projects')}
-              className="inline-flex items-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200"
+              className="btn-primary text-lg px-10 py-4 relative z-10 min-w-[200px] inline-flex items-center justify-center"
             >
               <span>{t('hero.cta')}</span>
               <ArrowRight className="w-5 h-5 ml-2 rtl-flip" />
@@ -58,15 +71,17 @@ export default function Hero() {
             
             <button
               onClick={() => scrollToSection('contact')}
-              className="inline-flex items-center px-8 py-4 border-2 border-primary-600 text-primary-600 dark:text-primary-400 dark:border-primary-400 font-semibold rounded-xl hover:bg-primary-600 hover:text-white transition-all duration-200"
+              className="btn-secondary text-lg min-w-[200px] inline-flex items-center justify-center"
             >
               <span>{t('hero.contact')}</span>
             </button>
           </div>
           
-          {/* Scroll indicator */}
+          {/* Scroll Indicator */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
-            <ChevronDown className="w-6 h-6 text-gray-400" />
+            <div className="w-6 h-10 border-2 border-sky-400 rounded-full flex justify-center">
+              <div className="w-1 h-3 bg-sky-400 rounded-full mt-2 animate-pulse"></div>
+            </div>
           </div>
         </div>
       </div>

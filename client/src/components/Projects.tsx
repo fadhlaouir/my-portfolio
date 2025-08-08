@@ -53,85 +53,97 @@ export default function Projects() {
   const { ref, hasIntersected } = useIntersectionObserver();
 
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-dark-950">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-24 bg-gray-50 dark:bg-gray-900 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-gradient-to-br from-sky-50 to-white dark:from-gray-900 dark:to-gray-950"></div>
+      
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div ref={ref} className={`fade-in ${hasIntersected ? 'visible' : ''}`}>
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
-            {t('projects.title')}
-          </h2>
-          <p className="text-gray-600 dark:text-gray-300 text-center mb-16 max-w-2xl mx-auto">
-            {t('projects.subtitle')}
-          </p>
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
+              <span className="gradient-text">{t('projects.title')}</span>
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              {t('projects.subtitle')}
+            </p>
+          </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {projects.map((project, index) => (
               <div
                 key={project.id}
-                className="card-hover bg-gray-50 dark:bg-dark-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl"
+                className="glass project-card rounded-3xl overflow-hidden group"
               >
-                <img
-                  src={project.image}
-                  alt={t(`projects.${project.id}.title`)}
-                  className="rounded-xl mb-6 w-full h-48 object-cover"
-                />
+                <div className="h-64 bg-gradient-to-br from-sky-100 to-sky-200 dark:from-sky-900 dark:to-sky-800 relative overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-24 h-24 bg-white dark:bg-gray-800 rounded-2xl flex items-center justify-center shadow-xl">
+                      <span className="text-3xl font-bold text-sky-600 dark:text-sky-400">
+                        {project.id === 'express-starter' ? '🚀' : 
+                         project.id === 'ai-chatbot' ? '🤖' : 
+                         project.id === 'ecommerce' ? '🛒' : '📱'}
+                      </span>
+                    </div>
+                  </div>
+                </div>
                 
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                    {t(`projects.${project.id}.title`)}
-                  </h3>
-                  <div className="flex gap-2">
+                <div className="p-8 lg:p-10">
+                  <div className="flex items-center justify-between mb-6">
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
+                      {t(`projects.${project.id}.title`)}
+                    </h3>
+                    <div className="flex items-center gap-2 text-sky-600 dark:text-sky-400">
+                      <Star className="w-5 h-5 fill-current" />
+                      <span className="font-semibold">{project.stars}</span>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-700 dark:text-gray-300 mb-8 text-lg leading-relaxed">
+                    {t(`projects.${project.id}.description`)}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-3 mb-8">
+                    {project.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="tech-badge px-4 py-2 bg-sky-100 dark:bg-sky-900/30 text-sky-800 dark:text-sky-200 rounded-xl text-sm font-semibold"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <div className="flex gap-4">
                     <a
                       href={project.github || "#"}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-500 hover:text-primary-600 transition-colors"
+                      className="flex items-center gap-3 px-6 py-3 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-200 rounded-xl transition-all duration-300 font-semibold"
                     >
                       <Github className="w-5 h-5" />
+                      <span>Code</span>
                     </a>
                     <a
                       href="#"
-                      className="text-gray-500 hover:text-emerald-600 transition-colors"
+                      className="flex items-center gap-3 btn-primary"
                     >
                       <ExternalLink className="w-5 h-5" />
+                      <span>Live Demo</span>
                     </a>
                   </div>
-                </div>
-                
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  {t(`projects.${project.id}.description`)}
-                </p>
-                
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className={`px-3 py-1 rounded-full text-xs font-medium ${
-                        technologyColors[tech] || 'bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200'
-                      }`}
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                
-                <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
-                  <div className="flex items-center gap-1">
-                    <Star className="w-4 h-4 fill-current" />
-                    <span>{project.stars} stars</span>
-                  </div>
-                  <span>{project.status}</span>
                 </div>
               </div>
             ))}
           </div>
           
-          <div className="text-center mt-12">
+          <div className="text-center mt-16">
             <a
-              href="#"
-              className="inline-flex items-center px-6 py-3 border-2 border-primary-600 text-primary-600 dark:text-primary-400 dark:border-primary-400 font-semibold rounded-xl hover:bg-primary-600 hover:text-white transition-all duration-200"
+              href="https://github.com/fadhlaouir"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary text-lg px-8 py-4 inline-flex items-center gap-3"
             >
               <span>{t('projects.viewAll')}</span>
-              <ArrowRight className="w-5 h-5 ml-2 rtl-flip" />
+              <ArrowRight className="w-5 h-5 rtl-flip" />
             </a>
           </div>
         </div>
