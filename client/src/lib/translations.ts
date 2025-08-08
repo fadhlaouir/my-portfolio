@@ -128,9 +128,8 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Footer
     'footer.tagline': 'Building the future, one line of code at a time.',
-    'footer.copyright': '© 2024 Raed Fadhlaoui. All rights reserved.',
-    'footer.built': 'Built with',
-    'footer.tech': 'using React & Tailwind CSS'
+    'footer.copyright': '© 2025 Raed Fadhlaoui. All rights reserved.',
+    'footer.built': 'Built with ❤️ using React, TypeScript & Tailwind CSS'
   },
   
   fr: {
@@ -260,9 +259,8 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Footer
     'footer.tagline': 'Construire l\'avenir, une ligne de code à la fois.',
-    'footer.copyright': '© 2024 Raed Fadhlaoui. Tous droits réservés.',
-    'footer.built': 'Créé avec',
-    'footer.tech': 'utilisant React & Tailwind CSS'
+    'footer.copyright': '© 2025 Raed Fadhlaoui. Tous droits réservés.',
+    'footer.built': 'Construit avec ❤️ en utilisant React, TypeScript et Tailwind CSS'
   },
   
   ar: {
@@ -392,8 +390,7 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Footer
     'footer.tagline': 'بناء المستقبل، سطر كود في المرة.',
-    'footer.copyright': '© 2024 رائد فضل الله. جميع الحقوق محفوظة.',
-    'footer.built': 'تم البناء بـ',
-    'footer.tech': 'باستخدام React و Tailwind CSS'
+    'footer.copyright': '© 2025 رائد فضل الله. جميع الحقوق محفوظة.',
+    'footer.built': 'تم البناء بـ ❤️ باستخدام React وTypeScript وTailwind CSS'
   }
 };

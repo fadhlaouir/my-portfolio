@@ -54,10 +54,10 @@ export default function Footer() {
           {/* Copyright */}
           <div className="border-t border-white/10 pt-8">
             <p className="text-gray-400 mb-2">
-              © {currentYear} Raed Fadhlaoui. All rights reserved.
+              {t('footer.copyright')}
             </p>
             <p className="text-sm text-gray-500">
-              Built with ❤️ using React, TypeScript & Tailwind CSS
+              {t('footer.built')}
             </p>
           </div>
         </div>
