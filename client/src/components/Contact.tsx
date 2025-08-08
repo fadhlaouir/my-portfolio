@@ -26,11 +26,10 @@ export default function Contact() {
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Contact Information */}
-            <div className="space-y-8">
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                  <MapPin className="w-6 h-6 mr-3 text-blue-600" />
-                  {t('contact.info.title')}
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 h-96 overflow-y-auto">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <MapPin className="w-6 h-6 mr-3 text-blue-600" />
+                {t('contact.info.title')}
                 </h3>
                 
                 <div className="space-y-6">
