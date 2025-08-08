@@ -52,11 +52,11 @@ export default function Volunteer() {
                 <Heart className="w-6 h-6 text-sky-600" />
               </div>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-                Volunteer Experience
+                {t('volunteer.title')}
               </h2>
             </div>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Community involvement and leadership roles that have shaped my commitment to education, mentorship, and technology advocacy.
+              {t('volunteer.subtitle')}
             </p>
           </div>
           

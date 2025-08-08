@@ -8,6 +8,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'nav.projects': 'Projects',
     'nav.skills': 'Skills',
     'nav.experience': 'Experience',
+    'nav.education': 'Education',
+    'nav.volunteer': 'Volunteer',
     'nav.contact': 'Contact',
     
     // Hero Section
@@ -75,6 +77,14 @@ export const translations: Record<Language, Record<string, string>> = {
     'experience.gomycode-intern.period': 'Jan 2019 – Apr 2019',
     'experience.gomycode-intern.description': 'Actively participated in team discussions to contribute to the resolution of technical issues. Developed prototypes and demos to showcase key features of new functionalities. Acquired practical skills by working on real projects under the supervision of industry experts. Collaborated with other interns to share ideas and knowledge and foster a collaborative learning environment.',
     
+    // Education Section
+    'education.title': 'Education & Certifications',
+    'education.subtitle': 'Academic background and professional certifications that shaped my expertise in software development and technology.',
+    
+    // Volunteer Section
+    'volunteer.title': 'Volunteer Experience',
+    'volunteer.subtitle': 'Community involvement and leadership roles that have shaped my commitment to education, mentorship, and technology advocacy.',
+    
     // Contact Section
     'contact.title': 'Get In Touch',
     'contact.subtitle': 'I\'m always interested in hearing about new opportunities, innovative projects, or just having a chat about technology.',
@@ -103,6 +113,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'nav.projects': 'Projets',
     'nav.skills': 'Compétences',
     'nav.experience': 'Expérience',
+    'nav.education': 'Éducation',
+    'nav.volunteer': 'Bénévolat',
     'nav.contact': 'Contact',
     
     // Hero Section
@@ -169,8 +181,14 @@ export const translations: Record<Language, Record<string, string>> = {
     'experience.gomycode-intern.company': 'GoMyCode',
     'experience.gomycode-intern.period': 'Jan 2019 – Avr 2019',
     'experience.gomycode-intern.description': 'Participation active aux discussions d\'équipe pour contribuer à la résolution des problèmes techniques. Développement de prototypes et démos pour présenter les fonctionnalités clés de nouvelles fonctionnalités. Acquisition de compétences pratiques en travaillant sur de vrais projets sous la supervision d\'experts de l\'industrie. Collaboration avec d\'autres stagiaires pour partager des idées et des connaissances et favoriser un environnement d\'apprentissage collaboratif.',
-    'experience.teaching.period': '2020 – 2021',
-    'experience.teaching.description': 'Enseignement de bootcamps de développement full-stack, mentorat de développeurs juniors. Aide de 200+ étudiants dans leur transition vers des carrières tech.',
+    
+    // Education Section
+    'education.title': 'Éducation et Certifications',
+    'education.subtitle': 'Parcours académique et certifications professionnelles qui ont façonné mon expertise en développement logiciel et technologie.',
+    
+    // Volunteer Section
+    'volunteer.title': 'Expérience Bénévole',
+    'volunteer.subtitle': 'Engagement communautaire et rôles de leadership qui ont façonné mon engagement envers l\'éducation, le mentorat et la promotion technologique.',
     
     // Contact Section
     'contact.title': 'Me Contacter',
@@ -200,6 +218,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'nav.projects': 'المشاريع',
     'nav.skills': 'المهارات',
     'nav.experience': 'الخبرة',
+    'nav.education': 'التعليم',
+    'nav.volunteer': 'التطوع',
     'nav.contact': 'التواصل',
     
     // Hero Section
@@ -266,6 +286,14 @@ export const translations: Record<Language, Record<string, string>> = {
     'experience.gomycode-intern.company': 'GoMyCode',
     'experience.gomycode-intern.period': 'يناير 2019 – أبريل 2019',
     'experience.gomycode-intern.description': 'المشاركة الفعالة في مناقشات الفريق للمساهمة في حل المسائل التقنية. تطوير النماذج الأولية والعروض التوضيحية لإظهار الميزات الرئيسية للوظائف الجديدة. اكتساب المهارات العملية من خلال العمل على مشاريع حقيقية تحت إشراف خبراء الصناعة. التعاون مع المتدربين الآخرين لتبادل الأفكار والمعرفة وتعزيز بيئة تعلم تعاونية.',
+    
+    // Education Section
+    'education.title': 'التعليم والشهادات',
+    'education.subtitle': 'الخلفية الأكاديمية والشهادات المهنية التي شكلت خبرتي في تطوير البرمجيات والتكنولوجيا.',
+    
+    // Volunteer Section
+    'volunteer.title': 'الخبرة التطوعية',
+    'volunteer.subtitle': 'المشاركة المجتمعية وأدوار القيادة التي شكلت التزامي بالتعليم والإرشاد والدعوة التكنولوجية.',
     
     // Contact Section
     'contact.title': 'تواصل معي',

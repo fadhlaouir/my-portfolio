@@ -41,7 +41,10 @@ export default function Navigation() {
               {t('nav.experience')}
             </button>
             <button onClick={() => scrollToSection('education')} className="nav-link">
-              Education
+              {t('nav.education')}
+            </button>
+            <button onClick={() => scrollToSection('volunteer')} className="nav-link">
+              {t('nav.volunteer')}
             </button>
             <button onClick={() => scrollToSection('contact')} className="nav-link">
               {t('nav.contact')}
@@ -99,7 +102,10 @@ export default function Navigation() {
               {t('nav.experience')}
             </button>
             <button onClick={() => scrollToSection('education')} className="block w-full text-left nav-link py-2">
-              Education
+              {t('nav.education')}
+            </button>
+            <button onClick={() => scrollToSection('volunteer')} className="block w-full text-left nav-link py-2">
+              {t('nav.volunteer')}
             </button>
             <button onClick={() => scrollToSection('contact')} className="block w-full text-left nav-link py-2">
               {t('nav.contact')}

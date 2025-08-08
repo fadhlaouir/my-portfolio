@@ -95,7 +95,7 @@ export default function Contact() {
                     onChange={handleInputChange}
                     required
                     className="w-full"
-                    placeholder="Your Name"
+                    placeholder={t('contact.form.name')}
                   />
                 </div>
                 
@@ -111,7 +111,7 @@ export default function Contact() {
                     onChange={handleInputChange}
                     required
                     className="w-full"
-                    placeholder="your@email.com"
+                    placeholder={t('contact.form.email')}
                   />
                 </div>
                 
@@ -127,7 +127,7 @@ export default function Contact() {
                     rows={5}
                     required
                     className="w-full resize-none"
-                    placeholder="Tell me about your project or just say hello!"
+                    placeholder={t('contact.form.message')}
                   />
                 </div>
                 
