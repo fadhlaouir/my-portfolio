@@ -3,7 +3,8 @@
 This is a professional personal portfolio website for Raed Fadhlaoui, a Full Stack Developer (.NET/JS) and OSS Contributor. The application is built as a modern, responsive single-page application showcasing personal projects, skills, experience, education, certifications, volunteer experience, testimonials, and providing a contact form. The portfolio features a clean light theme design with smooth animations and multi-language support (English, French, Arabic) with RTL support for Arabic.
 
 ## Recent Changes (January 2025)
-- **Code Cleanup & Optimization** - Removed unused components (HeroRedesigned, ProjectsRedesigned, SkillsRedesigned) and cleaned up CSS
+- **Major Code Cleanup & Optimization** - Removed unused CSS classes (stagger-animation, floating-shapes, text-reveal, btn-primary::before), consolidating duplicates and cleaning up empty lines for better maintainability
+- **Navigation Simplification** - Cleaned up scroll function using modern scrollIntoView API and reverted to clean EN/FR/AR language switcher without flags
 - **Complete Multilingual Support** - Achieved 100% translation coverage across English, French, and Arabic for every text element
 - **Enhanced Footer** - Updated copyright to 2025 and comprehensive tech stack display with heart emoji
 - **Professional SEO Implementation** - Added comprehensive meta tags, Schema.org markup, geographic targeting, and structured data

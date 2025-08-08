@@ -7,14 +7,10 @@ export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const offsetTop = element.offsetTop - 80;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: 'smooth'
-      });
-    }
+    document.getElementById(sectionId)?.scrollIntoView({ 
+      behavior: 'smooth', 
+      block: 'start' 
+    });
     setIsMobileMenuOpen(false);
   };
 
