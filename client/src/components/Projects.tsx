@@ -64,7 +64,7 @@ export default function Projects() {
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full"
+                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="aspect-video rounded-lg overflow-hidden mb-6">
                   <img 
@@ -74,38 +74,36 @@ export default function Projects() {
                   />
                 </div>
                 
-                <div className="flex flex-col h-full">
-                  <div className="space-y-4 flex-grow">
-                    {project.downloads && (
-                      <div className="flex items-center gap-2">
-                        <Download className="w-4 h-4 text-emerald-600" />
-                        <span className="text-sm font-medium text-emerald-600">
-                          {project.downloads} Downloads
-                        </span>
-                      </div>
-                    )}
-                    
-                    <h3 className="text-xl font-bold text-gray-900">
-                      {t(`projects.${project.id}.title`)}
-                    </h3>
-                    
-                    <p className="text-gray-600 leading-relaxed">
-                      {t(`projects.${project.id}.description`)}
-                    </p>
-                    
-                    <div className="flex gap-3 pt-2">
-                      {project.npm && (
-                        <a
-                          href={project.npm}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-4 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors text-sm font-medium"
-                        >
-                          <ExternalLink className="w-4 h-4" />
-                          NPM Package
-                        </a>
-                      )}
+                <div className="space-y-4">
+                  {project.downloads && (
+                    <div className="flex items-center gap-2">
+                      <Download className="w-4 h-4 text-emerald-600" />
+                      <span className="text-sm font-medium text-emerald-600">
+                        {project.downloads} Downloads
+                      </span>
                     </div>
+                  )}
+                  
+                  <h3 className="text-xl font-bold text-gray-900">
+                    {t(`projects.${project.id}.title`)}
+                  </h3>
+                  
+                  <p className="text-gray-600 leading-relaxed">
+                    {t(`projects.${project.id}.description`)}
+                  </p>
+                  
+                  <div className="flex gap-3 pt-2">
+                    {project.npm && (
+                      <a
+                        href={project.npm}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-4 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors text-sm font-medium"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        NPM Package
+                      </a>
+                    )}
                   </div>
                   
                   <div className={`flex gap-2 mt-4 ${project.id === 'express-starter' || project.id === 'ai-chatbot' ? 'flex-nowrap overflow-x-auto' : 'flex-wrap'}`}>
