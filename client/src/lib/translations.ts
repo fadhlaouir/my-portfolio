@@ -119,7 +119,6 @@ export const translations: Record<Language, Record<string, string>> = {
     'contact.info.location': 'Location',
     'contact.location.city': 'Quebec City, Quebec, Canada',
     'contact.location.description': 'Beautiful historic city in Eastern Canada',
-    'contact.map.title': 'Quebec City, Canada',
     'contact.social.title': 'Connect With Me',
     
     // Footer
@@ -249,7 +248,6 @@ export const translations: Record<Language, Record<string, string>> = {
     'contact.info.location': 'Localisation',
     'contact.location.city': 'Ville de Québec, Québec, Canada',
     'contact.location.description': 'Belle ville historique de l\'Est du Canada',
-    'contact.map.title': 'Ville de Québec, Canada',
     'contact.social.title': 'Me Suivre',
     
     // Footer
@@ -379,7 +377,6 @@ export const translations: Record<Language, Record<string, string>> = {
     'contact.info.location': 'الموقع',
     'contact.location.city': 'مدينة كيبيك، كيبيك، كندا',
     'contact.location.description': 'مدينة تاريخية جميلة في شرق كندا',
-    'contact.map.title': 'مدينة كيبيك، كندا',
     'contact.social.title': 'تواصل معي',
     
     // Footer

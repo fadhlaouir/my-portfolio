@@ -88,10 +88,6 @@ export default function Contact() {
 
             {/* Quebec City Map */}
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                <MapPin className="w-6 h-6 mr-3 text-blue-600" />
-                {t('contact.map.title')}
-              </h3>
               
               <div className="relative h-96 rounded-xl overflow-hidden border border-gray-200">
                 <iframe
