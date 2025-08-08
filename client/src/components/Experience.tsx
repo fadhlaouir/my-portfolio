@@ -80,13 +80,13 @@ export default function Experience() {
   const { ref, hasIntersected } = useIntersectionObserver();
 
   return (
-    <section id="experience" className="py-20 bg-white">
+    <section id="experience" className="py-20 bg-white dark:bg-gray-800">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={ref} className={`fade-in ${hasIntersected ? 'visible' : ''}`}>
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900 dark:text-gray-100">
             {t('experience.title')}
           </h2>
-          <p className="text-gray-600 text-center mb-16 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 text-center mb-16 max-w-2xl mx-auto">
             {t('experience.subtitle')}
           </p>
           
@@ -94,7 +94,7 @@ export default function Experience() {
             {experiences.map((experience) => (
               <div
                 key={experience.id}
-                className="bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="bg-gray-50 dark:bg-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="flex flex-col md:flex-row md:items-center gap-6">
                   <div className="flex-shrink-0">
@@ -107,17 +107,17 @@ export default function Experience() {
                   
                   <div className="flex-grow">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                      <h3 className="text-xl font-bold text-gray-900">
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
                         {t(`experience.${experience.id}.title`)}
                       </h3>
                       <span className={`text-sm font-medium ${experience.iconColor}`}>
                         {t(`experience.${experience.id}.period`)}
                       </span>
                     </div>
-                    <p className="text-lg text-gray-700 mb-3">
+                    <p className="text-lg text-gray-700 dark:text-gray-300 mb-3">
                       {t(`experience.${experience.id}.company`)}
                     </p>
-                    <p className="text-gray-600 mb-4 leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
                       {t(`experience.${experience.id}.description`)}
                     </p>
                     <div className="flex flex-wrap gap-2">

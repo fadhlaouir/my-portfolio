@@ -73,7 +73,27 @@
   --dark-950: hsl(224, 71%, 4%);
 }
 
-/* Removed dark theme */
+.dark {
+  --background: hsl(210, 25%, 7.8431%);
+  --foreground: hsl(210, 6.6667%, 97.0588%);
+  --card: hsl(180, 6.6667%, 15%);
+  --card-foreground: hsl(210, 6.6667%, 97.0588%);
+  --popover: hsl(210, 25%, 7.8431%);
+  --popover-foreground: hsl(210, 6.6667%, 97.0588%);
+  --primary: hsl(216, 87%, 65%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(210, 6.6667%, 20%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(210, 6.6667%, 15%);
+  --muted-foreground: hsl(210, 6.6667%, 65%);
+  --accent: hsl(210, 6.6667%, 20%);
+  --accent-foreground: hsl(216, 87%, 65%);
+  --destructive: hsl(356.3033, 90.5579%, 54.3137%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(210, 6.6667%, 20%);
+  --input: hsl(210, 6.6667%, 15%);
+  --ring: hsl(216, 87%, 65%);
+}
 
 @layer base {
   * {
@@ -178,7 +198,7 @@
   
   /* Skill Progress Bars */
   .skill-bar {
-    @apply h-2 bg-gray-200 rounded-full overflow-hidden relative;
+    @apply h-2 bg-gray-200 dark:bg-gray-600 rounded-full overflow-hidden relative;
   }
   
   .skill-progress {
@@ -215,11 +235,11 @@
   
   /* Navigation Glass Effect */
   .nav-glass {
-    @apply bg-white/80 backdrop-blur-md border-b border-white/20;
+    @apply bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-white/20 dark:border-gray-700/20;
   }
   
   .nav-link {
-    @apply text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 relative py-2;
+    @apply text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-all duration-300 relative py-2;
   }
   
   .nav-link::after {

@@ -22,7 +22,7 @@ export default function Hero() {
     <section
       id="home"
       ref={ref}
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-sky-50 pt-20"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-sky-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-20"
     >
       {/* Animated Background Elements */}
       <div className="floating-shapes">
@@ -45,12 +45,12 @@ export default function Hero() {
           
           {/* Large Typography */}
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
-            <span className="block text-gray-900 mb-4">{t('hero.greeting')}</span>
+            <span className="block text-gray-900 dark:text-gray-100 mb-4">{t('hero.greeting')}</span>
             <span className="gradient-text">{t('name')}</span>
           </h1>
           
           {/* Professional Headline */}
-          <h2 className="text-2xl sm:text-3xl md:text-4xl text-gray-800 mb-8 leading-relaxed font-medium">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl text-gray-800 dark:text-gray-200 mb-8 leading-relaxed font-medium">
             {t('hero.headline')}
           </h2>
           

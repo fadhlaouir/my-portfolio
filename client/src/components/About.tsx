@@ -19,11 +19,11 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-white via-slate-50 to-blue-50">
+    <section id="about" className="py-20 bg-gradient-to-br from-white via-slate-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div ref={ref} className={`fade-in ${hasIntersected ? 'visible' : ''}`}>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               {t('about.title')}
             </h2>
           </div>
@@ -31,7 +31,7 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Bio Section */}
             <div className="space-y-8">
-              <div className="space-y-6 text-lg leading-relaxed text-gray-700">
+              <div className="space-y-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
                 <p className="text-xl text-reveal">{t('about.bio')}</p>
                 <p>{t('about.bio2')}</p>
                 <p>{t('about.bio3')}</p>

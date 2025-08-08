@@ -84,14 +84,14 @@ export default function Skills() {
   const { ref, hasIntersected } = useIntersectionObserver();
 
   return (
-    <section id="skills" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <section id="skills" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div ref={ref} className={`fade-in ${hasIntersected ? 'visible' : ''}`}>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
               {t('skills.title')}
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
               {t('skills.subtitle')}
             </p>
           </div>
@@ -120,11 +120,11 @@ export default function Skills() {
                                 {skill.icon}
                               </span>
                             </div>
-                            <span className="font-semibold text-gray-800">{skill.name}</span>
+                            <span className="font-semibold text-gray-800 dark:text-gray-200">{skill.name}</span>
                           </div>
                           <div className="flex items-center gap-2">
-                            <span className="text-sm font-bold text-gray-900">{skill.percentage}%</span>
-                            <span className="text-xs text-gray-500 font-medium bg-gray-100 px-2 py-1 rounded-full">
+                            <span className="text-sm font-bold text-gray-900 dark:text-gray-100">{skill.percentage}%</span>
+                            <span className="text-xs text-gray-500 dark:text-gray-400 font-medium bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded-full">
                               {skill.level}
                             </span>
                           </div>

@@ -50,13 +50,13 @@ export default function Projects() {
   const { ref, hasIntersected } = useIntersectionObserver();
 
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={ref} className={`fade-in ${hasIntersected ? 'visible' : ''}`}>
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900 dark:text-gray-100">
             {t('projects.title')}
           </h2>
-          <p className="text-gray-600 text-center mb-16 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 text-center mb-16 max-w-2xl mx-auto">
             {t('projects.subtitle')}
           </p>
           
@@ -64,7 +64,7 @@ export default function Projects() {
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative pb-16"
+                className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative pb-16"
               >
                 <div className="aspect-video rounded-lg overflow-hidden mb-6">
                   <img 
@@ -84,11 +84,11 @@ export default function Projects() {
                     </div>
                   )}
                   
-                  <h3 className="text-xl font-bold text-gray-900">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
                     {t(`projects.${project.id}.title`)}
                   </h3>
                   
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                     {t(`projects.${project.id}.description`)}
                   </p>
                   
