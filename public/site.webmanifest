@@ -1,0 +1,19 @@
+{
+  "name": "Raed Fadhlaoui - Full Stack Developer",
+  "short_name": "Raed Fadhlaoui",
+  "description": "Senior Full Stack Developer specializing in React, Node.js, .NET with 6+ years experience",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#0ea5e9",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/",
+  "lang": "en",
+  "orientation": "portrait-primary"
+}

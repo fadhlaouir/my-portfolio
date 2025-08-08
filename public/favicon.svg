@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Background -->
+  <rect width="32" height="32" rx="6" fill="#0ea5e9"/>
+  
+  <!-- RF monogram -->
+  <g fill="white" font-family="Inter, Arial, sans-serif" font-weight="bold" font-size="18">
+    <!-- R -->
+    <path d="M7 8h6.5c2 0 3.5 1.2 3.5 3 0 1.2-0.8 2.2-1.8 2.6L17 18h-2.5l-1.2-4h-3.8v4H7V8z M9.5 12h3.5c0.8 0 1.5-0.4 1.5-1s-0.7-1-1.5-1h-3.5v2z"/>
+    <!-- F -->
+    <path d="M20 8h6v2h-3.5v2.5H25v2h-2.5V18h-2.5V8z"/>
+  </g>
+</svg>
