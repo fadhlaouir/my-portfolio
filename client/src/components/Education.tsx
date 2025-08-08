@@ -75,13 +75,13 @@ export default function Education() {
   const { ref, hasIntersected } = useIntersectionObserver();
 
   return (
-    <section id="education" className="py-20 bg-white">
+    <section id="education" className="py-20 bg-white dark:bg-gray-800">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={ref} className={`fade-in ${hasIntersected ? 'visible' : ''}`}>
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100 text-center mb-4">
             {t('education.title')}
           </h2>
-          <p className="text-gray-600 text-center mb-16 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 text-center mb-16 max-w-2xl mx-auto">
             {t('education.subtitle')}
           </p>
           
@@ -92,7 +92,7 @@ export default function Education() {
                 <div className="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center">
                   <GraduationCap className="w-6 h-6 text-sky-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">{t('education.academic')}</h3>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">{t('education.academic')}</h3>
               </div>
               
               <div className="space-y-8">
@@ -109,7 +109,7 @@ export default function Education() {
                       
                       <div className="flex-grow">
                         <div className="flex justify-between items-start mb-2">
-                          <h4 className="text-lg font-bold text-gray-900">
+                          <h4 className="text-lg font-bold text-gray-900 dark:text-gray-100">
                             {edu.degree}
                           </h4>
                           <span className="text-sm text-sky-600 font-medium">
@@ -117,12 +117,12 @@ export default function Education() {
                           </span>
                         </div>
                         
-                        <p className="text-gray-700 mb-2">
+                        <p className="text-gray-700 dark:text-gray-300 mb-2">
                           {edu.school}
                         </p>
                         
                         {edu.note && (
-                          <p className="text-sm text-emerald-600 bg-emerald-50 px-3 py-1 rounded-lg inline-block">
+                          <p className="text-sm text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/30 px-3 py-1 rounded-lg inline-block">
                             {edu.note}
                           </p>
                         )}
@@ -139,33 +139,33 @@ export default function Education() {
                 <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
                   <Award className="w-6 h-6 text-purple-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">{t('education.certifications')}</h3>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">{t('education.certifications')}</h3>
               </div>
               
               <div className="space-y-6">
                 {certifications.map((cert, index) => (
-                  <div key={index} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+                  <div key={index} className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
                     <div className="flex justify-between items-start mb-3">
-                      <h4 className="font-bold text-gray-900 text-lg leading-tight">
+                      <h4 className="font-bold text-gray-900 dark:text-gray-100 text-lg leading-tight">
                         {cert.title}
                       </h4>
-                      <span className="text-sm text-purple-600 font-medium bg-purple-100 px-2 py-1 rounded-lg">
+                      <span className="text-sm text-purple-600 dark:text-purple-400 font-medium bg-purple-100 dark:bg-purple-900/30 px-2 py-1 rounded-lg">
                         {cert.year}
                       </span>
                     </div>
                     
                     <div className="flex justify-between items-center">
                       <div>
-                        <p className="text-gray-700 font-medium">
+                        <p className="text-gray-700 dark:text-gray-300 font-medium">
                           {cert.issuer}
                         </p>
                         {cert.platform && (
-                          <p className="text-xs text-gray-500 mt-1">
+                          <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                             {t('education.via')} {cert.platform}
                           </p>
                         )}
                       </div>
-                      <span className="text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded-full">
+                      <span className="text-xs text-gray-500 dark:text-gray-400 bg-gray-200 dark:bg-gray-600 px-2 py-1 rounded-full">
                         {cert.type}
                       </span>
                     </div>
