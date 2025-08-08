@@ -34,5 +34,5 @@ export default defineConfig({
       deny: ["**/.*"],
     },
   },
-  base: "my-portfolio",
+  base: "/my-portfolio",
 });
