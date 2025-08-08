@@ -98,6 +98,14 @@
 }
 
 @layer components {
+  /* Animation delays for staggered effects */
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+  .animation-delay-1000 { animation-delay: 1000ms; }
+  .animation-delay-2000 { animation-delay: 2000ms; }
+  .animation-delay-4000 { animation-delay: 4000ms; }
   /* RTL Support */
   [dir="rtl"] {
     direction: rtl;
@@ -142,38 +150,109 @@
 
   /* Premium gradient text */
   .gradient-text {
-    background: linear-gradient(135deg, hsl(199, 89%, 48%), hsl(198, 93%, 60%), hsl(201, 94%, 86%));
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-weight: 700;
   }
   
-  /* Glass morphism effect */
-  .glass {
-    backdrop-filter: blur(16px);
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+  /* New premium gradients */
+  .gradient-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   }
   
-  .dark .glass {
-    background: rgba(0, 0, 0, 0.4);
+  .gradient-secondary {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  }
+  
+  .gradient-accent {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  }
+  
+  /* Advanced text gradients */
+  .text-gradient-purple {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-gradient-blue {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-gradient-pink {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Advanced glass morphism effects */
+  .glass {
+    backdrop-filter: blur(20px) saturate(180%);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  }
+  
+  .glass-card {
+    backdrop-filter: blur(25px) saturate(200%);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  }
+  
+  .frosted-glass {
+    backdrop-filter: blur(30px) saturate(150%);
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
   
-  /* Premium card hover effects */
+  /* Ultra-premium card effects */
   .card-hover {
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: transform;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    will-change: transform, box-shadow;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card-hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.8s;
   }
   
   .card-hover:hover {
-    transform: translateY(-12px) scale(1.02);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    transform: translateY(-16px) scale(1.03) rotateX(5deg);
+    box-shadow: 
+      0 32px 64px rgba(0, 0, 0, 0.12),
+      0 16px 32px rgba(0, 0, 0, 0.08),
+      0 8px 16px rgba(0, 0, 0, 0.04);
   }
   
-  .dark .card-hover:hover {
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  .card-hover:hover::before {
+    left: 100%;
+  }
+  
+  /* Magnetic hover effect */
+  .magnetic-card {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+  }
+  
+  .magnetic-card:hover {
+    transform: perspective(1000px) rotateX(10deg) rotateY(-10deg) scale(1.02);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.15);
   }
   
   /* Project card 3D tilt effect */
