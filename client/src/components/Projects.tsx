@@ -92,11 +92,11 @@ export default function Projects() {
                     {t(`projects.${project.id}.description`)}
                   </p>
                   
-                  <div className="flex flex-wrap gap-2">
+                  <div className={`flex gap-2 ${project.id === 'express-starter' || project.id === 'ai-chatbot' ? 'flex-nowrap overflow-x-auto' : 'flex-wrap'}`}>
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className={`px-3 py-1 rounded-full text-sm font-medium ${
+                        className={`px-3 py-1 rounded-full text-sm font-medium flex-shrink-0 ${
                           technologyColors[tech] || 'bg-gray-100 text-gray-800'
                         }`}
                       >
