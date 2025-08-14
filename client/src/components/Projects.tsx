@@ -80,7 +80,7 @@ export default function Projects() {
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative pb-16"
+                className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-700 hover:-translate-y-1 relative pb-16 magnetic-hover premium-card"
               >
                 <div className="aspect-video rounded-lg overflow-hidden mb-6">
                   <img 

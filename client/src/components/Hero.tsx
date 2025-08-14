@@ -82,11 +82,11 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center relative z-10">
         <div className={`fade-in ${hasIntersected ? 'visible' : ''}`}>
           {/* Professional Photo */}
-          <div className="w-40 h-40 mx-auto mb-12 rounded-full overflow-hidden shadow-2xl animate-glow ring-4 ring-sky-400/20">
+          <div className="w-40 h-40 mx-auto mb-12 rounded-full overflow-hidden shadow-2xl animate-glow ring-4 ring-sky-400/20 magnetic-hover premium-float">
             <img 
               src={profileImage} 
               alt="Raed Fadhlaoui"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover transition-transform duration-500"
             />
           </div>
           
@@ -115,7 +115,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <button
               onClick={() => scrollToSection('projects')}
-              className="btn-primary text-lg px-10 py-4 relative z-10 min-w-[200px] inline-flex items-center justify-center"
+              className="btn-primary text-lg px-10 py-4 relative z-10 min-w-[200px] inline-flex items-center justify-center magnetic-hover animate-glow"
             >
               <span>{t('hero.cta')}</span>
               <ArrowRight className="w-5 h-5 ml-2 rtl-flip" />
