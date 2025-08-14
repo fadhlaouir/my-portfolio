@@ -33,6 +33,7 @@ export default function Navigation() {
               { key: 'experience', section: 'experience' },
               { key: 'education', section: 'education' },
               { key: 'volunteer', section: 'volunteer' },
+              { key: 'articles', section: 'articles' },
               { key: 'contact', section: 'contact' }
             ].map(({ key, section }) => (
               <button key={key} onClick={() => scrollToSection(section)} className="nav-link">
@@ -127,6 +128,7 @@ export default function Navigation() {
               { key: 'experience', section: 'experience' },
               { key: 'education', section: 'education' },
               { key: 'volunteer', section: 'volunteer' },
+              { key: 'articles', section: 'articles' },
               { key: 'contact', section: 'contact' }
             ].map(({ key, section }) => (
               <button 

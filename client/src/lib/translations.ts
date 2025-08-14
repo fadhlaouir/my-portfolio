@@ -10,6 +10,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'nav.experience': 'Experience',
     'nav.education': 'Education',
     'nav.volunteer': 'Volunteer',
+    'nav.articles': 'Articles',
     'nav.contact': 'Contact',
     
     // Hero Section
@@ -135,6 +136,15 @@ export const translations: Record<Language, Record<string, string>> = {
     'contact.cta.description': 'Let\'s discuss your next project and bring your ideas to life.',
     'contact.cta.button': 'Get In Touch',
     
+    // Articles section
+    'articles.title': 'Articles & Insights',
+    'articles.subtitle': 'Thoughts, tutorials, and insights from my development journey',
+    'articles.readMore': 'Read Article',
+    'articles.viewAll': 'View All Articles on Medium',
+    'articles.visitMedium': 'Visit Medium Profile',
+    'articles.error.title': 'Unable to Load Articles',
+    'articles.error.message': 'We\'re having trouble fetching articles right now. Please visit my Medium profile directly.',
+
     // Footer
     'footer.tagline': 'Building the future, one line of code at a time.',
     'footer.copyright': '© 2025 Raed Fadhlaoui. All rights reserved.',
@@ -153,6 +163,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'nav.experience': 'Expérience',
     'nav.education': 'Éducation',
     'nav.volunteer': 'Bénévolat',
+    'nav.articles': 'Articles',
     'nav.contact': 'Contact',
     
     // Hero Section
@@ -278,6 +289,15 @@ export const translations: Record<Language, Record<string, string>> = {
     'contact.cta.description': 'Discutons de votre prochain projet et donnons vie à vos idées.',
     'contact.cta.button': 'Me Contacter',
     
+    // Articles section
+    'articles.title': 'Articles et Perspectives',
+    'articles.subtitle': 'Réflexions, tutoriels et insights de mon parcours de développement',
+    'articles.readMore': 'Lire l\'Article',
+    'articles.viewAll': 'Voir Tous les Articles sur Medium',
+    'articles.visitMedium': 'Visiter le Profil Medium',
+    'articles.error.title': 'Impossible de Charger les Articles',
+    'articles.error.message': 'Nous avons des difficultés à récupérer les articles en ce moment. Veuillez visiter directement mon profil Medium.',
+
     // Footer
     'footer.tagline': 'Construire l\'avenir, une ligne de code à la fois.',
     'footer.copyright': '© 2025 Raed Fadhlaoui. Tous droits réservés.',
@@ -296,6 +316,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'nav.experience': 'الخبرة',
     'nav.education': 'التعليم',
     'nav.volunteer': 'التطوع',
+    'nav.articles': 'المقالات',
     'nav.contact': 'التواصل',
     
     // Hero Section
@@ -421,6 +442,15 @@ export const translations: Record<Language, Record<string, string>> = {
     'contact.cta.description': 'لنناقش مشروعك القادم ونحول أفكارك إلى واقع.',
     'contact.cta.button': 'تواصل معي',
     
+    // Articles section
+    'articles.title': 'المقالات والرؤى',
+    'articles.subtitle': 'أفكار ودروس ورؤى من رحلتي في التطوير',
+    'articles.readMore': 'قراءة المقال',
+    'articles.viewAll': 'عرض جميع المقالات على Medium',
+    'articles.visitMedium': 'زيارة الملف الشخصي على Medium',
+    'articles.error.title': 'تعذر تحميل المقالات',
+    'articles.error.message': 'نواجه صعوبة في جلب المقالات الآن. يرجى زيارة ملفي الشخصي على Medium مباشرة.',
+
     // Footer
     'footer.tagline': 'بناء المستقبل، سطر كود في المرة.',
     'footer.copyright': '© 2025 رائد فضلاوي. جميع الحقوق محفوظة.',
