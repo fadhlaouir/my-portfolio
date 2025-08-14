@@ -74,18 +74,18 @@ export default function About() {
 
             {/* Stats Section */}
             <div className="premium-card p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Career Highlights</h3>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center">Career Highlights</h3>
               <div className="space-y-6">
                 {stats.map((stat, index) => {
                   const IconComponent = stat.icon;
                   return (
-                    <div key={stat.label} className="flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100">
-                      <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                        <IconComponent className="w-6 h-6 text-blue-600" />
+                    <div key={stat.label} className="flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-100 dark:border-blue-800">
+                      <div className="w-12 h-12 bg-blue-100 dark:bg-blue-800/50 rounded-xl flex items-center justify-center">
+                        <IconComponent className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                       </div>
                       <div>
-                        <div className="text-3xl font-bold text-gray-900">{stat.value}</div>
-                        <div className="text-sm text-gray-600 font-medium">{t(`about.stats.${stat.label}`)}</div>
+                        <div className="text-3xl font-bold text-gray-900 dark:text-gray-100">{stat.value}</div>
+                        <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">{t(`about.stats.${stat.label}`)}</div>
                       </div>
                     </div>
                   );

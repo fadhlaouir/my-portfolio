@@ -127,7 +127,7 @@ export default function Projects() {
                       <span
                         key={tech}
                         className={`px-3 py-1 rounded-full text-sm font-medium flex-shrink-0 ${
-                          technologyColors[tech] || 'bg-gray-100 text-gray-800'
+                          technologyColors[tech] || 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300'
                         }`}
                       >
                         {tech}
@@ -144,7 +144,7 @@ export default function Projects() {
               href="https://github.com/fadhlaouir"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors font-medium"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors font-medium"
             >
               {t('projects.viewAll')}
               <ArrowRight className="w-4 h-4" />

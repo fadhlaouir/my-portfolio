@@ -47,32 +47,32 @@ const experiences = [
 ];
 
 const technologyColors: Record<string, string> = {
-  React: 'bg-blue-100 text-blue-800',
-  'Node.js': 'bg-green-100 text-green-800',
-  '.NET': 'bg-purple-100 text-purple-800',
-  Azure: 'bg-sky-100 text-sky-800',
-  Angular: 'bg-red-100 text-red-800',
-  JavaScript: 'bg-yellow-100 text-yellow-800',
-  'Team Leadership': 'bg-indigo-100 text-indigo-800',
-  Agile: 'bg-cyan-100 text-cyan-800',
-  'Performance Optimization': 'bg-green-100 text-green-800',
-  Security: 'bg-red-100 text-red-800',
-  JWT: 'bg-purple-100 text-purple-800',
-  'Clean Architecture': 'bg-gray-100 text-gray-800',
-  Microservices: 'bg-blue-100 text-blue-800',
-  'RESTful APIs': 'bg-emerald-100 text-emerald-800',
-  'Project Management': 'bg-orange-100 text-orange-800',
-  MongoDB: 'bg-green-100 text-green-800',
-  Mentoring: 'bg-emerald-100 text-emerald-800',
-  'Curriculum Design': 'bg-purple-100 text-purple-800',
-  Teaching: 'bg-blue-100 text-blue-800',
-  'Full Stack Development': 'bg-blue-100 text-blue-800',
-  'UI/UX': 'bg-pink-100 text-pink-800',
-  'Code Review': 'bg-gray-100 text-gray-800',
-  'Accessibility': 'bg-green-100 text-green-800',
-  'Documentation': 'bg-indigo-100 text-indigo-800',
-  'Prototyping': 'bg-orange-100 text-orange-800',
-  'Team Collaboration': 'bg-cyan-100 text-cyan-800'
+  React: 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300',
+  'Node.js': 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300',
+  '.NET': 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300',
+  Azure: 'bg-sky-100 text-sky-800 dark:bg-sky-900/30 dark:text-sky-300',
+  Angular: 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300',
+  JavaScript: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300',
+  'Team Leadership': 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300',
+  Agile: 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900/30 dark:text-cyan-300',
+  'Performance Optimization': 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300',
+  Security: 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300',
+  JWT: 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300',
+  'Clean Architecture': 'bg-gray-100 text-gray-800 dark:bg-gray-700/50 dark:text-gray-300',
+  Microservices: 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300',
+  'RESTful APIs': 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300',
+  'Project Management': 'bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300',
+  MongoDB: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300',
+  Mentoring: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300',
+  'Curriculum Design': 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300',
+  Teaching: 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300',
+  'Full Stack Development': 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300',
+  'UI/UX': 'bg-pink-100 text-pink-800 dark:bg-pink-900/30 dark:text-pink-300',
+  'Code Review': 'bg-gray-100 text-gray-800 dark:bg-gray-700/50 dark:text-gray-300',
+  'Accessibility': 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300',
+  'Documentation': 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-300',
+  'Prototyping': 'bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300',
+  'Team Collaboration': 'bg-cyan-100 text-cyan-800 dark:bg-cyan-900/30 dark:text-cyan-300'
 };
 
 export default function Experience() {
@@ -110,7 +110,7 @@ export default function Experience() {
             {experiences.map((experience) => (
               <div
                 key={experience.id}
-                className="bg-gray-50 dark:bg-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="bg-gray-50 dark:bg-gray-800/50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="flex flex-col md:flex-row md:items-center gap-6">
                   <div className="flex-shrink-0">

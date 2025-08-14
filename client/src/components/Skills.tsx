@@ -121,7 +121,7 @@ export default function Skills() {
                     <div className={`w-12 h-12 ${category.color.replace('text-', 'bg-').replace('-600', '-100')} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                       <IconComponent className={`w-6 h-6 ${category.color}`} />
                     </div>
-                    <h3 className={`text-xl font-bold ${category.color} dark:text-opacity-90`}>
+                    <h3 className={`text-xl font-bold ${category.color} dark:${category.color.replace('text-', 'text-').replace('-600', '-400')}`}>
                       {t(`skills.${category.key}`)}
                     </h3>
                   </div>

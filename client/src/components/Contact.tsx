@@ -103,34 +103,34 @@ export default function Contact() {
                   href="https://github.com/fadhlaouir"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:bg-gray-100 hover:border-gray-300 transition-all duration-300 group"
+                  className="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl border border-gray-200 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-500 transition-all duration-300 group"
                 >
-                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center group-hover:bg-gray-200 transition-colors">
-                    <Github className="w-6 h-6 text-gray-700" />
+                  <div className="w-12 h-12 bg-gray-100 dark:bg-gray-600 rounded-lg flex items-center justify-center group-hover:bg-gray-200 dark:group-hover:bg-gray-500 transition-colors">
+                    <Github className="w-6 h-6 text-gray-700 dark:text-gray-300" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">{t('contact.social.github')}</h4>
-                    <p className="text-sm text-gray-600">{t('contact.social.github.description')}</p>
+                    <h4 className="font-semibold text-gray-900 dark:text-gray-100">{t('contact.social.github')}</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">{t('contact.social.github.description')}</p>
                   </div>
                 </a>
 
                 <a
                   href="mailto:raed.fadhlaoui@gmail.com"
-                  className="flex items-center gap-4 p-4 bg-gray-50 rounded-xl border border-gray-200 hover:bg-gray-100 hover:border-emerald-300 transition-all duration-300 group"
+                  className="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl border border-gray-200 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 hover:border-emerald-300 dark:hover:border-emerald-500 transition-all duration-300 group"
                 >
-                  <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center group-hover:bg-emerald-200 transition-colors">
+                  <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg flex items-center justify-center group-hover:bg-emerald-200 dark:group-hover:bg-emerald-800/50 transition-colors">
                     <Mail className="w-6 h-6 text-emerald-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">{t('contact.email')}</h4>
-                    <p className="text-sm text-gray-600">{t('contact.social.email.description')}</p>
+                    <h4 className="font-semibold text-gray-900 dark:text-gray-100">{t('contact.email')}</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">{t('contact.social.email.description')}</p>
                   </div>
                 </a>
 
                 {/* Call to Action */}
-                <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-blue-200">
-                  <h4 className="font-bold text-gray-900 mb-2">{t('contact.cta.title')}</h4>
-                  <p className="text-gray-600 text-sm mb-4">
+                <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl border border-blue-200 dark:border-blue-800">
+                  <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-2">{t('contact.cta.title')}</h4>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
                     {t('contact.cta.description')}
                   </p>
                   <a
