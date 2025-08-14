@@ -11,8 +11,8 @@
     "start": "NODE_ENV=production node dist/index.js",
     "check": "tsc",
     "db:push": "drizzle-kit push",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+   "predeploy": "npm run build && Copy-Item client/dist/index.html client/dist/404.html",
+  "deploy": "gh-pages -d client/dist"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
