@@ -16,7 +16,7 @@ export default defineConfig({
     outDir: path.resolve(__dirname, "client", "dist"),
     emptyOutDir: true,
   },
-  base: "/",
+ base: "/my-portfolio/",
   server: {
     fs: {
       strict: false,
