@@ -11,17 +11,11 @@ import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import BackgroundAnimation from '../components/BackgroundAnimation';
 import ScrollIndicator from '../components/ScrollIndicator';
-import ScrollProgress from '../components/ScrollProgress';
-import CursorTrail from '../components/CursorTrail';
-import SoundEffects from '../components/SoundEffects';
 
 export default function Portfolio() {
   return (
     <div className="min-h-screen relative">
-      <ScrollProgress />
       <ScrollIndicator />
-      <CursorTrail />
-      <SoundEffects />
       <BackgroundAnimation />
       <div className="relative z-10">
         <Navigation />
