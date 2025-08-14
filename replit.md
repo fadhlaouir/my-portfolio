@@ -3,16 +3,17 @@
 This is a professional personal portfolio website for Raed Fadhlaoui, a Full Stack Developer (.NET/JS) and OSS Contributor. The application is built as a modern, responsive single-page application showcasing personal projects, skills, experience, education, certifications, volunteer experience, testimonials, and providing a contact form. The portfolio features a clean light theme design with smooth animations and multi-language support (English, French, Arabic) with RTL support for Arabic.
 
 ## Recent Changes (January 2025)
-- **Major Code Cleanup & Optimization** - Removed unused CSS classes (stagger-animation, floating-shapes, text-reveal, btn-primary::before), consolidating duplicates and cleaning up empty lines for better maintainability
+- **Complete Dark Mode Enhancement** - Fixed all text contrast issues across every component ensuring perfect readability in both light and dark themes
+- **Major Code Cleanup & Optimization** - Removed unused CSS classes, consolidated duplicate styles, cleaned up empty lines, and streamlined codebase structure
+- **Technology Tags Dark Mode** - Updated all technology badges in Projects and Experience sections with proper dark mode backgrounds and text colors
+- **Contact Section Polish** - Enhanced social links and call-to-action sections with appropriate dark theme styling
+- **Skills Section Improvement** - Fixed category titles and skill progress bars for optimal dark mode visibility
 - **Navigation Simplification** - Cleaned up scroll function using modern scrollIntoView API and reverted to clean EN/FR/AR language switcher without flags
 - **Complete Multilingual Support** - Achieved 100% translation coverage across English, French, and Arabic for every text element
-- **Enhanced Footer** - Updated copyright to 2025 and comprehensive tech stack display with heart emoji
 - **Professional SEO Implementation** - Added comprehensive meta tags, Schema.org markup, geographic targeting, and structured data
 - **Custom Favicon & Branding** - Created professional RF monogram favicon in SVG format with consistent branding
 - **Performance Optimization** - Added DNS prefetching, proper meta tags, and web manifest for PWA capabilities
-- **Volunteer Experience Enhancement** - Added detailed Arabic translations for community leadership roles
-- **Search Engine Optimization** - Implemented robots.txt, sitemap.xml, and canonical URLs for better search ranking
-- Maintained clean, professional light-theme design with premium agency-grade styling
+- Maintained clean, professional design with premium agency-grade styling and perfect theme consistency
 
 # User Preferences
 

@@ -360,59 +360,6 @@
     100% { left: 100%; }
   }
 
-  /* Advanced Scroll Animations */
-  .scroll-parallax {
-    transform: translateZ(0);
-    will-change: transform;
-  }
-
-  /* Premium Section Transitions */
-  .section-transition {
-    position: relative;
-    background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.95) 100%);
-    backdrop-filter: blur(10px);
-    border-top: 1px solid rgba(59,130,246,0.1);
-    border-bottom: 1px solid rgba(59,130,246,0.1);
-  }
-
-  .dark .section-transition {
-    background: linear-gradient(135deg, rgba(17,24,39,0.9) 0%, rgba(31,41,55,0.95) 100%);
-    border-top: 1px solid rgba(59,130,246,0.2);
-    border-bottom: 1px solid rgba(59,130,246,0.2);
-  }
-
-  /* Interactive Grid Pattern */
-  .grid-pattern {
-    background-image: 
-      radial-gradient(circle at 25px 25px, rgba(59,130,246,0.1) 2px, transparent 2px);
-    background-size: 50px 50px;
-    animation: grid-move 20s linear infinite;
-  }
-
-  @keyframes grid-move {
-    0% { background-position: 0 0; }
-    100% { background-position: 50px 50px; }
-  }
-
-  /* Premium Loading Animation */
-  .premium-loading {
-    position: relative;
-  }
-
-  .premium-loading::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, transparent, rgba(59,130,246,0.2), transparent);
-    transform: translateX(-100%);
-    animation: loading-shimmer 2s infinite;
-  }
-
-  @keyframes loading-shimmer {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
-  }
-
   /* Enhanced Navigation Link Animations */
   .nav-link {
     @apply text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-all duration-500 relative py-2;
@@ -450,9 +397,7 @@
   .nav-link:hover::before {
     opacity: 1;
   }
-  
 
-  
   /* Premium Fade In with 3D Transform */
   .fade-in {
     opacity: 0;
@@ -517,9 +462,7 @@
       transform: translateY(0) rotateX(0deg) scale(1);
     }
   }
-  
 
-  
   /* Skill Progress Bars */
   .skill-bar {
     @apply h-2 bg-gray-200 dark:bg-gray-600 rounded-full overflow-hidden relative;
@@ -574,28 +517,6 @@
       0 1px 0 rgba(59,130,246,0.2),
       inset 0 1px 0 rgba(255,255,255,0.1);
   }
-  
-  .nav-link {
-    @apply text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-all duration-300 relative py-2;
-  }
-  
-  .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 50%;
-    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-    transition: all 0.3s ease;
-  }
-  
-  .nav-link:hover::after {
-    width: 100%;
-    left: 0;
-  }
-
-
 
   /* RTL Support */
   [dir="rtl"] {
@@ -647,9 +568,6 @@
     background-clip: text;
     font-weight: 700;
   }
-  
-  /* Glass morphism effect */
-
   
   /* Premium card hover effects */
   .card-hover {
@@ -706,18 +624,6 @@
   
   .tech-badge:hover::before {
     left: 100%;
-  }
-  
-  /* Smooth reveal animations */
-  .fade-in {
-    opacity: 0;
-    transform: translateY(60px);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
   }
   
   .slide-in-left {
